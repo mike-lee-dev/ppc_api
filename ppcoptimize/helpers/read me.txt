@@ -1,0 +1,3 @@
+Converting things from one structure to another
+Input validation
+Formatting stuff for display purposes
