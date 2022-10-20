@@ -2,6 +2,7 @@ from flask import Flask, jsonify, request
 from flask_restful import Resource, Api, reqparse
 from pymongo import MongoClient
 import os
+import ppcoptimize.ppcoptimizer as ppcoptimizer
 
 app = Flask(__name__)
 api = Api(app)
@@ -17,10 +18,11 @@ db = mongo['test']
 accounts = db['accounts']
 
 
-@app.route('/test', methods=['GET'])
+@app.route('/test', methods=['GET', 'POST'])
 def index():
     # call function from ppcoptimizer and store it into Mongo DB
     # then return the results to the endpoint of node js or frontend
+    save_or_response = ppcoptimizer.main()
     pass
 
 
