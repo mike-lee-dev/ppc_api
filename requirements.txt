@@ -83,3 +83,8 @@ wincertstore==0.2
 wsproto==1.2.0
 xarray==0.21.1
 zipp==3.9.0
+PyMeeus==0.5.10
+filterpy==1.4.5
+pystan==2.19.1.1
+sklearn==0.0
+treelib==1.6.1
