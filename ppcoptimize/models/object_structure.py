@@ -1,14 +1,14 @@
 #if a keyword/target has too fee data we fall back to adgroup default
 #if a adgroup has too fee data we fall back to campaign default
 #if a campaign has too fee data we fall back to account default
-from models import market_curve
-from models.compute_bid import compute_bid
-from utils import dataframe
-from utils import input_output
+from . import market_curve
+from .compute_bid import compute_bid
+from ..utils import dataframe
+from ..utils import input_output
 from dataclasses import dataclass, InitVar, field
 import pandas as pd
 import numpy as np
-import global_var
+from .. import global_var
 import matplotlib.pyplot as plt
 
 #https://stackoverflow.com/questions/51575931/class-inheritance-in-python-3-7-dataclasses

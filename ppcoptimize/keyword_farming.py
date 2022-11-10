@@ -1,7 +1,7 @@
 import pandas as pd
 import nltk
 import re
-from utils import input_output, dataframe, amazon_campaign_link, campaign_management
+from .utils import input_output, dataframe, amazon_campaign_link, campaign_management
 #https://towardsdatascience.com/fuzzywuzzy-find-similar-strings-within-one-column-in-a-pandas-data-frame-99f6c2a0c212
 #   KW: 	Auto -> 	Manual KW SP (broad/exact)	
 #	PAT: 	Auto -> 	Manual PAT SP (PAT)

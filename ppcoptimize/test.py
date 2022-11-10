@@ -1,4 +1,4 @@
-from utils.input_output import read_bid
+from .utils.input_output import read_bid
 
 
 

@@ -1,6 +1,4 @@
-from object_structure import campaign
-
-
+from .object_structure import *
 
 
 class sponsored_product(campaign_id)

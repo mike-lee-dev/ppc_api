@@ -1,4 +1,4 @@
-from utils import input_output, dataframe, amazon_campaign_link, campaign_management
+from .utils import input_output, dataframe, amazon_campaign_link, campaign_management
 import pandas as pd
 from itertools import permutations
 
