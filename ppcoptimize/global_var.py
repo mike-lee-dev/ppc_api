@@ -1,1 +1,1 @@
-path='./data/raw/bulk.xlsx'
+path = './data/raw/bulk.xlsx'
