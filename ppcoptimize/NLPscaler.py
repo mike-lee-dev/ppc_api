@@ -107,110 +107,107 @@ def main():
 	###I should try to use the code below to get the right sysnet
 	###I should also check BERT https://arxiv.org/abs/1810.04805
 	def SimScore(synsets1, synsets2):
-	"""
-	Purpose: Computes sentence similarity using Wordnet path_similarity().
-	Input: Synset lists representing sentence 1 and sentence 2.
-	Output: Similarity score as a float
-	"""
-	 
-	print("-----")
-	print("Synsets1: %s\n" % synsets1)
-	print("Synsets2: %s\n" % synsets2)
-	 
-	sumSimilarityscores = 0
-	scoreCount = 0
-	 
-	# For each synset in the first sentence...
-	for synset1 in synsets1:
-	 
-	    synsetScore = 0
-	    similarityScores = []
-	 
-	    # For each synset in the second sentence...
-	    for synset2 in synsets2:
-	 
-	        # Only compare synsets with the same POS tag. Word to word knowledge
-	        # measures cannot be applied across different POS tags.
-	        if synset1.pos() == synset2.pos():
-	  
-	            # Note below is the call to path_similarity mentioned above. 
-	            synsetScore = synset1.path_similarity(synset2)
-	 
-	            if synsetScore != None:
-	                print("Path Score %0.2f: %s vs. %s" % (synsetScore, synset1, synset2))
-	                similarityScores.append(synsetScore)
-	 
-	            # If there are no similarity results but the SAME WORD is being
-	            # compared then it gives a max score of 1.
-	            elif synset1.name().split(".")[0] == synset2.name().split(".")[0]:
-	                synsetScore = 1
-	                print("Path MAX-Score %0.2f: %s vs. %s" % (synsetScore, synset1, synset2))
-	                similarityScores.append(synsetScore)
-	 
-	            synsetScore = 0
-	 
-	    if(len(similarityScores) > 0):
-	        sumSimilarityscores += max(similarityScores)
-	        scoreCount += 1
-	  
-	# Average the summed, maximum similarity scored and return.
-	if scoreCount > 0:
-	    avgScores = sumSimilarityscores / scoreCount
-	  
-	print("Func Score: %0.2f" % avgScores)
-	return(avgScores)
-	'''
-	solver = pywraplp.Solver.CreateSolver('GLOP')
+		"""
+		Purpose: Computes sentence similarity using Wordnet path_similarity().
+		Input: Synset lists representing sentence 1 and sentence 2.
+		Output: Similarity score as a float
+		"""
 
-	infinity = solver.infinity()
-	# x and y are integer non-negative variables.
-	x = solver.IntVar(0.0, infinity, 'x')
-	y = solver.IntVar(0.0, infinity, 'y')
+		print("-----")
+		print("Synsets1: %s\n" % synsets1)
+		print("Synsets2: %s\n" % synsets2)
 
-	solver.Maximize(simlarity)
-	solver.Solve()
+		sumSimilarityscores = 0
+		scoreCount = 0
 
-	print('Number of variables =', solver.NumVariables())
-	'''
+		# For each synset in the first sentence...
+		for synset1 in synsets1:
 
+			synsetScore = 0
+			similarityScores = []
 
+			# For each synset in the second sentence...
+			for synset2 in synsets2:
 
-	'''
-	df= pd.DataFrame()
-	for i, word1 in enumerate(words):
-		print("\n",word1)
-		wn_word1 = wn.synsets(word1)
-		if len(wn_word1)==0:
-			print("this word is not in the dictionary : ", word1)
-			words.remove(word1)
-		else:			
-			print(wn_word1[0].lemma_names())
-			for word2 in words[i+1:]:
-				wn_word2=wn.synsets(word2)
-				if len(wn_word2)==0:
-					print("this word is not in the dictionary : ", word2)
-					words.remove(word2)
-				else:				
-					wn_word2 = wn.synsets(word2)
+				# Only compare synsets with the same POS tag. Word to word knowledge
+				# measures cannot be applied across different POS tags.
+				if synset1.pos() == synset2.pos():
 
-					common_hyponyms= set(wn_word1.closure(hypo)).intersection(set(wn_word2.closure(hypo)))
-					print(common_hyponyms)
-					print(word1 + " " + word2 + "simlarity :",wn_word1[0].path_similarity(wn_word2[0]))
-					#common_lemmas = len(set(wn_word1.lemma_names).intersection(set(wn_word2.lemma_names)))
-					#print(common_lemmas)'''
-	'''
-			wn_word = wn.synsets(word)
-			if len(wn_word)==0:
-				print("this word is not in the dictionary : ", word)
-			else:	
-				print("Synset :", wn_word)
-				print("Hypernyms :", wn_word[0].hypernyms())
-				print("Member holonyms :", wn_word[0].member_holonyms())
-				common_lemmas = len(set(house.lemma_names).intersection(set(station.lemma_names)))
-	'''
+					# Note below is the call to path_similarity mentioned above.
+					synsetScore = synset1.path_similarity(synset2)
+
+					if synsetScore != None:
+						print("Path Score %0.2f: %s vs. %s" % (synsetScore, synset1, synset2))
+						similarityScores.append(synsetScore)
+
+					# If there are no similarity results but the SAME WORD is being
+					# compared then it gives a max score of 1.
+					elif synset1.name().split(".")[0] == synset2.name().split(".")[0]:
+						synsetScore = 1
+						print("Path MAX-Score %0.2f: %s vs. %s" % (synsetScore, synset1, synset2))
+						similarityScores.append(synsetScore)
+
+					synsetScore = 0
+
+			if(len(similarityScores) > 0):
+				sumSimilarityscores += max(similarityScores)
+				scoreCount += 1
+
+		# Average the summed, maximum similarity scored and return.
+		if scoreCount > 0:
+			avgScores = sumSimilarityscores / scoreCount
+
+		print("Func Score: %0.2f" % avgScores)
+		return(avgScores)
+		'''
+		solver = pywraplp.Solver.CreateSolver('GLOP')
+	
+		infinity = solver.infinity()
+		# x and y are integer non-negative variables.
+		x = solver.IntVar(0.0, infinity, 'x')
+		y = solver.IntVar(0.0, infinity, 'y')
+	
+		solver.Maximize(simlarity)
+		solver.Solve()
+	
+		print('Number of variables =', solver.NumVariables())
+		'''
 
 
 
+		'''
+		df= pd.DataFrame()
+		for i, word1 in enumerate(words):
+			print("\n",word1)
+			wn_word1 = wn.synsets(word1)
+			if len(wn_word1)==0:
+				print("this word is not in the dictionary : ", word1)
+				words.remove(word1)
+			else:			
+				print(wn_word1[0].lemma_names())
+				for word2 in words[i+1:]:
+					wn_word2=wn.synsets(word2)
+					if len(wn_word2)==0:
+						print("this word is not in the dictionary : ", word2)
+						words.remove(word2)
+					else:				
+						wn_word2 = wn.synsets(word2)
+	
+						common_hyponyms= set(wn_word1.closure(hypo)).intersection(set(wn_word2.closure(hypo)))
+						print(common_hyponyms)
+						print(word1 + " " + word2 + "simlarity :",wn_word1[0].path_similarity(wn_word2[0]))
+						#common_lemmas = len(set(wn_word1.lemma_names).intersection(set(wn_word2.lemma_names)))
+						#print(common_lemmas)'''
+		'''
+				wn_word = wn.synsets(word)
+				if len(wn_word)==0:
+					print("this word is not in the dictionary : ", word)
+				else:	
+					print("Synset :", wn_word)
+					print("Hypernyms :", wn_word[0].hypernyms())
+					print("Member holonyms :", wn_word[0].member_holonyms())
+					common_lemmas = len(set(house.lemma_names).intersection(set(station.lemma_names)))
+		'''
 
 if __name__ == "__main__":
 	main()
