@@ -1,0 +1,1 @@
+campaign_adgroup_to_skip=['defen','catch','competi','cat']
