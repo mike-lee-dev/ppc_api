@@ -30,6 +30,7 @@ def read_collection_account_as_df(collection, account, db):
 	col=db[collection]	
 	#getting documents
 	cursor = col.find({"account": ObjectId(account)})
+	# cursor = col.find({})
 	#Converting the Cursor to Dataframe
 	list_cur = list(cursor)
 	df = pd.DataFrame(list_cur)

@@ -49,9 +49,9 @@ def read_sqr(account):
 def get_price():
 	df_price=mongo_db.read_collection_account_as_df('price_reports')
 	#get price for each SKU
-	df_price.groupby('SKU')
-	print(df_price)
-	return df_price
+	df_price = df_price[['sku', 'adGroupId', 'adId', 'asin', 'campaignId', 'price']]
+
+	return df_price[df_price['price'] > 0]
 
 #Clustering
 def read_clustering(account):
@@ -68,7 +68,7 @@ def read_category_listing_report(account):
 	account_file=account + '/raw/Category+Listings+Report.xlsx'
 	df=pd.read_excel(io=account_file,sheet_name='Template',header=1, engine="openpyxl")
 	return df
-	
+
 """
 def valid_price():
 	if today> sales_from_date and today<sale_end_date:

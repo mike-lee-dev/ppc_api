@@ -9,7 +9,6 @@ import math
 import glob
 
 
-
 def main(): #optimize all accounts
 	global_var.db=mongo_db.db_connect()
 	accounts = mongo_db.read_collection_as_df('accounts', global_var.db)
@@ -32,8 +31,6 @@ def optimize_account():
 	print(f"bid: \n{df_bid_history}")
 	df_price=input_output.get_price()
 	exit()
-	
-
 
 	df_history=merge_history(df_campaign, df_adgroup, df_keyword, df_kw_history)
 	print(df_history)
@@ -185,11 +182,6 @@ def get_slope_conv_value(df_campaign, df_history, df_bid, df_bid_history, accoun
 
 					dataframe.change_val_if_col_contains(df_bid,'a', t.a, 'Target Id', t.target_id)
 					dataframe.change_val_if_col_contains(df_bid,'conv_value', t.conv_value, 'Target Id', t.target_id)
-
-									
-
-
-
 
 
 def update_bid_excel(df_bid, account):
