@@ -27,7 +27,7 @@ def read_collection_as_df(collection, db):
 
 def read_collection_account_as_df(collection, account, db):
 	#select the collection within the database
-	col=db[collection]	
+	col=db[collection]
 	#getting documents
 	cursor = col.find({"account": ObjectId(account)})
 	# cursor = col.find({})

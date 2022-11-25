@@ -16,7 +16,7 @@ from sklearn.tree import export_graphviz
 import scipy
 import pydot
 
-def clustering(df, path):
+def clustering(df):
 	# df is the orignial dataframe
 	# RFpreproc is the dataframe with feature
 	# RF_filter is RFpreproc resampled weekly, aggregated by feature and filtered if feature has low observation
@@ -33,10 +33,10 @@ def clustering(df, path):
 	RF_decoding=decoding_node(RF_preproc, lecampaign, leadgroup, letargeting, lematchtype)
 
 	dfclustered=aggregate_by_node(RF_decoding, df)
-	dfclustered.to_csv(path + "/prediction/merge_test.csv")
+	# dfclustered.to_csv(path + "/prediction/merge_test.csv")
 
 	dfclustered, RF_decoding=kill_small_leave(RF_decoding, df, bintree)
-	dfclustered.to_csv(path + "/prediction/kill_small_leave.csv")
+	# dfclustered.to_csv(path + "/prediction/kill_small_leave.csv")
 	return dfclustered, RF_decoding
 
 
