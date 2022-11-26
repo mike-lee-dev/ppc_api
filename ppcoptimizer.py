@@ -31,7 +31,6 @@ def optimize_account():
     df_bid_history = input_output.read_bid_history()
     print(f"bid: \n{df_bid_history}")
     df_price = input_output.get_price()
-    exit()
 
     df_history = merge_history(df_campaign, df_adgroup, df_keyword, df_kw_history)
     print(df_history)
@@ -52,8 +51,7 @@ def merge_history(df_campaign, df_adgroup, df_keyword, df_kw_history):
     print(df_kw_history.dtypes)
     df_history = df_history.merge(df_kw_history, how='left', on=['campaignId', 'adGroupId', 'keywordId'])
     print(df_history.dtypes)
-    print(f"History merged:\n{df_history}")
-    exit()
+    return df_history
 
 
 # df_history=df_history.merge(df_campaign, how='left', on='campaignId')
