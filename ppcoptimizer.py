@@ -36,7 +36,7 @@ def optimize_account():
     print(df_history)
     df_clustered, RF_decoding = initiate_clustering(df_history)
     df_forecast = conversion_rate(df_clustered, RF_decoding)
-    df_bid_SP  # =merge_forecast_bid(df_bid_SP, df_forecast)
+    # df_bid_SP = merge_forecast_bid(df_bid_SP, df_forecast)
     df_bid_history_SP = dataframe.to_datetime64(input_output.read_bid_history('SP'))
     df_bid_SP = get_slope_conv_value(df_campaign, df_history_SP, df_bid_SP, df_bid_history_SP)
     df_bid = compute_bid(df_bid)
