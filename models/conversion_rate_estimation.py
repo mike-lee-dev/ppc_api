@@ -22,6 +22,7 @@ def initiate(df_clustered, path):
     S_t = pd.DataFrame(index=df_clustered['Leave'].unique(), columns=['S'])
     y_t = pd.DataFrame(index=df_clustered['Leave'].unique(), columns=['y'])
     threshold = 50
+    dates = df_clustered.sort_index().index.unique()
     # if can find file, read, else create new filter
     try:  # still need to be implemented, but we need to save clustering rules first
         R, Q, P, H, F, x_t = input_output.read_kalman_state(path)
@@ -33,7 +34,7 @@ def initiate(df_clustered, path):
         kf.F = F
         kf.x = x_t.to_numpy()
         print(f"Kalman filter could be loaded successfully :{kf}")
-        sampled_data = auto_sampling(df_clustered, threshold, i, end_date)
+        sampled_data = auto_sampling(df_clustered, threshold, end_date)
         m_t = get_kalman_measurment(x_t, sampled_data.set_index('Leave'))
         kf = initiate_measurment_covariance(kf, m_t, x_t)
         kf = update(kf, m_t)
@@ -51,17 +52,13 @@ def initiate(df_clustered, path):
         kf = initiate_measurment_covariance(kf, m_t, x_t)
         kf = initiate_process_covariance(kf, df_clustered)
         kf = initiate_naive_model(kf, n)
-        dic = {}
-        look_back_window = 14
 
-        # dates = pd.date_range(df_clustered.index[14], df_clustered.index[-1])
-        dates = df_clustered.sort_index().index.unique()
         # kf, x_t=predict_and_save(kf, x_t)
         for i, end_date in enumerate(dates):  # range(look_back_window, len(dates)):
             # df.loc[dates[i]] = [None, None, None]
             # sampled_data=constant_sampling(df_clustered, look_back_window, i, dates)
             kf, x_t = predict_and_save(kf, x_t, path)
-            sampled_data = auto_sampling(df_clustered, threshold, i,
+            sampled_data = auto_sampling(df_clustered, threshold,
                                          end_date)  # pd.to_datetime('2022-03-01', format='%Y-%m-%d'))#end_date)
             m_t = get_kalman_measurment(x_t, sampled_data.set_index('Leave'))
             kf = update_and_save(kf, m_t, x_t)
@@ -209,7 +206,7 @@ def initiate_measurment_covariance(kf, m_t, x_t):  # Measurment covariance matri
     mean = m_t['conversions'].sum() / m_t['clicks'].sum()
     m_t['clicks'] = m_t['clicks'].apply(lambda x: math.nan if x == 0 else x)
     r = abs(1 / (m_t['clicks'] + 1) * ((m_t['conversions'] + mean) / (m_t['clicks']) + 1) * (
-                1 + m_t['clicks'] - m_t['conversions'] - mean) / (m_t['clicks']) + 1)  # **2 #=σ^2
+            1 + m_t['clicks'] - m_t['conversions'] - mean) / (m_t['clicks']) + 1)  # **2 #=σ^2
     # if we get no click, R needs to be high
     r = r.fillna(1000)
     R_t = pd.DataFrame(data=np.diag(r), index=x_t.index, columns=x_t.index)
@@ -271,8 +268,8 @@ def constant_sampling(df_clustered, look_back_window, i, dates):
     return day_data
 
 
-def auto_sampling(df_clustered, threshold, i, end_date):
-    df_auto_sampling = pd.DataFrame(columns=['Leave', 'Start date', 'End date', 'Range', 'clicks', 'conversions'])
+def auto_sampling(df_clustered, threshold, end_date):
+    df_auto_sampling = pd.DataFrame(columns=['Leave', 'startDate', 'endDate', 'Range', 'clicks', 'conversions'])
 
     for leave in df_clustered.loc[:end_date].Leave.unique():
         df_leave = df_clustered.loc[:end_date].query('Leave == @leave').copy()
@@ -280,8 +277,8 @@ def auto_sampling(df_clustered, threshold, i, end_date):
         if flag:
             df_auto_sampling = df_auto_sampling.append(result)
     # df_auto_sampling = pd.concat([df_auto_sampling, result])
-    df_auto_sampling['Start date'] = df_auto_sampling['Start date'].apply(lambda x: x.date())
-    df_auto_sampling['End date'] = df_auto_sampling['End date'].apply(lambda x: x.date())
+    df_auto_sampling['startDate'] = df_auto_sampling['startDate'].apply(lambda x: x.date())
+    df_auto_sampling['endDate'] = df_auto_sampling['endDate'].apply(lambda x: x.date())
     return df_auto_sampling
 
 

@@ -7,37 +7,32 @@ import global_var
 
 
 # account Objects
-def get_campaign():
-    df_campaign = mongo_db.read_collection_account_as_df('campaigns', global_var.account, global_var.db)
+def get_campaign(profileId):
+    df_campaign = mongo_db.read_collection_account_as_df('campaigns', profileId, global_var.db)
     return df_campaign
 
 
-def get_adgroup():
-    df_adgroup = mongo_db.read_collection_account_as_df('adgroups', global_var.account, global_var.db)
+def get_adgroup(profileId):
+    df_adgroup = mongo_db.read_collection_account_as_df('adgroups', profileId, global_var.db)
     return df_adgroup
 
 
-def get_keyword():
-    df_keyword = mongo_db.read_collection_account_as_df('keywords', global_var.account, global_var.db)
+def get_keyword(profileId):
+    df_keyword = mongo_db.read_collection_account_as_df('keywords', profileId, global_var.db)
     return df_keyword
 
 
-# Bids
-def read_bid():
-    df_bid = mongo_db.read_collection_as_df('keywords', global_var.account, global_var.db)
-    return df_bid
-
-
-def read_bid_history():
-    df_bid_history = mongo_db.read_collection_as_df('bids', global_var.db)
+def read_bid_history(profileId):
+    df_bid_history = mongo_db.read_collection_account_as_df('bids_history', profileId, global_var.db)
     return df_bid_history
 
 
 # Performance report
-def read_report():
-    df_history = mongo_db.read_collection_as_df('keyword_reports', global_var.db)
-    df_history['conversions'] = df_history['purchases30d']
-    df_history['sales'] = df_history['sales30d']
+def read_keyword_history(profileId):
+    df_history = mongo_db.read_collection_account_as_df('keyword_history', profileId, global_var.db)
+    if len(df_history) > 0:
+        df_history['conversions'] = df_history['purchases30d']
+        df_history['sales'] = df_history['sales30d']
     return df_history
 
 
@@ -52,12 +47,13 @@ def read_sqr(account):
 
 # read Active Listing Report - We need it to get the price
 
-def get_price():
-    df_price = mongo_db.read_collection_account_as_df('price_reports')
-    # get price for each SKU
-    df_price = df_price[['sku', 'adGroupId', 'adId', 'asin', 'campaignId', 'price']]
-
-    return df_price[df_price['price'] > 0]
+def get_price(profileId):
+    df_price = mongo_db.read_collection_account_as_df('price_reports', profileId, global_var.db)
+    if len(df_price) > 0:
+        df_price = df_price[['sku', 'adGroupId', 'adId', 'asin', 'campaignId', 'price']]
+        return df_price[df_price['price'] > 0]
+    else:
+        return df_price
 
 
 # Clustering
@@ -111,17 +107,17 @@ def read_kalman_state(account):
     P = np.loadtxt(account + "/prediction/P.txt")
     H = np.loadtxt(account + "/prediction/H.txt")
     F = np.loadtxt(account + "/prediction/F.txt")
-    x = pd.read_csv(account + "/prediction/x.txt", squeeze=True)
+    x = pd.read_csv(account + "/prediction/x.csv", squeeze=True)
     return R, Q, P, H, F, x
 
 
-def write_kalman_state(R, Q, P, H, F, x, account):
-    np.savetxt(account + "/prediction/R.txt", R)
-    np.savetxt(account + "/prediction/Q.txt", Q)
-    np.savetxt(account + "/prediction/P.txt", P)
-    np.savetxt(account + "/prediction/H.txt", H)
-    np.savetxt(account + "/prediction/F.txt", F)
-    x.to_csv(account + "/prediction/x.csv")
+def write_kalman_state(R, Q, P, H, F, x, path):
+    np.savetxt(path + "/prediction/R.txt", R)
+    np.savetxt(path + "/prediction/Q.txt", Q)
+    np.savetxt(path + "/prediction/P.txt", P)
+    np.savetxt(path + "/prediction/H.txt", H)
+    np.savetxt(path + "/prediction/F.txt", F)
+    x.to_csv(path + "/prediction/x.csv")
 
 
 # Prediction by date

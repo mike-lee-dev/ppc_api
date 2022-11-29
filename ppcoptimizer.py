@@ -7,51 +7,55 @@ from models import cluster, conversion_rate_estimation, object_structure, comput
 from datetime import datetime, date
 import math
 import glob
+import os
 
 
 def main():  # optimize all accounts
     global_var.db = mongo_db.db_connect()
     accounts = mongo_db.read_collection_as_df('accounts', global_var.db)
-    print(accounts)
-    # for account  in accounts:
-    optimize_account()
+    for profileId in accounts['profileId']:
+        print(f"{profileId}  --- Merge")
+        optimize_account(profileId)
 
 
-def optimize_account():
-    df_campaign = input_output.get_campaign()
-    print(f"Campaign :\n{df_campaign}")
-    df_adgroup = input_output.get_adgroup()
-    print(f"Adgroup: \n{df_adgroup}")
-    df_keyword = input_output.get_keyword()
-    print(f"Keyword: \n{df_keyword}")
-
-    df_kw_history = input_output.read_report()
-    print(f"History: \n{df_kw_history}")
-
-    df_bid_history = input_output.read_bid_history()
-    print(f"bid: \n{df_bid_history}")
-    df_price = input_output.get_price()
-
+def optimize_account(profileId):
+    df_campaign = input_output.get_campaign(profileId)
+    # print(f"Campaign :\n{df_campaign}")
+    df_adgroup = input_output.get_adgroup(profileId)
+    # print(f"Adgroup: \n{df_adgroup}")
+    df_keyword = input_output.get_keyword(profileId)
+    # print(f"Keyword: \n{df_keyword}")
+    df_kw_history = input_output.read_keyword_history(profileId)
+    # print(f"Keyword History: \n{df_kw_history}")
+    df_bid_history = input_output.read_bid_history(profileId)
+    # print(f"Bids History: \n{df_bid_history}")
+    df_price = input_output.get_price(profileId)
+    # print(f"Price Report: \n{df_price}")
     df_history = merge_history(df_campaign, df_adgroup, df_keyword, df_kw_history)
-    print(df_history)
-    df_clustered, RF_decoding = initiate_clustering(df_history)
-    df_forecast = conversion_rate(df_clustered, RF_decoding)
+    # print(df_history)
+    df_clustered, RF_decoding = initiate_clustering(df_history, profileId)
+    # print(df_clustered, RF_decoding)
+    df_forecast = conversion_rate(df_clustered, RF_decoding, profileId)
+    # print(df_forecast)
     # df_bid_SP = merge_forecast_bid(df_bid_SP, df_forecast)
-    df_bid_history_SP = dataframe.to_datetime64(input_output.read_bid_history('SP'))
+    # df_bid_history_SP = dataframe.to_datetime64(input_output.read_bid_history('SP'))
     df_bid_SP = get_slope_conv_value(df_campaign, df_history_SP, df_bid_SP, df_bid_history_SP)
-    df_bid = compute_bid(df_bid)
-    df_bid_SP.to_csv(global_var.account + "/prediction/newbids_SP.csv")
-    update_bid_excel(df_bid_SP, 'SP')
+    # df_bid = compute_bid(df_bid)
+    # df_bid_SP.to_csv(global_var.account + "/prediction/newbids_SP.csv")
+    # update_bid_excel(df_bid_SP, 'SP')
 
 
 def merge_history(df_campaign, df_adgroup, df_keyword, df_kw_history):
-    df_history = df_keyword.merge(df_adgroup, how='left', on=['adGroupId', 'campaignId'])
-    print(df_history.dtypes)
-    df_history = df_history.merge(df_campaign, how='left', on='campaignId')
-    print(df_kw_history.dtypes)
-    df_history = df_history.merge(df_kw_history, how='left', on=['campaignId', 'adGroupId', 'keywordId'])
-    print(df_history.dtypes)
-    return df_history
+    try:
+        df_history = df_keyword.merge(df_adgroup, how='left', on=['adGroupId', 'campaignId'])
+        # print(df_history.dtypes)
+        df_history = df_history.merge(df_campaign, how='left', on='campaignId')
+        # print(df_kw_history.dtypes)
+        df_history = df_history.merge(df_kw_history, how='left', on=['campaignId', 'adGroupId', 'keywordId'])
+        # print(df_history.dtypes)
+        return df_history
+    except:
+        return pd.DataFrame()
 
 
 # df_history=df_history.merge(df_campaign, how='left', on='campaignId')
@@ -93,29 +97,36 @@ def merge_no_date(df_bid, df_history, campaign_type, account):
 """
 
 
-def initiate_clustering(df_history, account):
-    # try:
-    #	df_clustered, RF_decoding=input_output.read_clustering() We need to update the history, this can't work. We should store the rules if we don't want to cluster each time
-    # except:
-    df_clustered, RF_decoding = cluster.clustering(df_history, account)
-    input_output.write_clustering(df_clustered, RF_decoding, account)
+def initiate_clustering(df_history, profileId):
+    try:
+        df_clustered, RF_decoding = cluster.clustering(df_history, profileId)
+        return df_clustered, RF_decoding
+    except:
+        return pd.DataFrame(), pd.DataFrame()
+    # input_output.write_clustering(df_clustered, RF_decoding, account)
     # df_clustered=cluster.aggregate_by_node(RF_decoding, df_history)
-    return df_clustered, RF_decoding
+    # return df_clustered, RF_decoding
 
 
-def conversion_rate(df_clustered, RF_decoding, account):
-    kf, X_t = conversion_rate_estimation.initiate(df_clustered, account)
+def conversion_rate(df_clustered, RF_decoding, profileId):
+    if not len(df_clustered) == 0:
+        if not os.path.exists("./data/" + profileId):
+            os.mkdir("./data/" + profileId)
+            os.mkdir("./data/" + profileId + "/prediction")
+        kf, X_t = conversion_rate_estimation.initiate(df_clustered, './data/' + profileId)
+        df_forecast = X_t.join(RF_decoding.set_index('Leave'), how='outer').drop_duplicates()
+        df_forecast.to_csv("./data/" + profileId + "/prediction/df_forecast.csv")
+        return df_forecast
+    else:
+        print("No data")
+        return pd.DataFrame()
 
-    df_forecast = X_t.join(RF_decoding.set_index('Leave'), how='outer').drop_duplicates()
-    df_forecast.to_csv(account + "/prediction/df_forecast.csv")
-    return df_forecast
 
-
-"""
 def merge_forecast_bid(df_bid, df_forecast):
-	df_bid=pd.merge(df_bid, df_forecast, how='left', left_on=['campaignName', 'adGroupName','Targeting', 'matchType'], right_on=['Campaign_Name', 'Ad_Group_Name','Targeting', 'Match_Type'])
-	return df_bid
-"""
+    df_bid = pd.merge(df_bid, df_forecast, how='left',
+                      left_on=['campaignName', 'adGroupName', 'Targeting', 'matchType'],
+                      right_on=['Campaign_Name', 'Ad_Group_Name', 'Targeting', 'Match_Type'])
+    return df_bid
 
 
 def get_slope_conv_value(df_campaign, df_history, df_bid, df_bid_history, account):

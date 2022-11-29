@@ -17,7 +17,7 @@ import scipy
 import pydot
 
 
-def clustering(df):
+def clustering(df, profileId):
     # df is the orignial dataframe
     # RFpreproc is the dataframe with feature
     # RF_filter is RFpreproc resampled weekly, aggregated by feature and filtered if feature has low observation
@@ -116,8 +116,8 @@ def random_forest(RF_filter):
 
     regr.fit(RF_filter, CR_filter)
     feat_importances = pd.Series(regr.feature_importances_, index=RF_filter.columns)
-    print("Random Forest feature importance \n: ")
-    print(feat_importances.sort_values(ascending=False))
+    # print("Random Forest feature importance \n: ")
+    # print(feat_importances.sort_values(ascending=False))
     return regr
 
 
@@ -134,7 +134,7 @@ def read_binear_tree(regr, RF_filter):
     f = open('tree.dot', 'r')
     data_tree = f.read()
     # out = StringIO()
-    print(data_tree)
+    # print(data_tree)
     f.close()
     return data_tree
 
@@ -186,10 +186,10 @@ def binear_tree(data_tree, RF_preproc):
 
     dfrules['Node'] = dfrules['Node'].astype(int)
     dfrules = dfrules.set_index('Node')
-    print(dfrules)
+    # print(dfrules)
 
     leaves = [leave.identifier for leave in bintree.leaves()]
-    print("leaves :", leaves)
+    # print("leaves :", leaves)
 
     # tag data with the leave number and save matrix of hierarchy
     # depth=bintree.depth()
@@ -235,7 +235,7 @@ def decoding_node(RF_preproc, lecampaign, leadgroup, letargeting, lematchtype):
     # RF_decoding=RF_decoding[['Leave','Portfolio_name', 'campaignName', 'adGroupName', 'targeting', 'matchType']]
     RF_decoding = RF_decoding[['Leave', 'campaignName', 'adGroupName', 'targeting', 'matchType']]
     RF_decoding = RF_decoding.drop_duplicates(subset=['campaignName', 'adGroupName', 'targeting', 'matchType'])
-    print(f"decoding: \n{RF_decoding}")
+    # print(f"decoding: \n{RF_decoding}")
     return RF_decoding
 
 
