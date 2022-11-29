@@ -25,6 +25,7 @@ def initiate(df_clustered, path):
     dates = df_clustered.sort_index().index.unique()
     # if can find file, read, else create new filter
     try:  # still need to be implemented, but we need to save clustering rules first
+        print("existing file update")
         R, Q, P, H, F, x_t = input_output.read_kalman_state(path)
         kf, n = create_kalman_filter(x_t)
         kf.R = R
@@ -37,7 +38,7 @@ def initiate(df_clustered, path):
         sampled_data = auto_sampling(df_clustered, threshold, end_date)
         m_t = get_kalman_measurment(x_t, sampled_data.set_index('Leave'))
         kf = initiate_measurment_covariance(kf, m_t, x_t)
-        kf = update(kf, m_t)
+        kf = kf.update(kf, m_t)
         input_output.append_state_history(dates[i - 1].date(), x_t, m_t, path)
         print(f"state: {kf.x}")
         kf = predict_and_save(kf, x_t, path)
