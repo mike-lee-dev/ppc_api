@@ -37,9 +37,9 @@ def optimize_account(profileId):
     # print(df_clustered, RF_decoding)
     df_forecast = conversion_rate(df_clustered, RF_decoding, profileId)
     # print(df_forecast)
-    # df_bid_SP = merge_forecast_bid(df_bid_SP, df_forecast)
-    # df_bid_history_SP = dataframe.to_datetime64(input_output.read_bid_history('SP'))
-    # df_bid_SP = get_slope_conv_value(df_campaign, df_history_SP, df_bid_SP, df_bid_history_SP)
+    df_bid_history_merge = merge_forecast_bid(df_campaign, df_adgroup, df_keyword, df_kw_history, df_forecast)
+    # df_bid_history_merge.to_csv('./data/df_bid_history_merge.csv')
+    df_bid_conv = get_slope_conv_value(df_campaign, df_history, df_kw_history, df_bid_history_merge, './data')
     # df_bid = compute_bid(df_bid)
     # df_bid_SP.to_csv(global_var.account + "/prediction/newbids_SP.csv")
     # update_bid_excel(df_bid_SP, 'SP')
@@ -48,11 +48,8 @@ def optimize_account(profileId):
 def merge_history(df_campaign, df_adgroup, df_keyword, df_kw_history):
     try:
         df_history = df_keyword.merge(df_adgroup, how='left', on=['adGroupId', 'campaignId'])
-        # print(df_history.dtypes)
         df_history = df_history.merge(df_campaign, how='left', on='campaignId')
-        # print(df_kw_history.dtypes)
         df_history = df_history.merge(df_kw_history, how='left', on=['campaignId', 'adGroupId', 'keywordId'])
-        # print(df_history.dtypes)
         return df_history
     except:
         return pd.DataFrame()
@@ -98,10 +95,10 @@ def merge_no_date(df_bid, df_history, campaign_type, account):
 
 
 def initiate_clustering(df_history, profileId):
-    try:
+    if len(df_history) > 0:
         df_clustered, RF_decoding = cluster.clustering(df_history, profileId)
         return df_clustered, RF_decoding
-    except:
+    else:
         return pd.DataFrame(), pd.DataFrame()
     # input_output.write_clustering(df_clustered, RF_decoding, account)
     # df_clustered=cluster.aggregate_by_node(RF_decoding, df_history)
@@ -122,15 +119,22 @@ def conversion_rate(df_clustered, RF_decoding, profileId):
         return pd.DataFrame()
 
 
-def merge_forecast_bid(df_bid, df_forecast):
-    df_bid = pd.merge(df_bid, df_forecast, how='left',
-                      left_on=['campaignName', 'adGroupName', 'Targeting', 'matchType'],
-                      right_on=['Campaign_Name', 'Ad_Group_Name', 'Targeting', 'Match_Type'])
+def merge_forecast_bid(df_campaign, df_adgroup, df_keyword, df_kw_history, df_forecast):
+    if len(df_kw_history) == 0:
+        return pd.DataFrame()
+    df_kw_history = pd.merge(df_kw_history, df_campaign[['campaignId', 'campaignName']], on='campaignId')
+    df_kw_history = pd.merge(df_kw_history, df_adgroup[['adGroupId', 'adGroupName']], on="adGroupId")
+    df_kw_history = pd.merge(df_kw_history, df_keyword[['keywordId', 'matchType']], on="keywordId")
+    df_bid = pd.merge(df_kw_history, df_forecast, how='left',
+                      left_on=['campaignName', 'adGroupName', 'targeting', 'matchType'],
+                      right_on=['campaignName', 'adGroupName', 'targeting', 'matchType'])
     return df_bid
 
 
-def get_slope_conv_value(df_campaign, df_history, df_bid, df_bid_history, account):
+def get_slope_conv_value(df_campaign, df_history, df_bid, df_bid_history, path):
     # for every campaign, every adgroup, every target in df_bid get a + b
+    if len(df_campaign) == 0 or len(df_history) == 0 or len(df_bid) == 0 or len(df_bid_history) == 0:
+        return pd.DataFrame()
     try:
         default_conv_val = df_history['sales'].sum() / df_history['conversions'].sum()
     except ZeroDivisionError:
@@ -138,16 +142,16 @@ def get_slope_conv_value(df_campaign, df_history, df_bid, df_bid_history, accoun
 
     # loop over campaign, then adgroup, then target and add output (CV and slope) to the prediction file
     for i, cam in df_campaign.iterrows():  # we could use itertuples to speed up the performance but we would need to have the same format for all campaigns
-        if cam['Product'] == 'Sponsored Display':
-            if cam['Cost Type'] == 'vcpm':
-                continue
+        # if cam['Product'] == 'Sponsored Display':
+        #     if cam['Cost Type'] == 'vcpm':
+        #         continue
         df_campaign_history = dataframe.select_row_by_val(df_history, 'campaignName', cam['campaignName'])
         df_campaign_bid_history = dataframe.select_row_by_val(df_bid_history, 'campaignId', str(cam['campaignId']))
-        c = object_structure.Campaign(cam['campaignId'], cam['campaignName'], cam['State'], df_campaign_history,
+        c = object_structure.Campaign(cam['campaignId'], cam['campaignName'], cam['state'], df_campaign_history,
                                       df_campaign_bid_history, 1., default_conv_val)
         dataframe.change_val_if_col_contains(df_bid, 'a', c.a, 'campaignId', str(c.campaign_id))
         dataframe.change_val_if_col_contains(df_bid, 'conv_value', c.conv_value, 'campaignId', str(c.campaign_id))
-        dfadgr = dataframe.select_row_by_val(df_bid, 'Entity', "Ad Group", 'campaignId', str(c.campaign_id))
+        dfadgr = dataframe.select_row_by_val(df_bid, 'Entity', "adGroupId", 'campaignId', str(c.campaign_id))
 
         for j, adgr in dfadgr.iterrows():
             df_adgroup_history = dataframe.select_row_by_val(df_history, 'campaignName', c.campaign_name, 'adGroupName',
@@ -204,6 +208,37 @@ def get_slope_conv_value(df_campaign, df_history, df_bid, df_bid_history, accoun
 
                     dataframe.change_val_if_col_contains(df_bid, 'a', t.a, 'Target Id', t.target_id)
                     dataframe.change_val_if_col_contains(df_bid, 'conv_value', t.conv_value, 'Target Id', t.target_id)
+
+    dftarget = input_output.read_target(path)
+    df_bid = pd.merge(df_bid, dftarget, how='left', left_on='Campaign Id', right_on='Campaign Id').drop_duplicates(ignore_index=True)
+
+    df_bid['new_bid'] = df_bid['target_acos'] * df_bid['CR'] * df_bid['conv_value'] / df_bid['a']
+    df_bid['new_bid'] = df_bid.apply(lambda x: limit_bid_change(x['Bid'], x['new_bid'], 0.25), axis=1)
+    df_bid['new_bid'] = df_bid.apply(lambda x: valid_bid(x['new_bid']), axis=1)
+    return df_bid
+
+
+def limit_bid_change(old_bid, new_bid, max_change):
+    upper_limit = old_bid * (1 + max_change)
+    lower_limit = old_bid / (1 + max_change)
+    if new_bid > upper_limit:
+        new_bid = upper_limit
+    if new_bid < lower_limit:
+        new_bid = lower_limit
+    print(f"new bid after limit{new_bid}")
+    return new_bid
+
+
+def valid_bid(new_bid, campaign_type='SP'):
+    if campaign_type == 'SP':
+        limit = 0.02
+    if campaign_type == 'SB':
+        limit = 0.1
+    if new_bid < limit:
+        new_bid = limit
+    if new_bid == '':
+        new_bid = limit
+    return new_bid
 
 
 def update_bid_excel(df_bid, account):

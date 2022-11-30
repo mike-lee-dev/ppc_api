@@ -60,11 +60,7 @@ class _CampaignBase:
             self.b = 0
         else:
             try:
-                print(dataframe.select_row_by_val(dataframe.get_biddable_object(df_bid_history), 'campaignId',
-                                                  self.campaign_id).dropna(subset=['avg_cpc']))
-                self.a = market_curve.market_curve(
-                    dataframe.select_row_by_val(dataframe.get_biddable_object(df_bid_history), 'campaignId',
-                                                self.campaign_id).dropna(subset=['avg_cpc']))
+                self.a = market_curve.market_curve(dataframe.select_row_by_val(dataframe.get_biddable_object(df_bid_history), 'campaignId', self.campaign_id).dropna(subset=['avg_cpc']))
 
             except ValueError:
                 self.a = 1.
@@ -72,27 +68,27 @@ class _CampaignBase:
             print(f"the equation is {self.a} * maxcpc {self.b}")
 
     def get_conversion_value(self, df_history, df_bid_history):
-        if df_bid_history['Product'].iloc[0] == 'Sponsored Brands':
-            if dataframe.last_n_days(df_history, 30)['Conversions'].sum() >= 1:
-                self.conv_value = (
-                        dataframe.last_n_days(df_history, 30)['Sales'].sum() /
-                        dataframe.last_n_days(df_history, 30)['Conversions'].sum())
-            else:
-                pass  # account average
+        # if df_bid_history['Product'].iloc[0] == 'Sponsored Brands':
+        if dataframe.last_n_days(df_history, 30)['conversions'].sum() >= 1:
+            self.conv_value = (
+                    dataframe.last_n_days(df_history, 30)['sales30d'].sum() /
+                    dataframe.last_n_days(df_history, 30)['conversions'].sum())
+        else:
+            pass  # account average
         # self.conv_value=input_output.active_listing(global_var.path)['price'].mean()
 
-        else:
-            SKUs = dataframe.select_row_by_val(df_bid_history, 'Entity', 'Product Ad')
-            try:
-                listing = input_output.get_price(global_var.path)
-                self.conv_value = SKUs.merge(listing, how='left', left_on='SKU', right_on='seller-sku')['price'].mean()
-            except FileNotFoundError:
-                if dataframe.last_n_days(df_history, 30)['Conversions'].sum() > 0:
-                    self.conv_value = (
-                            dataframe.last_n_days(df_history, 30)['Sales'].sum() /
-                            dataframe.last_n_days(df_history, 30)['Conversions'].sum())
-                else:
-                    pass
+        # else:
+        #     SKUs = dataframe.select_row_by_val(df_bid_history, 'Entity', 'Product Ad')
+        #     try:
+        #         listing = input_output.get_price(global_var.path)
+        #         self.conv_value = SKUs.merge(listing, how='left', left_on='SKU', right_on='seller-sku')['price'].mean()
+        #     except FileNotFoundError:
+        #         if dataframe.last_n_days(df_history, 30)['Conversions'].sum() > 0:
+        #             self.conv_value = (
+        #                     dataframe.last_n_days(df_history, 30)['Sales'].sum() /
+        #                     dataframe.last_n_days(df_history, 30)['Conversions'].sum())
+        #         else:
+        #             pass
         print(f"the conversion value is {self.conv_value}")
 
 
@@ -138,9 +134,7 @@ class _AdgroupBase():  # (_CampaignBase):
             pass
         # used value from campaign
         else:
-            self.a = market_curve.market_curve(
-                dataframe.select_row_by_val(dataframe.get_biddable_object(df_bid_history), 'Ad Group Id',
-                                            self.adgroup_id).dropna(subset=['avg_cpc']))
+            self.a = market_curve.market_curve(dataframe.select_row_by_val(dataframe.get_biddable_object(df_bid_history), 'Ad Group Id', self.adgroup_id).dropna(subset=['avg_cpc']))
             self.b = 0
             print(f"the equation is {self.a} * maxcpc {self.b}")
 
@@ -159,12 +153,10 @@ class _AdgroupBase():  # (_CampaignBase):
 
                 if not prices.empty:
                     if len(SKUs['SKU'].value_counts()) > 0:
-                        self.conv_value = SKUs.merge(prices, how='left', left_on='SKU', right_on='seller-sku')[
-                            'price'].mean()  # we should filter only active SKUs
+                        self.conv_value = SKUs.merge(prices, how='left', left_on='SKU', right_on='seller-sku')['price'].mean()  # we should filter only active SKUs
                     else:
                         try:
-                            self.conv_value = SKUs.merge(prices, how='left', left_on='ASIN', right_on='asin1')[
-                                'price'].mean()  # for vendor
+                            self.conv_value = SKUs.merge(prices, how='left', left_on='ASIN', right_on='asin1')['price'].mean()  # for vendor
                         except:
                             pass
                 else:
@@ -224,8 +216,7 @@ class _TargetBase():  # (_AdgroupBase):
     def get_conv_rate():
         df = read_kalman_state()
         # cond=df['campaignId']==self.campaign_id & df['Ad Group Name']==self.adgroup_name & df['Targeting']==self.targeting & df['Match Type'] == self.match_type
-        cond = df['campaignId'] == self.campaign_id & df['Ad Group Id'] == self.adgroup_id & df[
-            'Targeting'] == self.targeting & df['Match Type'] == self.match_type
+        cond = df['campaignId'] == self.campaign_id & df['Ad Group Id'] == self.adgroup_id & df['Targeting'] == self.targeting & df['Match Type'] == self.match_type
         self.conv_rate = df.where(cond)  # would be cleaner to have targetingID
 
     def get_slope(self, df_bid_history):
@@ -236,9 +227,7 @@ class _TargetBase():  # (_AdgroupBase):
         # used value from adgroup
         else:
             # self.a=market_curve.market_curve(dataframe.select_row_by_val(dataframe.get_biddable_object(df_bid_history),'Keyword or Product Targeting',self.target_name).dropna(subset=['Bid','avg_cpc']))
-            self.a = market_curve.market_curve(
-                dataframe.select_row_by_val(dataframe.get_biddable_object(df_bid_history), 'Targeting',
-                                            self.target_name).dropna(subset=['avg_cpc']))
+            self.a = market_curve.market_curve(dataframe.select_row_by_val(dataframe.get_biddable_object(df_bid_history), 'Targeting', self.target_name).dropna(subset=['avg_cpc']))
 
             # print(self.a)
             # if self.target_name =='+copper +hand':

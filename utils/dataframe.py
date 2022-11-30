@@ -57,7 +57,7 @@ def get_biddable_object(df):
 
 
 def add_date_dataframe(df, date):
-    df['Date'] = date
+    df['date'] = date
     # df['Date']=pd.to_datetime(df['Date'])#.dt.date
     return df
 
@@ -69,12 +69,13 @@ def join_bid_history(df_bid, dfnode):
 def last_n_days(df, n):
     today = pd.to_datetime("today")
     begin = pd.to_datetime(today - pd.Timedelta(days=n))
+    # df["date"] = df["date"].apply(lambda x: datetime.strptime(x, '%Y-%m-%d'))
+
     try:
-        mask = ((df['Date'] > begin))  # & (df['Date'] <= today))
+        mask = (df['date'] > begin)  # & (df['Date'] <= today))
     except KeyError:
         df = df.reset_index()
-        print(df)
-        mask = ((df['Date'] > begin))
+        mask = (df['date'] > begin)
     df = df.loc[mask]
     if df.empty:
         print('DataFrame is empty!')
@@ -84,5 +85,5 @@ def last_n_days(df, n):
 
 def to_datetime64(df):
     # convert date from datetime to datetime64
-    df['Date'] = df['Date'].astype('datetime64')
+    df['date'] = df['date'].astype('datetime64')
     return df

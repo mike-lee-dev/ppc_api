@@ -25,7 +25,7 @@ def initiate(df_clustered, path):
     dates = df_clustered.sort_index().index.unique()
     # if can find file, read, else create new filter
     try:  # still need to be implemented, but we need to save clustering rules first
-        print("existing file update")
+        # print("existing file update")
         R, Q, P, H, F, x_t = input_output.read_kalman_state(path)
         kf, n = create_kalman_filter(x_t)
         kf.R = R
@@ -34,16 +34,28 @@ def initiate(df_clustered, path):
         kf.H = H
         kf.F = F
         kf.x = x_t.to_numpy()
-        print(f"Kalman filter could be loaded successfully :{kf}")
-        sampled_data = auto_sampling(df_clustered, threshold, end_date)
-        m_t = get_kalman_measurment(x_t, sampled_data.set_index('Leave'))
-        kf = initiate_measurment_covariance(kf, m_t, x_t)
-        kf = kf.update(kf, m_t)
-        input_output.append_state_history(dates[i - 1].date(), x_t, m_t, path)
-        print(f"state: {kf.x}")
-        kf = predict_and_save(kf, x_t, path)
+        # print(f"Kalman filter could be loaded successfully :{kf}")
+
+        # for i, end_date in enumerate(dates):
+        #     sampled_data = auto_sampling(df_clustered, threshold,
+        #                                  end_date)  # pd.to_datetime('2022-03-01', format='%Y-%m-%d'))#end_date)
+        #     m_t = get_kalman_measurment(x_t, sampled_data.set_index('Leave'))
+        #     kf = update_and_save(kf, m_t, x_t)
+        #     K_t[['K']] = np.reshape(kf.K.diagonal(), (-1, 1))
+        #     x_t[['x_prior']] = kf.x_prior
+        #     x_t[['x_post ']] = kf.x_post
+        #     P_t[['P_t']] = np.reshape(kf.P.diagonal(), (-1, 1))
+        #     P_t[['P_t_prior']] = np.reshape(kf.P_prior.diagonal(), (-1, 1))
+        #     P_t[['P_t_post']] = np.reshape(kf.P_post.diagonal(), (-1, 1))
+        #     Q_t[['Q']] = np.reshape(kf.Q.diagonal(), (-1, 1))
+        #     R_t[['R']] = np.reshape(kf.R.diagonal(), (-1, 1))
+        #     S_t[['S']] = np.reshape(kf.S.diagonal(), (-1, 1))
+        #     y_t[['y']] = kf.y
+        #     input_output.append_state_history(dates[i - 1].date(), x_t, m_t, K_t, P_t, Q_t, R_t, S_t, y_t, path)
+        # print(f"state: {kf.x}")
+        # kf = predict_and_save(kf, x_t, path)
     except (FileNotFoundError, OSError):
-        print(f"Kalman filter not found, new Kalman filter needs to be created")
+        # print(f"Kalman filter not found, new Kalman filter needs to be created")
         x_t = initiate_kalman_state(df_clustered)
         m_t = get_kalman_measurment(x_t, df_clustered)
         kf, n = create_kalman_filter(x_t)
@@ -154,8 +166,8 @@ def initiate_kalman_state(df_clustered):
 
 def set_index_date(df_clustered):
     # Initial State Matrix: we take the conversion rate of the 3 last months
-    df_clustered['Date'] = df_clustered['Date'].dt.date
-    df_clustered = df_clustered.set_index('Date')
+    df_clustered['date'] = df_clustered['date'].dt.date
+    df_clustered = df_clustered.set_index('date')
     df_clustered = df_clustered.sort_index()
     return df_clustered
 
@@ -172,7 +184,6 @@ def get_kalman_measurment(x_t, df_clustered):
     # the ratio of the variance of the prediction to the measurement is zero.
     # The result will be a new prediction that maintains same state but
     # whose variance will grow according to the process noise.
-    print(df_clustered)
     try:
         mean = df_clustered['conversions'].sum() / df_clustered['clicks'].sum()
     except ZeroDivisionError:
@@ -263,14 +274,12 @@ def constant_sampling(df_clustered, look_back_window, i, dates):
     day_data['Date'] = dates[i]
     day_data.set_index('Date', inplace=True)
     dic[dates[i]] = day_data
-    print(f'From {dates[i - look_back_window].date()} to {dates[i - 1].date()} (both inclusive)')
-    print(day_data.set_index('Leave'))
-    print('~' * 100)
     return day_data
 
 
 def auto_sampling(df_clustered, threshold, end_date):
-    df_auto_sampling = pd.DataFrame(columns=['Leave', 'startDate', 'endDate', 'Range', 'clicks', 'conversions'])
+    df_auto_sampling = pd.DataFrame(columns=['Leave', 'Start date', 'End date', 'Range', 'clicks', 'conversions'])
+    # df_auto_sampling = pd.DataFrame(columns=['Leave', 'startDate', 'endDate', 'Range', 'Clicks', 'Conversions'])
 
     for leave in df_clustered.loc[:end_date].Leave.unique():
         df_leave = df_clustered.loc[:end_date].query('Leave == @leave').copy()
@@ -278,8 +287,8 @@ def auto_sampling(df_clustered, threshold, end_date):
         if flag:
             df_auto_sampling = df_auto_sampling.append(result)
     # df_auto_sampling = pd.concat([df_auto_sampling, result])
-    df_auto_sampling['startDate'] = df_auto_sampling['startDate'].apply(lambda x: x.date())
-    df_auto_sampling['endDate'] = df_auto_sampling['endDate'].apply(lambda x: x.date())
+    df_auto_sampling['Start date'] = df_auto_sampling['Start date'].apply(lambda x: x.date())
+    df_auto_sampling['End date'] = df_auto_sampling['End date'].apply(lambda x: x.date())
     return df_auto_sampling
 
 
