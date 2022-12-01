@@ -20,12 +20,16 @@ def main():  # optimize all accounts
 
 def optimize_account(profileId):
     df_campaign = input_output.get_campaign(profileId)
+    # print(f"Campaign: {len(df_campaign)}")
     # print(f"Campaign :\n{df_campaign}")
     df_adgroup = input_output.get_adgroup(profileId)
+    # print(f"df_adgroup: {len(df_adgroup)}")
     # print(f"Adgroup: \n{df_adgroup}")
     df_keyword = input_output.get_keyword(profileId)
+    # print(f"df_keyword: {len(df_keyword)}")
     # print(f"Keyword: \n{df_keyword}")
     df_kw_history = input_output.read_keyword_history(profileId)
+    # print(f"df_kw_history: {len(df_kw_history)}")
     # print(f"Keyword History: \n{df_kw_history}")
     df_bid_history = input_output.read_bid_history(profileId)
     # print(f"Bids History: \n{df_bid_history}")
@@ -138,7 +142,7 @@ def get_slope_conv_value(df_campaign, df_history, df_bid, df_bid_history, path):
     try:
         default_conv_val = df_history['sales'].sum() / df_history['conversions'].sum()
     except ZeroDivisionError:
-        default_conv_val = 20.
+        default_conv_val = 20
 
     # loop over campaign, then adgroup, then target and add output (CV and slope) to the prediction file
     for i, cam in df_campaign.iterrows():  # we could use itertuples to speed up the performance but we would need to have the same format for all campaigns
@@ -161,8 +165,8 @@ def get_slope_conv_value(df_campaign, df_history, df_bid, df_bid_history, path):
             a = object_structure.Adgroup(
                 adgroup_id=adgr['adGroupId'],
                 adgroup_name=adgr['adGroupName'],
-                adgroup_status=adgr['State'],
-                adgroup_bid=adgr['Ad Group Default bid'],
+                adgroup_status=adgr['state'],
+                adgroup_bid=adgr['defaultBid'],
                 df_adgroup_history=df_adgroup_history,
                 df_adgroup_bid_history=df_adgroup_bid_history,
                 a=c.a,
@@ -181,12 +185,12 @@ def get_slope_conv_value(df_campaign, df_history, df_bid, df_bid_history, path):
                                                    str(a.adgroup_id))
 
             for k, target in dftarget.iterrows():
-                target_name = target['Targeting']
+                target_name = target['targeting']
                 df_target_history = dataframe.select_row_by_val(
                     df_history,
                     'campaignName', c.campaign_name,
                     'adGroupName', a.adgroup_name,
-                    'Targeting', target_name,
+                    'targeting', target_name,
                     'matchType', target['matchType']
                 )
                 df_target_bid_history = dataframe.select_row_by_val(
