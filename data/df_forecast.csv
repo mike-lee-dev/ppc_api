@@ -1,0 +1,242 @@
+,Unnamed: 0,CR,x_prior,x_post ,Date,campaignName,adGroupName,targeting,matchType
+0,1.0,0.1783202371143819,0.1784089587792484,0.1783202371143819,2022-11-18,,,,
+1,8.0,0.0884270720720206,0.088493472757215,0.0884270720720206,2022-11-18,,,,
+2,14.0,0.1510464931419798,0.1511614983516098,0.1510464931419798,2022-11-18,Brace - SP - BBM,bbm,+tendonitis +wrist,broad
+2,14.0,0.1510464931419798,0.1511614983516098,0.1510464931419798,2022-11-18,Brace - SP - Broad - Generic - GS,Generic Keywords,sport wrist brace,broad
+2,14.0,0.1510464931419798,0.1511614983516098,0.1510464931419798,2022-11-18,Brace - SP - Broad - Generic - GS,Generic Keywords,wrist brace typing,broad
+2,14.0,0.1510464931419798,0.1511614983516098,0.1510464931419798,2022-11-18,Brace - SP - Broad - Generic - GS,Generic Keywords,wrist relief for pain,broad
+2,14.0,0.1510464931419798,0.1511614983516098,0.1510464931419798,2022-11-18,Brace - SP - Broad - Generic - GS,Generic Keywords,gaming wrist brace,broad
+2,14.0,0.1510464931419798,0.1511614983516098,0.1510464931419798,2022-11-18,Brace - SP - Broad - Generic - GS,Generic Keywords,medical wrist brace,broad
+2,14.0,0.1510464931419798,0.1511614983516098,0.1510464931419798,2022-11-18,Brace - SP - Broad - Generic - GS,Generic Keywords,wrist wrap injury,broad
+2,14.0,0.1510464931419798,0.1511614983516098,0.1510464931419798,2022-11-18,Brace - SP - BBM,bbm,+copper +tendinitis,broad
+2,14.0,0.1510464931419798,0.1511614983516098,0.1510464931419798,2022-11-18,Brace - SP - BBM,bbm,+tendinitis +wrist,broad
+2,14.0,0.1510464931419798,0.1511614983516098,0.1510464931419798,2022-11-18,Brace - SP - BBM,bbm,+copper +brace,broad
+2,14.0,0.1510464931419798,0.1511614983516098,0.1510464931419798,2022-11-18,Brace - SP - Broad - Generic - GS,Generic Keywords,hand brace,broad
+2,14.0,0.1510464931419798,0.1511614983516098,0.1510464931419798,2022-11-18,Brace - SP - Broad - Generic - GS,Generic Keywords,hand stabilizer brace,broad
+2,14.0,0.1510464931419798,0.1511614983516098,0.1510464931419798,2022-11-18,Brace - SP - Broad - Generic - GS,Generic Keywords,hand wrist,broad
+2,14.0,0.1510464931419798,0.1511614983516098,0.1510464931419798,2022-11-18,Brace - SP - Broad - Generic - GS,Generic Keywords,hand wrist brace,broad
+2,14.0,0.1510464931419798,0.1511614983516098,0.1510464931419798,2022-11-18,Brace - SP - Broad - Generic - GS,Generic Keywords,hand wrist compression,broad
+2,14.0,0.1510464931419798,0.1511614983516098,0.1510464931419798,2022-11-18,Brace - SP - Broad - Generic - GS,Generic Keywords,support brace wrist,broad
+2,14.0,0.1510464931419798,0.1511614983516098,0.1510464931419798,2022-11-18,Brace - SP - Broad - Generic - GS,Generic Keywords,wrist brace,broad
+2,14.0,0.1510464931419798,0.1511614983516098,0.1510464931419798,2022-11-18,Brace - SP - Broad - Generic - GS,Generic Keywords,wrist stabilizer,broad
+3,22.0,0.2094402445092062,0.2094969587837167,0.2094402445092062,2022-11-18,,,,
+4,19.0,0.5506080950281155,0.5643170240681059,0.5506080950281155,2022-11-18,,,,
+5,13.0,0.0841036012573903,0.0842103918674449,0.0841036012573903,2022-11-18,,,,
+7,,,,,,Brace - SP - Broad - Injury KW - GS,Injury,wrist injury brace,broad
+7,,,,,,Brace - SP - Broad - Injury KW - GS,Injury,wrist injury support,broad
+7,,,,,,Brace - SP - Competitor manual,brace,night wrist brace,broad
+7,,,,,,Brace - SP - Exact - Injury KW - GS,Sprains,sprained wrist brace for men,exact
+7,,,,,,Brace - SP - Exact - Injury KW - GS,Sprains,sprained wrist brace for women,exact
+7,,,,,,Brace - SP - Exact - Injury KW - GS,Sprains,wrist brace for sprained wrist,exact
+7,,,,,,Catch all grouped,brace,canilleras para manos,phrase
+7,,,,,,Catch all grouped,brace,edema glove,broad
+7,,,,,,Catch all grouped,brace,edema glove,phrase
+7,,,,,,Gloves  - Competitor Brand - Exact,Gloves  - Competitor Brand - Exact,copper compression,phrase
+7,,,,,,Gloves  - Competitor Brand - Exact,Gloves  - Competitor Brand - Exact,copper fit gloves,exact
+7,,,,,,Gloves - SP - Cerebro - Amazons Choice - Exact,Gloves - SP - Cerebro - Amazons Choice - Exact,gloves carpal tunnel,exact
+7,,,,,,Gloves - SP - Cerebro - Exact,gloves,gaming gloves,exact
+7,,,,,,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,compression glove,phrase
+7,,,,,,Brace - SP - Broad - Injury KW - GS,Injury,wrist injury,broad
+7,,,,,,Brace - SP - Broad - Injury KW - GS,Injury,wrist injury support brace,broad
+7,,,,,,Brace - SP - Exact - Injury KW - GS,Sprains,sprained wrist brace left,exact
+7,,,,,,Brace - SP - Exact - Injury KW - GS,Tendinitis,wrist wraps tendonitis,exact
+7,,,,,,Catch all grouped,brace,wrist copper,broad
+7,,,,,,Catch all grouped,gloves,emf gloves,phrase
+7,,,,,,Gloves - SP - Cerebro - Amazons Choice - Exact,Gloves - SP - Cerebro - Amazons Choice - Exact,carpal tunnel gloves,exact
+7,,,,,,Gloves - SP - Cerebro - Exact,gloves,swelling reducer for hands,exact
+7,,,,,,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,swelling reducer for hands,phrase
+7,,,,,,Brace - SP - Broad - Injury KW - GS,Injury,wrist injury therapy,broad
+7,,,,,,Brace - SP - Competitor manual,brace,night wrist brace,phrase
+7,,,,,,Brace - SP - Exact - Injury KW - GS,Pain,hand pain relief,exact
+7,,,,,,Brace - SP - Exact - Injury KW - GS,Pain,wrist bandage pain,exact
+7,,,,,,Brace - SP - Exact - Injury KW - GS,Sprains,sprained wrist brace,exact
+7,,,,,,Gloves  - Competitor Brand - Exact,Gloves  - Competitor Brand - Exact,ace gloves,phrase
+7,,,,,,Gloves  - Competitor Brand - Exact,Gloves  - Competitor Brand - Exact,copper compression,exact
+7,,,,,,Gloves - SP - Cerebro - Amazons Choice - Exact,Gloves - SP - Cerebro - Amazons Choice - Exact,sewing gloves,exact
+7,,,,,,Gloves - SP - Cerebro - Exact,gloves,thumb compression sleeve,exact
+7,,,,,,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,copper glove,phrase
+7,,,,,,Brace - SP - Broad - Injury KW - GS,Injury,injury brace,broad
+7,,,,,,Gloves  - Competitor Brand - Exact,Gloves  - Competitor Brand - Exact,copper compression,broad
+7,,,,,,Gloves - SP - Cerebro - Exact,gloves,compression gloves for edema,exact
+7,,,,,,Brace - SP - Competitor manual,brace,night wrist support,broad
+7,,,,,,Brace - SP - Exact - Generic - GS,Left,left wrist brace women,exact
+7,,,,,,Brace - SP - Broad - Injury KW - GS,Tendinitis,tendonitis,broad
+7,,,,,,Brace - SP - Exact - Generic - GS,Generic Keywords,wrist braces,exact
+7,,,,,,Brace - SP - Exact - Generic - GS,Generic Keywords,wrist relief for pain,exact
+7,,,,,,Brace - SP - Exact - Generic - GS,Left,wrist brace left hand,exact
+7,,,,,,Brace - SP - Exact - Generic - GS,Right,right wrist brace women,exact
+7,,,,,,Catch all grouped,brace,wrist copper,phrase
+7,,,,,,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,anti arthritis gloves,phrase
+7,,,,,,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,arthriti glove,phrase
+7,,,,,,Brace - SP - Exact - Generic - GS,Generic Keywords,compression wrist brace,exact
+7,,,,,,Brace - SP - Exact - Generic - GS,Generic Keywords,wrist compression,exact
+7,,,,,,Brace - SP - Exact - Generic - GS,Generic Keywords,wrist wrap injury,exact
+7,,,,,,Brace - SP - Exact - Generic - GS,Right,right wrist support,exact
+7,,,,,,Brace - SP - Exact - Injury KW - GS,Pain,hand bandage pain,exact
+7,,,,,,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,arthriti compression,phrase
+7,,,,,,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,arthriti compression glove,phrase
+7,,,,,,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,arthriti pain,phrase
+7,,,,,,Brace - SP - Broad - Injury KW - GS,Injury,sport injury brace,broad
+7,,,,,,Brace - SP - Broad - Injury KW - GS,Injury,wrist injury recovery,broad
+7,,,,,,Brace - SP - Exact - Generic - GS,Generic Keywords,wristbands pain relief,exact
+7,,,,,,Brace - SP - Exact - Generic - GS,Left,wrist immobilizer left hand,exact
+7,,,,,,Brace - SP - Broad - Injury KW - GS,Tendinitis,brace tendonitis,broad
+7,,,,,,Brace - SP - Exact - Generic - GS,Generic Keywords,compression wrist support,exact
+7,,,,,,Brace - SP - Exact - Generic - GS,Generic Keywords,hand wrist,exact
+7,,,,,,Brace - SP - Exact - Generic - GS,Generic Keywords,wrist support,exact
+7,,,,,,Brace - SP - Exact - Generic - GS,Generic Keywords,wrist support for small wrists,exact
+7,,,,,,Gloves - SP - Cerebro - Amazons Choice - Exact,Gloves - SP - Cerebro - Amazons Choice - Exact,copper fit gloves for men,exact
+7,,,,,,Gloves - SP - Cerebro - Amazons Choice - Exact,Gloves - SP - Cerebro - Amazons Choice - Exact,typing gloves for cold hands,exact
+7,,,,,,Gloves - SP - Cerebro - Broad,Cerebro - Broad,compression hand arm sleeves for women,broad
+7,,,,,,Brace - SP - Broad - Injury KW - GS,Tendinitis,tendonitis wrist brace for women,broad
+7,,,,,,Catch all grouped,brace,comfybrace,phrase
+7,,,,,,Gloves - SP - Cerebro - Broad,Cerebro - Broad,compression socks for hand,broad
+7,,,,,,Brace - SP - Exact - Generic - GS,Generic Keywords,wrist immobilizer,exact
+7,,,,,,Gloves - SP - Cerebro - Amazons Choice - Exact,Gloves - SP - Cerebro - Amazons Choice - Exact,the gamer gloves,exact
+7,,,,,,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,arthriti pain relief,phrase
+7,,,,,,Catch all grouped,brace,hand pain,phrase
+7,,,,,,Gloves  - Competitor Brand - Exact,Gloves  - Competitor Brand - Exact,ace gloves,exact
+7,,,,,,Gloves - SP - Cerebro - Amazons Choice - Exact,Gloves - SP - Cerebro - Amazons Choice - Exact,gloves for typing in cold office,exact
+7,,,,,,Brace - SP - Broad - Injury KW - GS,Sprains,wrist sprain brace,broad
+7,,,,,,Brace - SP - Broad - Injury KW - GS,Tendinitis,tendinitis band wrist,broad
+7,,,,,,Brace - SP - Broad - Injury KW - GS,Tendinitis,tendonitis left wrist brace,broad
+7,,,,,,Brace - SP - Broad - Injury KW - GS,Tendinitis,tendonitis wrist band,broad
+7,,,,,,Brace - SP - Broad - Injury KW - GS,Tendinitis,tendonitis wrist brace,broad
+7,,,,,,Brace - SP - Broad - Injury KW - GS,Tendinitis,tendonitis wrist support,broad
+7,,,,,,Brace - SP - Competitor manual,brace,copper compression wrist support,exact
+7,,,,,,Brace - SP - Exact - Generic - GS,Generic Keywords,hand brace,exact
+7,,,,,,Brace - SP - Exact - Generic - GS,Generic Keywords,wrist injury brace,exact
+7,,,,,,Brace - SP - Exact - Generic - GS,Left,wrist splint left hand,exact
+7,,,,,,Brace - SP - Exact - Injury KW - GS,Pain,hand pain,exact
+7,,,,,,Brace - SP - Exact - Injury KW - GS,Pain,wrist pain,exact
+7,,,,,,Catch all grouped,brace,copper wrist band,broad
+7,,,,,,Catch all grouped,brace,wrist brace carpal tunnel,broad
+7,,,,,,Catch all grouped,brace,wrist orthosis,broad
+7,,,,,,Catch all grouped,brace,wrist orthosis,phrase
+7,,,,,,Catch all grouped,brace,wrist protection,broad
+7,,,,,,Catch all grouped,brace,wrist splint,broad
+7,,,,,,Catch all grouped,brace,wrist support,broad
+7,,,,,,Catch all grouped,brace,wrist wraps,broad
+7,,,,,,Catch all grouped,brace,wrist wraps,phrase
+7,,,,,,Catch all grouped,brace,wristbands carpal tunnel,broad
+7,,,,,,Catch all grouped,gloves,bowling gloves right hand,phrase
+7,,,,,,Catch all grouped,gloves,finger compression,phrase
+7,,,,,,Catch all grouped,gloves,finger gloves,broad
+7,,,,,,Catch all grouped,gloves,finger gloves,phrase
+7,,,,,,Catch all grouped,gloves,fingerless gloves,exact
+7,,,,,,Catch all grouped,gloves,fingerless gloves,phrase
+7,,,,,,Catch all grouped,gloves,fingerless gloves men,phrase
+7,,,,,,Catch all grouped,gloves,fingerless gloves women,exact
+7,,,,,,Catch all grouped,gloves,gloves,broad
+7,,,,,,Catch all grouped,gloves,gloves men,phrase
+7,,,,,,Catch all grouped,gloves,gloves women,phrase
+7,,,,,,Catch all grouped,gloves,half finger gloves,broad
+7,,,,,,Catch all grouped,gloves,half finger gloves men,broad
+7,,,,,,Catch all grouped,gloves,hand brace,broad
+7,,,,,,Catch all grouped,gloves,hand cramp relief,exact
+7,,,,,,Catch all grouped,gloves,hand finger brace,broad
+7,,,,,,Catch all grouped,gloves,knitting gloves,broad
+7,,,,,,Catch all grouped,gloves,knitting gloves,phrase
+7,,,,,,Catch all grouped,gloves,lymphedema gloves,phrase
+7,,,,,,Catch all grouped,gloves,stroke gloves right hand,broad
+7,,,,,,Catch all grouped,gloves,wrist brace,phrase
+7,,,,,,Catch all grouped,gloves,wrist support,phrase
+7,,,,,,Gloves - SP - Cerebro - Amazons Choice - Exact,Gloves - SP - Cerebro - Amazons Choice - Exact,copper gloves for arthritis hands for women,exact
+7,,,,,,Gloves - SP - Cerebro - Amazons Choice - Exact,Gloves - SP - Cerebro - Amazons Choice - Exact,gaming gloves for cold hands,exact
+7,,,,,,Gloves - SP - Cerebro - Amazons Choice - Exact,Gloves - SP - Cerebro - Amazons Choice - Exact,gloves for arthritis hands for men,exact
+7,,,,,,Gloves - SP - Cerebro - Amazons Choice - Exact,Gloves - SP - Cerebro - Amazons Choice - Exact,guantes para artritis para mujer,exact
+7,,,,,,Gloves - SP - Cerebro - Amazons Choice - Exact,Gloves - SP - Cerebro - Amazons Choice - Exact,hand support for arthritis,exact
+7,,,,,,Gloves - SP - Cerebro - Amazons Choice - Exact,Gloves - SP - Cerebro - Amazons Choice - Exact,trigger finger gloves,exact
+7,,,,,,Gloves - SP - Cerebro - Broad,Cerebro - Broad,arthritis compression gloves men,broad
+7,,,,,,Gloves - SP - Cerebro - Broad,Cerebro - Broad,arthritis gloves,broad
+7,,,,,,Gloves - SP - Cerebro - Broad,Cerebro - Broad,arthritis gloves magnetic,broad
+7,,,,,,Gloves - SP - Cerebro - Broad,Cerebro - Broad,arthritis hand relief,broad
+7,,,,,,Gloves - SP - Cerebro - Broad,Cerebro - Broad,carpal tunnel gloves,broad
+7,,,,,,Gloves - SP - Cerebro - Broad,Cerebro - Broad,compression gloves,broad
+7,,,,,,Gloves - SP - Cerebro - Broad,Cerebro - Broad,compression hands women,broad
+7,,,,,,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,arthriti joint,phrase
+7,,,,,,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,arthriti relief,phrase
+7,,,,,,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,arthritis glove,phrase
+7,,,,,,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,arthritis gloves,phrase
+7,,,,,,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,hand compression,phrase
+13,,,,,,Gloves - SP - Cerebro - Broad,Cerebro - Broad,copper gloves men,broad
+13,,,,,,Gloves - SP - Cerebro - Broad,Cerebro - Broad,swelling reducer for hands,broad
+13,,,,,,Gloves - SP - Cerebro - Broad,Cerebro - Broad,pressure glove,broad
+13,,,,,,Gloves - SP - Cerebro - Broad,Cerebro - Broad,copper finger glove,broad
+13,,,,,,Gloves - SP - Cerebro - Broad,Cerebro - Broad,copper fingerless glove for women,broad
+13,,,,,,Gloves - SP - Cerebro - Broad,Cerebro - Broad,copper fit gloves,broad
+13,,,,,,Gloves - SP - Cerebro - Broad,Cerebro - Broad,gloves for rheumatoid arthritis,broad
+13,,,,,,Gloves - SP - Cerebro - Broad,Cerebro - Broad,copper compression gloves,broad
+13,,,,,,Gloves - SP - Cerebro - Broad,Cerebro - Broad,copper glove,broad
+13,,,,,,Gloves - SP - Cerebro - Broad,Cerebro - Broad,copper infused gloves,broad
+13,,,,,,Gloves - SP - Cerebro - Broad,Cerebro - Broad,gloves for painful hands,broad
+13,,,,,,Gloves - SP - Cerebro - Broad,Cerebro - Broad,hand compression,broad
+23,,,,,,Gloves - SP - Exact - Brand Defense Keywords - GS,Gloves - SP - Exact - Brand Defense Keywords - GS,fititude compression gloves,exact
+23,,,,,,Gloves - SP - Exact - Brand Defense Keywords - GS,Gloves - SP - Exact - Brand Defense Keywords - GS,fititude gloves,exact
+23,,,,,,Gloves - SP - Exact - Brand Defense Keywords - GS,Gloves - SP - Exact - Brand Defense Keywords - GS,fititude,exact
+23,,,,,,Gloves - SP - Exact - Brand Defense Keywords - GS,Gloves - SP - Exact - Brand Defense Keywords - GS,fititude infused copper pair of compression gloves,exact
+23,,,,,,Gloves - SP - Exact - Brand Defense Keywords - GS,Gloves - SP - Exact - Brand Defense Keywords - GS,fititude gloves,broad
+23,,,,,,Gloves - SP - Exact - Brand Defense Keywords - GS,Gloves - SP - Exact - Brand Defense Keywords - GS,fititude,phrase
+23,,,,,,Gloves - SP - Exact - Brand Defense Keywords - GS,Gloves - SP - Exact - Brand Defense Keywords - GS,compression gloves fititude,exact
+23,,,,,,Gloves - SP - Exact - Brand Defense Keywords - GS,Gloves - SP - Exact - Brand Defense Keywords - GS,fititude compression gloves,broad
+29,,,,,,Gloves - SP - Top Keywords,Top Keywords,gloves for swelling,exact
+29,,,,,,Gloves - SP - Top Keywords,Top Keywords,gloves for swelling,phrase
+29,,,,,,Gloves - SP - Top Keywords,Top Keywords,hand support glove pain,phrase
+29,,,,,,Wallet - SP - Broad - Generic - GS,Wallet - SP - Broad - Generic - GS,rfid wallet,broad
+29,,,,,,Wallet - SP - Broad - Generic - GS,Wallet - SP - Broad - Generic - GS,slim wallets for men,broad
+29,,,,,,Wallet - SP - Broad - Generic - GS,Wallet - SP - Broad - Generic - GS,wallet rfid blocking,broad
+29,,,,,,Gloves - SP - Top Keywords,Top Keywords,hand support glove pain,exact
+29,,,,,,Wallet - SP - Broad - Generic - GS,Wallet - SP - Broad - Generic - GS,minimalist wallet men,broad
+29,,,,,,Gloves - SP - Top Keywords,Top Keywords,hand compression gloves,phrase
+29,,,,,,Gloves - SP - Top Keywords,Top Keywords,compression gloves,phrase
+32,,,,,,Gloves - SP - KW - MIX - Discovery,gloves,arthritis gloves for women for pain,exact
+32,,,,,,Gloves - SP - KW - MIX - Discovery,gloves,compression glove,broad
+32,,,,,,Gloves - SP - manual,exact,thumb arthritis compression gloves,exact
+32,,,,,,Gloves - SP - manual,broad,copper hands,broad
+32,,,,,,Gloves - SP - manual,exact,finger support arthritis,exact
+32,,,,,,Gloves - SP - KW - MIX - Discovery,gloves,arthritis gloves for women for pain,broad
+32,,,,,,Gloves - SP - KW - MIX - Discovery,gloves,arthritis gloves for women for pain,phrase
+32,,,,,,Gloves - SP - manual,broad,copper gloves,broad
+32,,,,,,Gloves - SP - manual,exact,edema glove left hand,exact
+32,,,,,,Gloves - SP - KW - MIX - Discovery,gloves,compression gloves for arthritis for women,exact
+32,,,,,,Gloves - SP - KW - MIX - Discovery,gloves,compression glove,phrase
+32,,,,,,Gloves - SP - manual,exact,gloves for arthritis,exact
+32,,,,,,Gloves - SP - KW - MIX - Discovery,gloves,fingerless compression gloves for women,exact
+32,,,,,,Gloves - SP - KW - MIX - Discovery,gloves,arthritis gloves,broad
+32,,,,,,Gloves - SP - KW - MIX - Discovery,gloves,arthritis gloves,phrase
+32,,,,,,Gloves - SP - KW - MIX - Discovery,gloves,arthritis gloves women,broad
+32,,,,,,Gloves - SP - manual,bbm,+arthritis +gloves,broad
+32,,,,,,Gloves - SP - manual,bbm,+arthritis +pain,broad
+32,,,,,,Gloves - SP - manual,bbm,+edema +glove,broad
+32,,,,,,Gloves - SP - manual,bbm,+hand +pain,broad
+32,,,,,,Gloves - SP - manual,bbm,+swelling +hand,broad
+32,,,,,,Gloves - SP - manual,broad,edema glove,broad
+32,,,,,,Gloves - SP - manual,broad,finger support arthritis,broad
+32,,,,,,Gloves - SP - manual,broad,guantes para artritis mujer,broad
+32,,,,,,Gloves - SP - manual,broad,hand compression,broad
+32,,,,,,Gloves - SP - manual,broad,hand support arthritis,broad
+32,,,,,,Gloves - SP - manual,exact,wrist compression sleeve,exact
+32,,,,,,Gloves - SP - manual,pain,finger arthritis relief,exact
+32,,,,,,Gloves - SP - manual,pain,finger joint pain,broad
+32,,,,,,Gloves - SP - manual,pain,finger pain,broad
+32,,,,,,Gloves - SP - manual,pain,glove hand pain,exact
+32,,,,,,Gloves - SP - manual,pain,gloves hand pain,broad
+32,,,,,,Gloves - SP - manual,pain,hand pain,broad
+32,,,,,,Gloves - SP - manual,pain,hand pain,exact
+32,,,,,,Gloves - SP - manual,pain,hand pain,phrase
+32,,,,,,Gloves - SP - manual,pain,hand pain relief,broad
+32,,,,,,Gloves - SP - manual,pain,hand pain relief,exact
+32,,,,,,Gloves - SP - manual,pain,hand pain relief,phrase
+32,,,,,,Gloves - SP - manual,pain,joint pain,phrase
+32,,,,,,Gloves - SP - manual,pain,muñequeras para dolor de manos,exact
+32,,,,,,Gloves - SP - manual,pain,pain glove,broad
+32,,,,,,Gloves - SP - manual,pain,pain relief glove,phrase
+32,,,,,,Gloves - SP - manual,phrase,arthritis,phrase
+32,,,,,,Gloves - SP - manual,phrase,arthritis gloves women,phrase
+32,,,,,,Gloves - SP - manual,phrase,circulation gloves,phrase
+32,,,,,,Gloves - SP - manual,phrase,compression gloves swelling,phrase
+32,,,,,,Gloves - SP - manual,phrase,finger compression gloves,phrase
+32,,,,,,Gloves - SP - manual,phrase,gaming gloves,phrase
+32,,,,,,Gloves - SP - manual,phrase,guantes de compresion,phrase
+32,,,,,,Gloves - SP - manual,phrase,wrist compression,phrase
+32,,,,,,Gloves - SP - manual,phrase,wrist support,phrase
