@@ -46,7 +46,7 @@ def optimize_account(profileId):
     # print(df_forecast)
     df_bid_history_merge = merge_forecast_bid(df_campaign, df_adgroup, df_keyword, df_kw_history, df_forecast)
     # df_bid_history_merge.to_csv('./data/df_bid_history_merge.csv')
-    # df_bid_conv = get_slope_conv_value(df_campaign, df_history, df_kw_history, df_bid_history_merge, './data')
+    df_bid_conv = get_slope_conv_value(df_campaign, df_history, df_kw_history, df_bid_history_merge, './data')
     # df_bid = compute_bid(df_bid)
     # df_bid_SP.to_csv(global_var.account + "/prediction/newbids_SP.csv")
     # update_bid_excel(df_bid_SP, 'SP')
