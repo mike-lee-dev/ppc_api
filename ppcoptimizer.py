@@ -3,7 +3,7 @@ import pandas as pd
 from utils import input_output, dataframe, mongo_db
 from helpers import date_helpers
 import global_var
-from models import cluster, conversion_rate_estimation, object_structure, compute_bid
+from models import cluster, conversion_rate_estimation, object_structure, compute_bid, market_curve
 from datetime import datetime, date
 import math
 import glob
@@ -138,91 +138,165 @@ def merge_forecast_bid(df_campaign, df_adgroup, df_keyword, df_kw_history, df_fo
     return df_bid
 
 
-def get_slope_conv_value(df_campaign, df_history, df_bid, df_bid_history, path):
+def cal_conv_value(row):
+    campaign_type = row.campaignType
+    df_adgroup_history = input_output.read_adgroup_history(row.profileId)
+    if campaign_type == 'sponsoredBrands':
+        df_ads = input_output.get_ads(row.profileId)
+        df_ads = df_ads.loc[df_ads['active'] == True]
+        df_adgroup_history = df_adgroup_history.loc[(df_adgroup_history['adGroupId'] in df_ads['adGroupId']) and (df_adgroup_history['price'] != 0)]
+        return df_adgroup_history['price'].mean()
+
+    else:
+        df_campaign_history = input_output.read_campaign_history(row.profileId)
+        # if dataframe.last_n_days(df_campaign_history, 30)['conversions'].sum() >= 1:
+        #     conv_value = (
+        #             dataframe.last_n_days(df_campaign_history, 30)['sales30d'].sum() /
+        #             dataframe.last_n_days(df_campaign_history, 30)['conversions'].sum())
+        # elif dataframe.last_n_days(df_adgroup_history, 30)['conversions'].sum() >= 1:
+        #     conv_value = (
+        #             dataframe.last_n_days(df_adgroup_history, 30)['sales30d'].sum() /
+        #             dataframe.last_n_days(df_adgroup_history, 30)['conversions'].sum())
+        # else:
+        #     conv_value = 0
+        # return conv_value
+        return 0.5
+
+
+def cal_avg_cpc(row):
+    df_keyword = input_output.get_keyword(row.profileId)
+    df_keyword = df_keyword.loc[df_keyword['keywordId'] == row.keywordId]
+    target_acos = df_keyword.iloc[0]['target_acos']
+    # target_acos = # from campaignId, adgroupId, profileId, keywordId but finally keywordId is last one
+    if not target_acos or not row.CR:
+        return 0
+    return target_acos * (row.CR * row.conv_value)
+
+
+def get_slope(row):
+    df_campaign_history = input_output.read_campaign_history(row.profileId)
+    count_clicks = dataframe.last_n_days(df_campaign_history, 5)['clicks'].count()
+    df_bid_history = df_campaign_history
+    # the default value for a=1
+    if count_clicks <= 0:
+        # if a campaign has more than 5 days with number of click>0: we take calculate a for the campaign
+        # if an adgroup has more than 5 days with number of click>0: we take calculate a for the adgroup
+        df_adgroup_history = input_output.read_adgroup_history(row.profileId)
+        count_clicks = dataframe.last_n_days(df_adgroup_history, 5)['clicks'].count()
+        df_bid_history = df_adgroup_history
+        # if a keyword/target has more than 5 days with number of click>0: we take calculate a for the keyword/target
+        if count_clicks <= 0:
+            df_keyword_history = input_output.read_keyword_history(row.profileId)
+            count_clicks = dataframe.last_n_days(df_keyword_history, 5)['clicks'].count()
+            df_bid_history = df_keyword_history
+            if count_clicks <= 0:
+                df_target_history = input_output.read_target_history(row.profileId)
+                count_clicks = dataframe.last_n_days(df_target_history, 5)['clicks'].count()
+                df_bid_history = df_target_history
+                if count_clicks <= 0:
+                    return 1
+
+    df_bid_history['avg_cpc'] = row.avg_cpc
+    a = market_curve.market_curve(dataframe.select_row_by_val(dataframe.get_biddable_object(df_bid_history), 'campaignId', row.campaignId).dropna(subset=['avg_cpc']))
+    return a
+
+
+def get_slope_conv_value(df_campaign, df_history, df_kw_history, df_bid_history_merge, path):
     # for every campaign, every adgroup, every target in df_bid get a + b
-    if len(df_campaign) == 0 or len(df_history) == 0 or len(df_bid) == 0 or len(df_bid_history) == 0:
+    if len(df_campaign) == 0 or len(df_history) == 0 or len(df_kw_history) == 0 or len(df_bid_history_merge) == 0:
         return pd.DataFrame()
     try:
         default_conv_val = df_history['sales'].sum() / df_history['conversions'].sum()
     except ZeroDivisionError:
         default_conv_val = 20
 
+    ### Calculate AVG_CPC values
+    ## Get campaign Type first
+    df_bid_history_merge['campaignType'] = df_bid_history_merge['campaignName'].apply(lambda x: df_campaign.loc[df_campaign['campaignName'] == x].iloc[0]['campaignType'])
+    df_bid_history_merge['conv_value'] = df_bid_history_merge.apply(cal_conv_value, axis=1)
+    df_bid_history_merge.to_csv('./data/df_bid_history_merge_slope_conv_value.csv')
+    df_bid_history_merge['avg_cpc'] = df_bid_history_merge.apply(cal_avg_cpc, axis=1)
+    df_bid_history_merge.to_csv('./data/df_bid_history_merge_slope_avg_cpc.csv')
+    # df_bid_history_merge['max_cpc'] = df_bid_history_merge.apply(cal_max_cpc, axis=1)
+    df_bid_history_merge['slope'] = df_bid_history_merge.apply(get_slope, axis=1)
+    df_bid_history_merge.to_csv('./data/df_bid_history_merge_slope_last.csv')
+
     # loop over campaign, then adgroup, then target and add output (CV and slope) to the prediction file
-    for i, cam in df_campaign.iterrows():  # we could use itertuples to speed up the performance but we would need to have the same format for all campaigns
-        # if cam['Product'] == 'Sponsored Display':
-        #     if cam['Cost Type'] == 'vcpm':
-        #         continue
-        df_campaign_history = dataframe.select_row_by_val(df_history, 'campaignName', cam['campaignName'])
-        df_campaign_bid_history = dataframe.select_row_by_val(df_bid_history, 'campaignId', str(cam['campaignId']))
-        c = object_structure.Campaign(cam['campaignId'], cam['campaignName'], cam['state'], df_campaign_history,
-                                      df_campaign_bid_history, 1., default_conv_val)
-        dataframe.change_val_if_col_contains(df_bid, 'a', c.a, 'campaignId', str(c.campaign_id))
-        dataframe.change_val_if_col_contains(df_bid, 'conv_value', c.conv_value, 'campaignId', str(c.campaign_id))
-        dfadgr = dataframe.select_row_by_val(df_bid, 'Entity', "adGroupId", 'campaignId', str(c.campaign_id))
-
-        for j, adgr in dfadgr.iterrows():
-            df_adgroup_history = dataframe.select_row_by_val(df_history, 'campaignName', c.campaign_name, 'adGroupName',
-                                                             adgr['adGroupName'])
-            df_adgroup_bid_history = dataframe.select_row_by_val(df_bid_history, 'campaignId', str(c.campaign_id),
-                                                                 'adGroupId', str(adgr['adGroupId']))
-            a = object_structure.Adgroup(
-                adgroup_id=adgr['adGroupId'],
-                adgroup_name=adgr['adGroupName'],
-                adgroup_status=adgr['state'],
-                adgroup_bid=adgr['defaultBid'],
-                df_adgroup_history=df_adgroup_history,
-                df_adgroup_bid_history=df_adgroup_bid_history,
-                a=c.a,
-                conv_value=c.conv_value
-            )
-
-            dataframe.change_val_if_col_contains(df_bid, 'a', a.a, 'adGroupId', str(a.adgroup_id))
-            dataframe.change_val_if_col_contains(df_bid, 'conv_value', a.conv_value, 'adGroupId', str(a.adgroup_id))
-            dfkw = dataframe.select_row_by_val(df_bid, 'Entity', "Keyword")
-            dfpat = dataframe.select_row_by_val(df_bid, 'Entity', "Product Targeting")
-            dfct = dataframe.select_row_by_val(df_bid, 'Entity', "Contextual Targeting")
-            dfaud = dataframe.select_row_by_val(df_bid, 'Entity', "Audience Targeting")
-            dftarget = pd.concat([dfkw, dfpat, dfct, dfaud])
-            # dftarget=dftarget.concat()
-            dftarget = dataframe.select_row_by_val(dftarget, 'campaignId', str(c.campaign_id), 'adGroupId',
-                                                   str(a.adgroup_id))
-
-            for k, target in dftarget.iterrows():
-                target_name = target['targeting']
-                df_target_history = dataframe.select_row_by_val(
-                    df_history,
-                    'campaignName', c.campaign_name,
-                    'adGroupName', a.adgroup_name,
-                    'targeting', target_name,
-                    'matchType', target['matchType']
-                )
-                df_target_bid_history = dataframe.select_row_by_val(
-                    df_bid_history,
-                    'Target Id', str(target['Target Id']),
-                )
-                if target['Entity'] in ['Keyword', 'Product Targeting', 'Contextual Targeting', 'Audience Targeting']:
-                    t = object_structure.Target(
-                        match_type=target['matchType'],
-                        target_bid=target['bid'],
-                        target_name=target_name,
-                        target_id=target['Target Id'],
-                        target_status=target['State'],
-                        df_target_history=df_target_history,
-                        df_target_bid_history=df_target_bid_history,
-                        a=a.a,
-                        conv_value=a.conv_value
-                    )
-
-                    dataframe.change_val_if_col_contains(df_bid, 'a', t.a, 'Target Id', t.target_id)
-                    dataframe.change_val_if_col_contains(df_bid, 'conv_value', t.conv_value, 'Target Id', t.target_id)
-
-    dftarget = input_output.read_target(path)
-    df_bid = pd.merge(df_bid, dftarget, how='left', left_on='Campaign Id', right_on='Campaign Id').drop_duplicates(ignore_index=True)
-
-    df_bid['new_bid'] = df_bid['target_acos'] * df_bid['CR'] * df_bid['conv_value'] / df_bid['a']
-    df_bid['new_bid'] = df_bid.apply(lambda x: limit_bid_change(x['Bid'], x['new_bid'], 0.25), axis=1)
-    df_bid['new_bid'] = df_bid.apply(lambda x: valid_bid(x['new_bid']), axis=1)
-    return df_bid
+    # for i, cam in df_campaign.iterrows():  # we could use itertuples to speed up the performance but we would need to have the same format for all campaigns
+    #     # if cam['Product'] == 'Sponsored Display':
+    #     #     if cam['Cost Type'] == 'vcpm':
+    #     #         continue
+    #     df_campaign_history = dataframe.select_row_by_val(df_history, 'campaignName', cam['campaignName'])
+    #     df_campaign_bid_history = dataframe.select_row_by_val(df_bid_history, 'campaignId', str(cam['campaignId']))
+    #     c = object_structure.Campaign(cam['campaignId'], cam['campaignName'], cam['state'], df_campaign_history,
+    #                                   df_campaign_bid_history, 1., default_conv_val)
+    #     dataframe.change_val_if_col_contains(df_bid, 'a', c.a, 'campaignId', str(c.campaign_id))
+    #     dataframe.change_val_if_col_contains(df_bid, 'conv_value', c.conv_value, 'campaignId', str(c.campaign_id))
+    #     dfadgr = dataframe.select_row_by_val(df_bid, 'Entity', "adGroupId", 'campaignId', str(c.campaign_id))
+    #
+    #     for j, adgr in dfadgr.iterrows():
+    #         df_adgroup_history = dataframe.select_row_by_val(df_history, 'campaignName', c.campaign_name, 'adGroupName',
+    #                                                          adgr['adGroupName'])
+    #         df_adgroup_bid_history = dataframe.select_row_by_val(df_bid_history, 'campaignId', str(c.campaign_id),
+    #                                                              'adGroupId', str(adgr['adGroupId']))
+    #         a = object_structure.Adgroup(
+    #             adgroup_id=adgr['adGroupId'],
+    #             adgroup_name=adgr['adGroupName'],
+    #             adgroup_status=adgr['state'],
+    #             adgroup_bid=adgr['defaultBid'],
+    #             df_adgroup_history=df_adgroup_history,
+    #             df_adgroup_bid_history=df_adgroup_bid_history,
+    #             a=c.a,
+    #             conv_value=c.conv_value
+    #         )
+    #
+    #         dataframe.change_val_if_col_contains(df_bid, 'a', a.a, 'adGroupId', str(a.adgroup_id))
+    #         dataframe.change_val_if_col_contains(df_bid, 'conv_value', a.conv_value, 'adGroupId', str(a.adgroup_id))
+    #         dfkw = dataframe.select_row_by_val(df_bid, 'Entity', "Keyword")
+    #         dfpat = dataframe.select_row_by_val(df_bid, 'Entity', "Product Targeting")
+    #         dfct = dataframe.select_row_by_val(df_bid, 'Entity', "Contextual Targeting")
+    #         dfaud = dataframe.select_row_by_val(df_bid, 'Entity', "Audience Targeting")
+    #         dftarget = pd.concat([dfkw, dfpat, dfct, dfaud])
+    #         # dftarget=dftarget.concat()
+    #         dftarget = dataframe.select_row_by_val(dftarget, 'campaignId', str(c.campaign_id), 'adGroupId',
+    #                                                str(a.adgroup_id))
+    #
+    #         for k, target in dftarget.iterrows():
+    #             target_name = target['targeting']
+    #             df_target_history = dataframe.select_row_by_val(
+    #                 df_history,
+    #                 'campaignName', c.campaign_name,
+    #                 'adGroupName', a.adgroup_name,
+    #                 'targeting', target_name,
+    #                 'matchType', target['matchType']
+    #             )
+    #             df_target_bid_history = dataframe.select_row_by_val(
+    #                 df_bid_history,
+    #                 'Target Id', str(target['Target Id']),
+    #             )
+    #             if target['Entity'] in ['Keyword', 'Product Targeting', 'Contextual Targeting', 'Audience Targeting']:
+    #                 t = object_structure.Target(
+    #                     match_type=target['matchType'],
+    #                     target_bid=target['bid'],
+    #                     target_name=target_name,
+    #                     target_id=target['Target Id'],
+    #                     target_status=target['State'],
+    #                     df_target_history=df_target_history,
+    #                     df_target_bid_history=df_target_bid_history,
+    #                     a=a.a,
+    #                     conv_value=a.conv_value
+    #                 )
+    #
+    #                 dataframe.change_val_if_col_contains(df_bid, 'a', t.a, 'Target Id', t.target_id)
+    #                 dataframe.change_val_if_col_contains(df_bid, 'conv_value', t.conv_value, 'Target Id', t.target_id)
+    #
+    # dftarget = input_output.read_target(path)
+    # df_bid = pd.merge(df_bid, dftarget, how='left', left_on='Campaign Id', right_on='Campaign Id').drop_duplicates(ignore_index=True)
+    #
+    # df_bid['new_bid'] = df_bid['target_acos'] * df_bid['CR'] * df_bid['conv_value'] / df_bid['a']
+    # df_bid['new_bid'] = df_bid.apply(lambda x: limit_bid_change(x['Bid'], x['new_bid'], 0.25), axis=1)
+    # df_bid['new_bid'] = df_bid.apply(lambda x: valid_bid(x['new_bid']), axis=1)
+    # return df_bid
 
 
 def limit_bid_change(old_bid, new_bid, max_change):

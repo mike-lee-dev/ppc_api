@@ -12,9 +12,28 @@ def get_campaign(profileId):
     return df_campaign
 
 
+def read_campaign_history(profileId):
+    df_campaign_history = mongo_db.read_collection_account_as_df('campaign_history', profileId, global_var.db)
+    if len(df_campaign_history) > 0:
+        df_campaign_history['conversions'] = df_campaign_history['purchases30d']
+    return df_campaign_history
+
+
 def get_adgroup(profileId):
     df_adgroup = mongo_db.read_collection_account_as_df('adgroups', profileId, global_var.db)
     return df_adgroup
+
+
+def read_adgroup_history(profileId):
+    df_adgroup_history = mongo_db.read_collection_account_as_df('adgroup_history', profileId, global_var.db)
+    if len(df_adgroup_history) > 0:
+        df_adgroup_history['conversions'] = df_adgroup_history['purchases30d']
+    return df_adgroup_history
+
+
+def get_ads(profileId):
+    df_ads = mongo_db.read_collection_account_as_df('ads', profileId, global_var.db)
+    return df_ads
 
 
 def get_keyword(profileId):
@@ -33,6 +52,14 @@ def read_keyword_history(profileId):
     if len(df_history) > 0:
         df_history['conversions'] = df_history['purchases30d']
         df_history['sales'] = df_history['sales30d']
+    return df_history
+
+
+def read_target_history(profileId):
+    df_history = mongo_db.read_collection_account_as_df('target_history', profileId, global_var.db)
+    if len(df_history) > 0:
+        df_history['conversions'] = df_history['attributedConversions30d']
+        df_history['sales'] = df_history['attributedSales30d']
     return df_history
 
 
