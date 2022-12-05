@@ -76,10 +76,10 @@ def encoding(RF_preproc):
     RF_preproc['matchType_enc'] = lematchtype.fit_transform(RF_preproc['matchType'])
 
     # split word by word. This might be useful if one word is better than another
-    vectorizer = CountVectorizer()  # --> Actually we don't need count because the number of occurence is irrelevant
-    vectorizer.fit(RF_preproc['targeting'])
-    # print(vectorizer.get_feature_names())
-    word_vect = vectorizer.transform(RF_preproc['targeting'])
+    # vectorizer = CountVectorizer()  # --> Actually we don't need count because the number of occurence is irrelevant
+    # vectorizer.fit(RF_preproc['targeting'])
+    # # print(vectorizer.get_feature_names())
+    # word_vect = vectorizer.transform(RF_preproc['targeting'])
 
     # Todo check if it removes symbols like []+
     # word=pd.DataFrame(data=word_vect.toarray(), index=RF_preproc.index, columns=vectorizer.get_feature_names())
