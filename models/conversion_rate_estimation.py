@@ -9,6 +9,7 @@ from filterpy.kalman import KalmanFilter
 from filterpy.common import Saver, Q_discrete_white_noise
 from utils import input_output
 from helpers import date_helpers
+import os, shutil
 
 
 # Todo we should estimate order rate (DT), purchase per order (DT) and value per perchase (price avg) separately
@@ -23,69 +24,81 @@ def initiate(df_clustered, path):
     y_t = pd.DataFrame(index=df_clustered['Leave'].unique(), columns=['y'])
     threshold = 50
     dates = df_clustered.sort_index().index.unique()
+
+    # Remove all in the existing folder and create new
+    for filename in os.listdir(path):
+        file_path = os.path.join(path, filename)
+        try:
+            if os.path.isfile(file_path) or os.path.islink(file_path):
+                os.unlink(file_path)
+            elif os.path.isdir(file_path):
+                shutil.rmtree(file_path)
+            os.mkdir(path + "/prediction")
+        except Exception as e:
+            print('Failed to delete %s. Reason: %s' % (file_path, e))
     # if can find file, read, else create new filter
-    try:  # still need to be implemented, but we need to save clustering rules first
-        # print("existing file update")
-        R, Q, P, H, F, x_t = input_output.read_kalman_state(path)
-        kf, n = create_kalman_filter(x_t)
-        kf.R = R
-        kf.Q = Q
-        kf.P = P
-        kf.H = H
-        kf.F = F
-        kf.x = x_t.to_numpy()
-        # print(f"Kalman filter could be loaded successfully :{kf}")
+    # try:  # still need to be implemented, but we need to save clustering rules first
+    #     # print("existing file update")
+    #     R, Q, P, H, F, x_t = input_output.read_kalman_state(path)
+    #     kf, n = create_kalman_filter(x_t)
+    #     kf.R = R
+    #     kf.Q = Q
+    #     kf.P = P
+    #     kf.H = H
+    #     kf.F = F
+    #     kf.x = x_t.to_numpy()
+    #     # print(f"Kalman filter could be loaded successfully :{kf}")
+    #
+    #     # for i, end_date in enumerate(dates):
+    #     #     sampled_data = auto_sampling(df_clustered, threshold,
+    #     #                                  end_date)  # pd.to_datetime('2022-03-01', format='%Y-%m-%d'))#end_date)
+    #     #     m_t = get_kalman_measurment(x_t, sampled_data.set_index('Leave'))
+    #     #     kf = update_and_save(kf, m_t, x_t)
+    #     #     K_t[['K']] = np.reshape(kf.K.diagonal(), (-1, 1))
+    #     #     x_t[['x_prior']] = kf.x_prior
+    #     #     x_t[['x_post ']] = kf.x_post
+    #     #     P_t[['P_t']] = np.reshape(kf.P.diagonal(), (-1, 1))
+    #     #     P_t[['P_t_prior']] = np.reshape(kf.P_prior.diagonal(), (-1, 1))
+    #     #     P_t[['P_t_post']] = np.reshape(kf.P_post.diagonal(), (-1, 1))
+    #     #     Q_t[['Q']] = np.reshape(kf.Q.diagonal(), (-1, 1))
+    #     #     R_t[['R']] = np.reshape(kf.R.diagonal(), (-1, 1))
+    #     #     S_t[['S']] = np.reshape(kf.S.diagonal(), (-1, 1))
+    #     #     y_t[['y']] = kf.y
+    #     #     input_output.append_state_history(dates[i - 1].date(), x_t, m_t, K_t, P_t, Q_t, R_t, S_t, y_t, path)
+    #     # print(f"state: {kf.x}")
+    #     # kf = predict_and_save(kf, x_t, path)
+    # except (FileNotFoundError, OSError):
+    #     # print(f"Kalman filter not found, new Kalman filter needs to be created")
+    x_t = initiate_kalman_state(df_clustered)
+    m_t = get_kalman_measurment(x_t, df_clustered)
+    kf, n = create_kalman_filter(x_t)
+    kf.x = x_t.to_numpy()
+    kf = measurement_function(kf, n)
+    kf = initiate_process_matrix(x_t, kf, n)
+    kf = initiate_measurment_covariance(kf, m_t, x_t)
+    kf = initiate_process_covariance(kf, df_clustered)
+    kf = initiate_naive_model(kf, n)
 
-        # for i, end_date in enumerate(dates):
-        #     sampled_data = auto_sampling(df_clustered, threshold,
-        #                                  end_date)  # pd.to_datetime('2022-03-01', format='%Y-%m-%d'))#end_date)
-        #     m_t = get_kalman_measurment(x_t, sampled_data.set_index('Leave'))
-        #     kf = update_and_save(kf, m_t, x_t)
-        #     K_t[['K']] = np.reshape(kf.K.diagonal(), (-1, 1))
-        #     x_t[['x_prior']] = kf.x_prior
-        #     x_t[['x_post ']] = kf.x_post
-        #     P_t[['P_t']] = np.reshape(kf.P.diagonal(), (-1, 1))
-        #     P_t[['P_t_prior']] = np.reshape(kf.P_prior.diagonal(), (-1, 1))
-        #     P_t[['P_t_post']] = np.reshape(kf.P_post.diagonal(), (-1, 1))
-        #     Q_t[['Q']] = np.reshape(kf.Q.diagonal(), (-1, 1))
-        #     R_t[['R']] = np.reshape(kf.R.diagonal(), (-1, 1))
-        #     S_t[['S']] = np.reshape(kf.S.diagonal(), (-1, 1))
-        #     y_t[['y']] = kf.y
-        #     input_output.append_state_history(dates[i - 1].date(), x_t, m_t, K_t, P_t, Q_t, R_t, S_t, y_t, path)
-        # print(f"state: {kf.x}")
-        # kf = predict_and_save(kf, x_t, path)
-    except (FileNotFoundError, OSError):
-        # print(f"Kalman filter not found, new Kalman filter needs to be created")
-        x_t = initiate_kalman_state(df_clustered)
-        m_t = get_kalman_measurment(x_t, df_clustered)
-        kf, n = create_kalman_filter(x_t)
-        kf.x = x_t.to_numpy()
-        kf = measurement_function(kf, n)
-        kf = initiate_process_matrix(x_t, kf, n)
-        kf = initiate_measurment_covariance(kf, m_t, x_t)
-        kf = initiate_process_covariance(kf, df_clustered)
-        kf = initiate_naive_model(kf, n)
-
-        # kf, x_t=predict_and_save(kf, x_t)
-        for i, end_date in enumerate(dates):  # range(look_back_window, len(dates)):
-            # df.loc[dates[i]] = [None, None, None]
-            # sampled_data=constant_sampling(df_clustered, look_back_window, i, dates)
-            kf, x_t = predict_and_save(kf, x_t, path)
-            sampled_data = auto_sampling(df_clustered, threshold,
-                                         end_date)  # pd.to_datetime('2022-03-01', format='%Y-%m-%d'))#end_date)
-            m_t = get_kalman_measurment(x_t, sampled_data.set_index('Leave'))
-            kf = update_and_save(kf, m_t, x_t)
-            K_t[['K']] = np.reshape(kf.K.diagonal(), (-1, 1))
-            x_t[['x_prior']] = kf.x_prior
-            x_t[['x_post ']] = kf.x_post
-            P_t[['P_t']] = np.reshape(kf.P.diagonal(), (-1, 1))
-            P_t[['P_t_prior']] = np.reshape(kf.P_prior.diagonal(), (-1, 1))
-            P_t[['P_t_post']] = np.reshape(kf.P_post.diagonal(), (-1, 1))
-            Q_t[['Q']] = np.reshape(kf.Q.diagonal(), (-1, 1))
-            R_t[['R']] = np.reshape(kf.R.diagonal(), (-1, 1))
-            S_t[['S']] = np.reshape(kf.S.diagonal(), (-1, 1))
-            y_t[['y']] = kf.y
-            input_output.append_state_history(dates[i - 1].date(), x_t, m_t, K_t, P_t, Q_t, R_t, S_t, y_t, path)
+    # kf, x_t=predict_and_save(kf, x_t)
+    for i, end_date in enumerate(dates):  # range(look_back_window, len(dates)):
+        # df.loc[dates[i]] = [None, None, None]
+        # sampled_data=constant_sampling(df_clustered, look_back_window, i, dates)
+        kf, x_t = predict_and_save(kf, x_t, path)
+        sampled_data = auto_sampling(df_clustered, threshold,
+                                     end_date)  # pd.to_datetime('2022-03-01', format='%Y-%m-%d'))#end_date)
+        m_t = get_kalman_measurment(x_t, sampled_data.set_index('Leave'))
+        kf = update_and_save(kf, m_t, x_t)
+        K_t[['K']] = np.reshape(kf.K.diagonal(), (-1, 1))
+        x_t[['x_prior']] = kf.x_prior
+        x_t[['x_post ']] = kf.x_post
+        P_t[['P_t']] = np.reshape(kf.P.diagonal(), (-1, 1))
+        P_t[['P_t_prior']] = np.reshape(kf.P_prior.diagonal(), (-1, 1))
+        P_t[['P_t_post']] = np.reshape(kf.P_post.diagonal(), (-1, 1))
+        Q_t[['Q']] = np.reshape(kf.Q.diagonal(), (-1, 1))
+        R_t[['R']] = np.reshape(kf.R.diagonal(), (-1, 1))
+        S_t[['S']] = np.reshape(kf.S.diagonal(), (-1, 1))
+        y_t[['y']] = kf.y
+        input_output.append_state_history(dates[i - 1].date(), x_t, m_t, K_t, P_t, Q_t, R_t, S_t, y_t, path)
 
     return kf, x_t
 
@@ -157,6 +170,7 @@ def initiate_kalman_state(df_clustered):
 
     # get the previous CR estimate or take average to initiate.
     x_t = pd.DataFrame(index=df_clustered['Leave'].unique(), columns=['CR'])
+    # x_t['Leave'] = df_clustered['Leave'].unique()
     avgCR = df_clustered['conversions'].sum() / df_clustered['clicks'].sum()
     # x_t['CR'] = (df_clustered.reset_index().groupby('Leave')['conversions'].sum()+avgCR) / (
     # df_clustered .reset_index().groupby('Leave')['clicks'].sum()+1)

@@ -45,8 +45,8 @@ def optimize_account(profileId):
     # df_forecast.to_csv('./data/df_forecast.csv')
     # print(df_forecast)
     df_bid_history_merge = merge_forecast_bid(df_campaign, df_adgroup, df_keyword, df_kw_history, df_forecast)
-    # df_bid_history_merge.to_csv('./data/df_bid_history_merge.csv')
-    df_bid_conv = get_slope_conv_value(df_campaign, df_history, df_kw_history, df_bid_history_merge, './data')
+    df_bid_history_merge.to_csv('./data/df_bid_history_merge.csv')
+    df_bid_conv = get_slope_conv_value(df_campaign, df_history, df_kw_history, df_bid_history_merge, profileId)
     # df_bid = compute_bid(df_bid)
     # df_bid_SP.to_csv(global_var.account + "/prediction/newbids_SP.csv")
     # update_bid_excel(df_bid_SP, 'SP')
@@ -118,6 +118,8 @@ def conversion_rate(df_clustered, RF_decoding, profileId):
             os.mkdir("./data/" + profileId)
             os.mkdir("./data/" + profileId + "/prediction")
         kf, X_t = conversion_rate_estimation.initiate(df_clustered, './data/' + profileId)
+        X_t['Leave'] = X_t.index
+        X_t.to_csv('./data/x_t.csv')
         df_forecast = X_t.join(RF_decoding.set_index('Leave'), how='outer').drop_duplicates()
         df_forecast.to_csv("./data/" + profileId + "/prediction/df_forecast.csv")
         return df_forecast
@@ -136,41 +138,6 @@ def merge_forecast_bid(df_campaign, df_adgroup, df_keyword, df_kw_history, df_fo
                       left_on=['campaignName', 'adGroupName', 'targeting', 'matchType'],
                       right_on=['campaignName', 'adGroupName', 'targeting', 'matchType'])
     return df_bid
-
-
-def cal_conv_value(row):
-    campaign_type = row.campaignType
-    df_adgroup_history = input_output.read_adgroup_history(row.profileId)
-    if campaign_type == 'sponsoredBrands':
-        df_ads = input_output.get_ads(row.profileId)
-        df_ads = df_ads.loc[df_ads['active'] == True]
-        df_adgroup_history = df_adgroup_history.loc[(df_adgroup_history['adGroupId'] in df_ads['adGroupId']) and (df_adgroup_history['price'] != 0)]
-        return df_adgroup_history['price'].mean()
-
-    else:
-        df_campaign_history = input_output.read_campaign_history(row.profileId)
-        # if dataframe.last_n_days(df_campaign_history, 30)['conversions'].sum() >= 1:
-        #     conv_value = (
-        #             dataframe.last_n_days(df_campaign_history, 30)['sales30d'].sum() /
-        #             dataframe.last_n_days(df_campaign_history, 30)['conversions'].sum())
-        # elif dataframe.last_n_days(df_adgroup_history, 30)['conversions'].sum() >= 1:
-        #     conv_value = (
-        #             dataframe.last_n_days(df_adgroup_history, 30)['sales30d'].sum() /
-        #             dataframe.last_n_days(df_adgroup_history, 30)['conversions'].sum())
-        # else:
-        #     conv_value = 0
-        # return conv_value
-        return 0.5
-
-
-def cal_avg_cpc(row):
-    df_keyword = input_output.get_keyword(row.profileId)
-    df_keyword = df_keyword.loc[df_keyword['keywordId'] == row.keywordId]
-    target_acos = df_keyword.iloc[0]['target_acos']
-    # target_acos = # from campaignId, adgroupId, profileId, keywordId but finally keywordId is last one
-    if not target_acos or not row.CR:
-        return 0
-    return target_acos * (row.CR * row.conv_value)
 
 
 def get_slope(row):
@@ -201,7 +168,7 @@ def get_slope(row):
     return a
 
 
-def get_slope_conv_value(df_campaign, df_history, df_kw_history, df_bid_history_merge, path):
+def get_slope_conv_value(df_campaign, df_history, df_kw_history, df_bid_history_merge, profileId):
     # for every campaign, every adgroup, every target in df_bid get a + b
     if len(df_campaign) == 0 or len(df_history) == 0 or len(df_kw_history) == 0 or len(df_bid_history_merge) == 0:
         return pd.DataFrame()
@@ -213,12 +180,95 @@ def get_slope_conv_value(df_campaign, df_history, df_kw_history, df_bid_history_
     ### Calculate AVG_CPC values
     ## Get campaign Type first
     df_bid_history_merge['campaignType'] = df_bid_history_merge['campaignName'].apply(lambda x: df_campaign.loc[df_campaign['campaignName'] == x].iloc[0]['campaignType'])
-    df_bid_history_merge['conv_value'] = df_bid_history_merge.apply(cal_conv_value, axis=1)
+
+    ## Get Conversion Value as a List
+    conv_val_list = []
+    df_adgroup_history = input_output.read_adgroup_history(profileId)
+    df_adgroup_history['date'] = df_adgroup_history['date'].apply(lambda x: pd.Timestamp(x))
+    df_ads = input_output.get_ads(profileId)
+    df_campaign_history = input_output.read_campaign_history(profileId)
+    df_campaign_history['date'] = df_campaign_history['date'].apply(lambda x: pd.Timestamp(x))
+    for i in range(len(df_bid_history_merge)):
+        row = df_bid_history_merge.iloc[i]
+        campaign_type = row['campaignType']
+
+        if campaign_type == 'sponsoredBrands':
+            df_ads_ch = df_ads.loc[df_ads['active'] == True]
+            df_adgroup_history_ch = df_adgroup_history.loc[(df_adgroup_history['adGroupId'] in df_ads_ch['adGroupId']) and (df_adgroup_history['price'] != 0)]
+            conv_value = df_adgroup_history_ch['price'].mean()
+
+        else:
+            # df_campaign_history['date'] = df_campaign_history['date'].apply(lambda x: pd.Timestamp(x))
+            # if dataframe.last_n_days(df_campaign_history, 30)['conversions'].sum() >= 1:
+            #     conv_value = (
+            #             dataframe.last_n_days(df_campaign_history, 30)['sales30d'].sum() /
+            #             dataframe.last_n_days(df_campaign_history, 30)['conversions'].sum())
+            # elif dataframe.last_n_days(df_adgroup_history, 30)['conversions'].sum() >= 1:
+            #     conv_value = (
+            #             dataframe.last_n_days(df_adgroup_history, 30)['sales30d'].sum() /
+            #             dataframe.last_n_days(df_adgroup_history, 30)['conversions'].sum())
+            # else:
+            #     conv_value = 0
+            conv_value = 0.5
+        conv_val_list.append(conv_value)
+
+    df_bid_history_merge['conv_value'] = conv_val_list
     df_bid_history_merge.to_csv('./data/df_bid_history_merge_slope_conv_value.csv')
-    df_bid_history_merge['avg_cpc'] = df_bid_history_merge.apply(cal_avg_cpc, axis=1)
+
+    ## Get Average CPC Value as a List
+    df_keyword = input_output.get_keyword(profileId)
+    avg_cpc_list = []
+    for i in range(len(df_bid_history_merge)):
+        row = df_bid_history_merge.iloc[i]
+        df_keyword_ch = df_keyword.loc[df_keyword['keywordId'] == row['keywordId']]
+        target_acos = df_keyword_ch.iloc[0]['target_acos']
+        # target_acos = # from campaignId, adgroupId, profileId, keywordId but finally keywordId is last one
+        # print(target_acos.isnull())
+        if not target_acos or not row['CR']:
+            avg_cpc = 0
+        else:
+            avg_cpc = target_acos * (row['CR'] * row['conv_value'])
+        avg_cpc_list.append(avg_cpc)
+
+    df_bid_history_merge['avg_cpc'] = avg_cpc_list
     df_bid_history_merge.to_csv('./data/df_bid_history_merge_slope_avg_cpc.csv')
-    # df_bid_history_merge['max_cpc'] = df_bid_history_merge.apply(cal_max_cpc, axis=1)
-    df_bid_history_merge['slope'] = df_bid_history_merge.apply(get_slope, axis=1)
+
+    # # df_bid_history_merge['max_cpc'] = df_bid_history_merge.apply(cal_max_cpc, axis=1)
+
+    count_clicks = dataframe.last_n_days(df_campaign_history, 5)['clicks'].count()
+    df_bid_history = df_campaign_history
+    slope_list = []
+    for i in range(len(df_bid_history_merge)):
+        row = df_bid_history_merge.iloc[i]
+        check_slope = 0
+        # the default value for a=1
+        if count_clicks <= 0:
+            # if a campaign has more than 5 days with number of click>0: we take calculate a for the campaign
+            # if an adgroup has more than 5 days with number of click>0: we take calculate a for the adgroup
+            count_clicks = dataframe.last_n_days(df_adgroup_history, 5)['clicks'].count()
+            df_bid_history = df_adgroup_history
+            check_slope = 0
+            # if a keyword/target has more than 5 days with number of click>0: we take calculate a for the keyword/target
+            if count_clicks <= 0:
+                df_keyword_history = input_output.read_keyword_history(profileId)
+                df_keyword_history['date'] = df_keyword_history['date'].apply(lambda x: pd.Timestamp(x))
+                count_clicks = dataframe.last_n_days(df_keyword_history, 5)['clicks'].count()
+                df_bid_history = df_keyword_history
+                check_slope = 0
+                if count_clicks <= 0:
+                    df_target_history = input_output.read_target_history(profileId)
+                    df_target_history['date'] = df_target_history['date'].apply(lambda x: pd.Timestamp(x))
+                    count_clicks = dataframe.last_n_days(df_target_history, 5)['clicks'].count()
+                    df_bid_history = df_target_history
+                    check_slope = 0
+                    if count_clicks <= 0:
+                        check_slope = 1
+                        slope_list.append(1)
+        if check_slope != 1:
+            df_bid_history['avg_cpc'] = df_bid_history_merge['avg_cpc']
+            a = market_curve.market_curve(dataframe.select_row_by_val(df_bid_history, 'campaignId', row['campaignId']).dropna(subset=['avg_cpc']))
+            slope_list.append(a)
+    df_bid_history_merge['slope'] = slope_list
     df_bid_history_merge.to_csv('./data/df_bid_history_merge_slope_last.csv')
 
     # loop over campaign, then adgroup, then target and add output (CV and slope) to the prediction file

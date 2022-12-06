@@ -69,7 +69,7 @@ def join_bid_history(df_bid, dfnode):
 def last_n_days(df, n):
     today = pd.to_datetime("today")
     begin = pd.to_datetime(today - pd.Timedelta(days=n))
-    df["date"] = df["date"].apply(lambda x: datetime.strptime(x, '%Y-%m-%d'))
+    # df["date"] = df["date"].apply(lambda x: datetime.strptime(x, '%Y-%m-%d'))
 
     try:
         mask = (df['date'] > begin)  # & (df['Date'] <= today))
