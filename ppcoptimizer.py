@@ -198,18 +198,17 @@ def get_slope_conv_value(df_campaign, df_history, df_kw_history, df_bid_history_
             conv_value = df_adgroup_history_ch['price'].mean()
 
         else:
-            # df_campaign_history['date'] = df_campaign_history['date'].apply(lambda x: pd.Timestamp(x))
-            # if dataframe.last_n_days(df_campaign_history, 30)['conversions'].sum() >= 1:
-            #     conv_value = (
-            #             dataframe.last_n_days(df_campaign_history, 30)['sales30d'].sum() /
-            #             dataframe.last_n_days(df_campaign_history, 30)['conversions'].sum())
-            # elif dataframe.last_n_days(df_adgroup_history, 30)['conversions'].sum() >= 1:
-            #     conv_value = (
-            #             dataframe.last_n_days(df_adgroup_history, 30)['sales30d'].sum() /
-            #             dataframe.last_n_days(df_adgroup_history, 30)['conversions'].sum())
-            # else:
-            #     conv_value = 0
-            conv_value = 0.5
+            df_campaign_history['date'] = df_campaign_history['date'].apply(lambda x: pd.Timestamp(x))
+            if dataframe.last_n_days(df_campaign_history, 30)['conversions'].sum() >= 1:
+                conv_value = (
+                        dataframe.last_n_days(df_campaign_history, 30)['sales30d'].sum() /
+                        dataframe.last_n_days(df_campaign_history, 30)['conversions'].sum())
+            elif dataframe.last_n_days(df_adgroup_history, 30)['conversions'].sum() >= 1:
+                conv_value = (
+                        dataframe.last_n_days(df_adgroup_history, 30)['sales30d'].sum() /
+                        dataframe.last_n_days(df_adgroup_history, 30)['conversions'].sum())
+            else:
+                conv_value = 0
         conv_val_list.append(conv_value)
 
     df_bid_history_merge['conv_value'] = conv_val_list
