@@ -1,11 +1,15 @@
-from utils.input_output import read_bid
+import json
+from flask import Flask
+import ppcoptimizer
+
+app = Flask(__name__)
 
 
-def main():
-    print("test")
-    df = read_bid()
-    print(df)
+@app.route('/')
+def index():
+    # ppcoptimizer.main()
+    return json.dumps({'name': 'alice',
+                       'email': 'alice@outlook.com'})
 
 
-if __name__ == "__main__":
-    main()
+app.run()
