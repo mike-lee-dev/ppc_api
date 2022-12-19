@@ -1,266 +1,448 @@
 ,CR,x_prior,x_post ,Date,Leave,campaignName,adGroupName,targeting,matchType
-2.0,0.15352485691675322,0.15352485691675322,0.15441137510082253,2022-11-30,2.0,Brace - SP - BBM,bbm,+tendonitis +wrist,broad
-2.0,0.15352485691675322,0.15352485691675322,0.15441137510082253,2022-11-30,2.0,Brace - SP - Broad - Generic - GS,Generic Keywords,sport wrist brace,broad
-2.0,0.15352485691675322,0.15352485691675322,0.15441137510082253,2022-11-30,2.0,Brace - SP - Broad - Generic - GS,Generic Keywords,wrist brace typing,broad
-2.0,0.15352485691675322,0.15352485691675322,0.15441137510082253,2022-11-30,2.0,Brace - SP - Broad - Injury KW - GS,Injury,wrist injury brace,broad
-2.0,0.15352485691675322,0.15352485691675322,0.15441137510082253,2022-11-30,2.0,Brace - SP - Broad - Injury KW - GS,Injury,wrist injury support,broad
-2.0,0.15352485691675322,0.15352485691675322,0.15441137510082253,2022-11-30,2.0,Brace - SP - Broad - Generic - GS,Generic Keywords,wrist relief for pain,broad
-2.0,0.15352485691675322,0.15352485691675322,0.15441137510082253,2022-11-30,2.0,Brace - SP - Broad - Injury KW - GS,Injury,wrist injury,broad
-2.0,0.15352485691675322,0.15352485691675322,0.15441137510082253,2022-11-30,2.0,Brace - SP - Broad - Injury KW - GS,Injury,wrist injury support brace,broad
-2.0,0.15352485691675322,0.15352485691675322,0.15441137510082253,2022-11-30,2.0,Brace - SP - Broad - Generic - GS,Generic Keywords,gaming wrist brace,broad
-2.0,0.15352485691675322,0.15352485691675322,0.15441137510082253,2022-11-30,2.0,Brace - SP - Broad - Generic - GS,Generic Keywords,medical wrist brace,broad
-2.0,0.15352485691675322,0.15352485691675322,0.15441137510082253,2022-11-30,2.0,Brace - SP - Broad - Generic - GS,Generic Keywords,wrist wrap injury,broad
-2.0,0.15352485691675322,0.15352485691675322,0.15441137510082253,2022-11-30,2.0,Brace - SP - Broad - Injury KW - GS,Injury,wrist injury therapy,broad
-2.0,0.15352485691675322,0.15352485691675322,0.15441137510082253,2022-11-30,2.0,Brace - SP - Broad - Injury KW - GS,Injury,injury brace,broad
-2.0,0.15352485691675322,0.15352485691675322,0.15441137510082253,2022-11-30,2.0,Brace - SP - BBM,bbm,+copper +tendinitis,broad
-2.0,0.15352485691675322,0.15352485691675322,0.15441137510082253,2022-11-30,2.0,Brace - SP - BBM,bbm,+tendinitis +wrist,broad
-2.0,0.15352485691675322,0.15352485691675322,0.15441137510082253,2022-11-30,2.0,Brace - SP - Broad - Injury KW - GS,Tendinitis,tendonitis,broad
-2.0,0.15352485691675322,0.15352485691675322,0.15441137510082253,2022-11-30,2.0,Brace - SP - Broad - Injury KW - GS,Injury,sport injury brace,broad
-2.0,0.15352485691675322,0.15352485691675322,0.15441137510082253,2022-11-30,2.0,Brace - SP - Broad - Injury KW - GS,Injury,wrist injury recovery,broad
-2.0,0.15352485691675322,0.15352485691675322,0.15441137510082253,2022-11-30,2.0,Brace - SP - Broad - Injury KW - GS,Tendinitis,brace tendonitis,broad
-2.0,0.15352485691675322,0.15352485691675322,0.15441137510082253,2022-11-30,2.0,Brace - SP - Broad - Injury KW - GS,Tendinitis,tendonitis wrist brace for women,broad
-2.0,0.15352485691675322,0.15352485691675322,0.15441137510082253,2022-11-30,2.0,Brace - SP - BBM,bbm,+copper +brace,broad
-2.0,0.15352485691675322,0.15352485691675322,0.15441137510082253,2022-11-30,2.0,Brace - SP - Broad - Generic - GS,Generic Keywords,hand brace,broad
-2.0,0.15352485691675322,0.15352485691675322,0.15441137510082253,2022-11-30,2.0,Brace - SP - Broad - Generic - GS,Generic Keywords,hand stabilizer brace,broad
-2.0,0.15352485691675322,0.15352485691675322,0.15441137510082253,2022-11-30,2.0,Brace - SP - Broad - Generic - GS,Generic Keywords,hand wrist,broad
-2.0,0.15352485691675322,0.15352485691675322,0.15441137510082253,2022-11-30,2.0,Brace - SP - Broad - Generic - GS,Generic Keywords,hand wrist brace,broad
-2.0,0.15352485691675322,0.15352485691675322,0.15441137510082253,2022-11-30,2.0,Brace - SP - Broad - Generic - GS,Generic Keywords,hand wrist compression,broad
-2.0,0.15352485691675322,0.15352485691675322,0.15441137510082253,2022-11-30,2.0,Brace - SP - Broad - Generic - GS,Generic Keywords,support brace wrist,broad
-2.0,0.15352485691675322,0.15352485691675322,0.15441137510082253,2022-11-30,2.0,Brace - SP - Broad - Generic - GS,Generic Keywords,wrist brace,broad
-2.0,0.15352485691675322,0.15352485691675322,0.15441137510082253,2022-11-30,2.0,Brace - SP - Broad - Generic - GS,Generic Keywords,wrist stabilizer,broad
-2.0,0.15352485691675322,0.15352485691675322,0.15441137510082253,2022-11-30,2.0,Brace - SP - Broad - Injury KW - GS,Sprains,wrist sprain brace,broad
-2.0,0.15352485691675322,0.15352485691675322,0.15441137510082253,2022-11-30,2.0,Brace - SP - Broad - Injury KW - GS,Tendinitis,tendinitis band wrist,broad
-2.0,0.15352485691675322,0.15352485691675322,0.15441137510082253,2022-11-30,2.0,Brace - SP - Broad - Injury KW - GS,Tendinitis,tendonitis left wrist brace,broad
-2.0,0.15352485691675322,0.15352485691675322,0.15441137510082253,2022-11-30,2.0,Brace - SP - Broad - Injury KW - GS,Tendinitis,tendonitis wrist band,broad
-2.0,0.15352485691675322,0.15352485691675322,0.15441137510082253,2022-11-30,2.0,Brace - SP - Broad - Injury KW - GS,Tendinitis,tendonitis wrist brace,broad
-2.0,0.15352485691675322,0.15352485691675322,0.15441137510082253,2022-11-30,2.0,Brace - SP - Broad - Injury KW - GS,Tendinitis,tendonitis wrist support,broad
-2.0,0.15352485691675322,0.15352485691675322,0.15441137510082253,2022-11-30,2.0,Brace - SP - Broad - Injury KW - GS,Tendinitis,wrist wraps tendonitis,broad
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Brace - SP - Exact - Injury KW - GS,Sprains,sprained wrist brace for men,exact
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Brace - SP - Exact - Injury KW - GS,Sprains,sprained wrist brace for women,exact
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Brace - SP - Exact - Injury KW - GS,Sprains,wrist brace for sprained wrist,exact
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Gloves  - Competitor Brand - Exact,Gloves  - Competitor Brand - Exact,copper fit gloves,exact
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Gloves - SP - Cerebro - Amazons Choice - Exact,Gloves - SP - Cerebro - Amazons Choice - Exact,gloves carpal tunnel,exact
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,copper gloves men,broad
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,swelling reducer for hands,broad
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Brace - SP - Exact - Injury KW - GS,Sprains,sprained wrist brace left,exact
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Brace - SP - Exact - Injury KW - GS,Tendinitis,wrist wraps tendonitis,exact
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Gloves - SP - Cerebro - Amazons Choice - Exact,Gloves - SP - Cerebro - Amazons Choice - Exact,carpal tunnel gloves,exact
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,swelling reducer for hands,phrase
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Brace - SP - Exact - Injury KW - GS,Pain,hand pain relief,exact
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Brace - SP - Exact - Injury KW - GS,Pain,wrist bandage pain,exact
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Brace - SP - Exact - Injury KW - GS,Sprains,sprained wrist brace,exact
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Brace - SP - Exact - Generic - GS,Left,left wrist brace women,exact
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Brace - SP - Exact - Generic - GS,Generic Keywords,wrist relief for pain,exact
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Brace - SP - Exact - Generic - GS,Left,wrist brace left hand,exact
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Brace - SP - Exact - Generic - GS,Right,right wrist brace women,exact
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,anti arthritis gloves,phrase
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Brace - SP - Exact - Generic - GS,Generic Keywords,compression wrist brace,exact
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Brace - SP - Exact - Generic - GS,Generic Keywords,wrist wrap injury,exact
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Brace - SP - Exact - Generic - GS,Right,right wrist support,exact
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Brace - SP - Exact - Injury KW - GS,Pain,hand bandage pain,exact
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,arthriti compression glove,phrase
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Brace - SP - Exact - Generic - GS,Generic Keywords,wristbands pain relief,exact
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Brace - SP - Exact - Generic - GS,Left,wrist immobilizer left hand,exact
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Brace - SP - Exact - Generic - GS,Generic Keywords,compression wrist support,exact
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Brace - SP - Exact - Generic - GS,Generic Keywords,wrist support for small wrists,exact
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Gloves - SP - Cerebro - Amazons Choice - Exact,Gloves - SP - Cerebro - Amazons Choice - Exact,copper fit gloves for men,exact
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Gloves - SP - Cerebro - Amazons Choice - Exact,Gloves - SP - Cerebro - Amazons Choice - Exact,typing gloves for cold hands,exact
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,compression hand arm sleeves for women,broad
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,copper finger glove,broad
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,compression socks for hand,broad
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,copper fingerless glove for women,broad
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Gloves - SP - Cerebro - Amazons Choice - Exact,Gloves - SP - Cerebro - Amazons Choice - Exact,the gamer gloves,exact
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,copper fit gloves,broad
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,arthriti pain relief,phrase
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Gloves - SP - Cerebro - Amazons Choice - Exact,Gloves - SP - Cerebro - Amazons Choice - Exact,gloves for typing in cold office,exact
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,gloves for rheumatoid arthritis,broad
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Brace - SP - Exact - Generic - GS,Generic Keywords,wrist injury brace,exact
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Brace - SP - Exact - Generic - GS,Left,wrist splint left hand,exact
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Gloves - SP - Cerebro - Amazons Choice - Exact,Gloves - SP - Cerebro - Amazons Choice - Exact,copper gloves for arthritis hands for women,exact
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Gloves - SP - Cerebro - Amazons Choice - Exact,Gloves - SP - Cerebro - Amazons Choice - Exact,gaming gloves for cold hands,exact
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Gloves - SP - Cerebro - Amazons Choice - Exact,Gloves - SP - Cerebro - Amazons Choice - Exact,gloves for arthritis hands for men,exact
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Gloves - SP - Cerebro - Amazons Choice - Exact,Gloves - SP - Cerebro - Amazons Choice - Exact,guantes para artritis para mujer,exact
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Gloves - SP - Cerebro - Amazons Choice - Exact,Gloves - SP - Cerebro - Amazons Choice - Exact,hand support for arthritis,exact
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Gloves - SP - Cerebro - Amazons Choice - Exact,Gloves - SP - Cerebro - Amazons Choice - Exact,trigger finger gloves,exact
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,arthritis compression gloves men,broad
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,arthritis gloves magnetic,broad
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,arthritis hand relief,broad
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,carpal tunnel gloves,broad
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,compression hands women,broad
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,copper compression gloves,broad
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,copper infused gloves,broad
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,gloves for painful hands,broad
-15.0,0.1670966262863733,0.1670966262863733,0.16598902353294723,2022-11-30,15.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,gaming gloves pc,broad
-19.0,0.18817180693589328,0.18817180693589328,0.1841477232778942,2022-11-30,19.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,pressure glove,broad
-19.0,0.18817180693589328,0.18817180693589328,0.1841477232778942,2022-11-30,19.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,arthritis gloves,broad
-19.0,0.18817180693589328,0.18817180693589328,0.1841477232778942,2022-11-30,19.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,compression gloves,broad
-19.0,0.18817180693589328,0.18817180693589328,0.1841477232778942,2022-11-30,19.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,copper glove,broad
-19.0,0.18817180693589328,0.18817180693589328,0.1841477232778942,2022-11-30,19.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,hand compression,broad
-19.0,0.18817180693589328,0.18817180693589328,0.1841477232778942,2022-11-30,19.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,cooper gloves,broad
-19.0,0.18817180693589328,0.18817180693589328,0.1841477232778942,2022-11-30,19.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,edema glove,broad
-19.0,0.18817180693589328,0.18817180693589328,0.1841477232778942,2022-11-30,19.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,gamer gloves,broad
-19.0,0.18817180693589328,0.18817180693589328,0.1841477232778942,2022-11-30,19.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,typing gloves,broad
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Brace - SP - Competitor manual,brace,night wrist brace,broad
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Catch all grouped,brace,canilleras para manos,phrase
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Catch all grouped,brace,edema glove,broad
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Catch all grouped,brace,edema glove,phrase
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Gloves  - Competitor Brand - Exact,Gloves  - Competitor Brand - Exact,copper compression,phrase
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Gloves - SP - Cerebro - Exact,gloves,gaming gloves,exact
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,compression glove,phrase
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Catch all grouped,brace,wrist copper,broad
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Catch all grouped,gloves,emf gloves,phrase
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Gloves - SP - Cerebro - Exact,gloves,swelling reducer for hands,exact
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Brace - SP - Competitor manual,brace,night wrist brace,phrase
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Gloves  - Competitor Brand - Exact,Gloves  - Competitor Brand - Exact,ace gloves,phrase
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Gloves  - Competitor Brand - Exact,Gloves  - Competitor Brand - Exact,copper compression,exact
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Gloves - SP - Cerebro - Amazons Choice - Exact,Gloves - SP - Cerebro - Amazons Choice - Exact,sewing gloves,exact
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Gloves - SP - Cerebro - Exact,gloves,thumb compression sleeve,exact
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,copper glove,phrase
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Gloves  - Competitor Brand - Exact,Gloves  - Competitor Brand - Exact,copper compression,broad
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Gloves - SP - Cerebro - Exact,gloves,compression gloves for edema,exact
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Brace - SP - Competitor manual,brace,night wrist support,broad
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Brace - SP - Exact - Generic - GS,Generic Keywords,wrist braces,exact
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Catch all grouped,brace,wrist copper,phrase
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,arthriti glove,phrase
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Brace - SP - Exact - Generic - GS,Generic Keywords,wrist compression,exact
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,arthriti compression,phrase
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,arthriti pain,phrase
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Brace - SP - Exact - Generic - GS,Generic Keywords,hand wrist,exact
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Brace - SP - Exact - Generic - GS,Generic Keywords,wrist support,exact
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Catch all grouped,brace,comfybrace,phrase
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Brace - SP - Exact - Generic - GS,Generic Keywords,wrist immobilizer,exact
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Catch all grouped,brace,hand pain,phrase
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Gloves  - Competitor Brand - Exact,Gloves  - Competitor Brand - Exact,ace gloves,exact
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Brace - SP - Competitor manual,brace,copper compression wrist support,exact
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Brace - SP - Exact - Generic - GS,Generic Keywords,hand brace,exact
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Brace - SP - Exact - Injury KW - GS,Pain,hand pain,exact
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Brace - SP - Exact - Injury KW - GS,Pain,wrist pain,exact
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Catch all grouped,brace,copper wrist band,broad
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Catch all grouped,brace,wrist brace carpal tunnel,broad
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Catch all grouped,brace,wrist orthosis,broad
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Catch all grouped,brace,wrist orthosis,phrase
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Catch all grouped,brace,wrist protection,broad
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Catch all grouped,brace,wrist splint,broad
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Catch all grouped,brace,wrist support,broad
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Catch all grouped,brace,wrist wraps,broad
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Catch all grouped,brace,wrist wraps,phrase
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Catch all grouped,brace,wristbands carpal tunnel,broad
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Catch all grouped,gloves,bowling gloves right hand,phrase
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Catch all grouped,gloves,finger compression,phrase
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Catch all grouped,gloves,finger gloves,broad
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Catch all grouped,gloves,finger gloves,phrase
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Catch all grouped,gloves,fingerless gloves,exact
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Catch all grouped,gloves,fingerless gloves,phrase
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Catch all grouped,gloves,fingerless gloves men,phrase
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Catch all grouped,gloves,fingerless gloves women,exact
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Catch all grouped,gloves,gloves,broad
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Catch all grouped,gloves,gloves men,phrase
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Catch all grouped,gloves,gloves women,phrase
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Catch all grouped,gloves,half finger gloves,broad
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Catch all grouped,gloves,half finger gloves men,broad
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Catch all grouped,gloves,hand brace,broad
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Catch all grouped,gloves,hand cramp relief,exact
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Catch all grouped,gloves,hand finger brace,broad
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Catch all grouped,gloves,knitting gloves,broad
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Catch all grouped,gloves,knitting gloves,phrase
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Catch all grouped,gloves,lymphedema gloves,phrase
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Catch all grouped,gloves,stroke gloves right hand,broad
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Catch all grouped,gloves,wrist brace,phrase
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Catch all grouped,gloves,wrist support,phrase
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,arthriti joint,phrase
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,arthriti relief,phrase
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,arthritis glove,phrase
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,arthritis gloves,phrase
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,hand compression,phrase
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Catch all grouped,brace,copper gloves,phrase
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Catch all grouped,brace,copper wrist support,broad
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Catch all grouped,brace,splint right hand,phrase
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Catch all grouped,gloves,arthritis,broad
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Catch all grouped,gloves,arthritis,phrase
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Catch all grouped,gloves,copper infused gloves men,broad
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Catch all grouped,gloves,tremor relief,broad
-20.0,0.11035832333239833,0.11035832333239833,0.12390789042661117,2022-11-30,20.0,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,gaming gloves,phrase
-36.0,0.6316365947372898,0.6316365947372898,0.6311339005083144,2022-11-30,36.0,Gloves - SP - Exact - Brand Defense Keywords - GS,Gloves - SP - Exact - Brand Defense Keywords - GS,fititude gloves,exact
-36.0,0.6316365947372898,0.6316365947372898,0.6311339005083144,2022-11-30,36.0,Gloves - SP - Exact - Brand Defense Keywords - GS,Gloves - SP - Exact - Brand Defense Keywords - GS,fititude gloves,broad
-37.0,0.3631876152821382,0.3631876152821382,0.3360516762522846,2022-11-30,37.0,Gloves - SP - Exact - Brand Defense Keywords - GS,Gloves - SP - Exact - Brand Defense Keywords - GS,fititude compression gloves,exact
-37.0,0.3631876152821382,0.3631876152821382,0.3360516762522846,2022-11-30,37.0,Gloves - SP - Exact - Brand Defense Keywords - GS,Gloves - SP - Exact - Brand Defense Keywords - GS,fititude infused copper pair of compression gloves,exact
-37.0,0.3631876152821382,0.3631876152821382,0.3360516762522846,2022-11-30,37.0,Gloves - SP - Exact - Brand Defense Keywords - GS,Gloves - SP - Exact - Brand Defense Keywords - GS,fititude compression gloves,broad
-40.0,0.4187072760413352,0.4187072760413352,0.40329150455236334,2022-11-30,40.0,Gloves - SP - manual,exact,thumb arthritis compression gloves,exact
-40.0,0.4187072760413352,0.4187072760413352,0.40329150455236334,2022-11-30,40.0,Gloves - SP - Exact - Brand Defense Keywords - GS,Gloves - SP - Exact - Brand Defense Keywords - GS,fititude,exact
-40.0,0.4187072760413352,0.4187072760413352,0.40329150455236334,2022-11-30,40.0,Gloves - SP - Top Keywords,Top Keywords,hand support glove pain,phrase
-40.0,0.4187072760413352,0.4187072760413352,0.40329150455236334,2022-11-30,40.0,Gloves - SP - manual,broad,copper hands,broad
-40.0,0.4187072760413352,0.4187072760413352,0.40329150455236334,2022-11-30,40.0,Gloves - SP - Top Keywords,Top Keywords,hand support glove pain,exact
-40.0,0.4187072760413352,0.4187072760413352,0.40329150455236334,2022-11-30,40.0,Gloves - SP - manual,broad,copper gloves,broad
-40.0,0.4187072760413352,0.4187072760413352,0.40329150455236334,2022-11-30,40.0,Gloves - SP - manual,exact,edema glove left hand,exact
-40.0,0.4187072760413352,0.4187072760413352,0.40329150455236334,2022-11-30,40.0,Gloves - SP - Exact - Brand Defense Keywords - GS,Gloves - SP - Exact - Brand Defense Keywords - GS,fititude,phrase
-40.0,0.4187072760413352,0.4187072760413352,0.40329150455236334,2022-11-30,40.0,Gloves - SP - Exact - Brand Defense Keywords - GS,Gloves - SP - Exact - Brand Defense Keywords - GS,compression gloves fititude,exact
-40.0,0.4187072760413352,0.4187072760413352,0.40329150455236334,2022-11-30,40.0,Gloves - SP - manual,bbm,+arthritis +gloves,broad
-40.0,0.4187072760413352,0.4187072760413352,0.40329150455236334,2022-11-30,40.0,Gloves - SP - manual,bbm,+arthritis +pain,broad
-40.0,0.4187072760413352,0.4187072760413352,0.40329150455236334,2022-11-30,40.0,Gloves - SP - manual,bbm,+edema +glove,broad
-40.0,0.4187072760413352,0.4187072760413352,0.40329150455236334,2022-11-30,40.0,Gloves - SP - manual,bbm,+hand +pain,broad
-40.0,0.4187072760413352,0.4187072760413352,0.40329150455236334,2022-11-30,40.0,Gloves - SP - manual,bbm,+swelling +hand,broad
-40.0,0.4187072760413352,0.4187072760413352,0.40329150455236334,2022-11-30,40.0,Gloves - SP - manual,broad,edema glove,broad
-40.0,0.4187072760413352,0.4187072760413352,0.40329150455236334,2022-11-30,40.0,Gloves - SP - manual,broad,finger support arthritis,broad
-40.0,0.4187072760413352,0.4187072760413352,0.40329150455236334,2022-11-30,40.0,Gloves - SP - manual,broad,guantes para artritis mujer,broad
-40.0,0.4187072760413352,0.4187072760413352,0.40329150455236334,2022-11-30,40.0,Gloves - SP - manual,broad,hand compression,broad
-40.0,0.4187072760413352,0.4187072760413352,0.40329150455236334,2022-11-30,40.0,Gloves - SP - manual,broad,hand support arthritis,broad
-40.0,0.4187072760413352,0.4187072760413352,0.40329150455236334,2022-11-30,40.0,Gloves - SP - manual,bbm,+copper +hand,broad
-40.0,0.4187072760413352,0.4187072760413352,0.40329150455236334,2022-11-30,40.0,Gloves - SP - manual,broad,arthritis gloves women,broad
-40.0,0.4187072760413352,0.4187072760413352,0.40329150455236334,2022-11-30,40.0,Gloves - SP - manual,broad,arthritis hand gloves,broad
-40.0,0.4187072760413352,0.4187072760413352,0.40329150455236334,2022-11-30,40.0,Gloves - SP - manual,broad,arthritis hand relief,broad
-40.0,0.4187072760413352,0.4187072760413352,0.40329150455236334,2022-11-30,40.0,Gloves - SP - manual,broad,fingerless compression gloves,broad
-40.0,0.4187072760413352,0.4187072760413352,0.40329150455236334,2022-11-30,40.0,Gloves - SP - manual,broad,gaming gloves,broad
-44.0,0.15562857123127022,0.15562857123127022,0.15335933932754217,2022-11-30,44.0,Gloves - SP - manual,exact,finger support arthritis,exact
-44.0,0.15562857123127022,0.15562857123127022,0.15335933932754217,2022-11-30,44.0,Gloves - SP - Top Keywords,Top Keywords,compression gloves,phrase
-44.0,0.15562857123127022,0.15562857123127022,0.15335933932754217,2022-11-30,44.0,Gloves - SP - manual,exact,arthritis compression gloves,exact
-45.0,0.18817168434853224,0.18817168434853224,0.18774847983094825,2022-11-30,45.0,Gloves - SP - Top Keywords,Top Keywords,gloves for swelling,exact
-45.0,0.18817168434853224,0.18817168434853224,0.18774847983094825,2022-11-30,45.0,Gloves - SP - Top Keywords,Top Keywords,gloves for swelling,phrase
-45.0,0.18817168434853224,0.18817168434853224,0.18774847983094825,2022-11-30,45.0,Gloves - SP - manual,exact,gloves for arthritis,exact
-45.0,0.18817168434853224,0.18817168434853224,0.18774847983094825,2022-11-30,45.0,Gloves - SP - Top Keywords,Top Keywords,hand compression gloves,phrase
-45.0,0.18817168434853224,0.18817168434853224,0.18774847983094825,2022-11-30,45.0,Gloves - SP - manual,exact,wrist compression sleeve,exact
-45.0,0.18817168434853224,0.18817168434853224,0.18774847983094825,2022-11-30,45.0,Gloves - SP - Top Keywords,Top Keywords,wrist compression sleeve,exact
-49.0,0.1164730937048329,0.1164730937048329,0.09904183185210597,2022-11-30,49.0,Gloves - SP - KW - MIX - Discovery,gloves,arthritis gloves for women for pain,exact
-49.0,0.1164730937048329,0.1164730937048329,0.09904183185210597,2022-11-30,49.0,Gloves - SP - KW - MIX - Discovery,gloves,compression glove,broad
-49.0,0.1164730937048329,0.1164730937048329,0.09904183185210597,2022-11-30,49.0,Gloves - SP - KW - MIX - Discovery,gloves,arthritis gloves for women for pain,broad
-49.0,0.1164730937048329,0.1164730937048329,0.09904183185210597,2022-11-30,49.0,Gloves - SP - KW - MIX - Discovery,gloves,arthritis gloves for women for pain,phrase
-49.0,0.1164730937048329,0.1164730937048329,0.09904183185210597,2022-11-30,49.0,Gloves - SP - KW - MIX - Discovery,gloves,compression gloves for arthritis for women,exact
-49.0,0.1164730937048329,0.1164730937048329,0.09904183185210597,2022-11-30,49.0,Gloves - SP - KW - MIX - Discovery,gloves,compression glove,phrase
-49.0,0.1164730937048329,0.1164730937048329,0.09904183185210597,2022-11-30,49.0,Gloves - SP - KW - MIX - Discovery,gloves,fingerless compression gloves for women,exact
-49.0,0.1164730937048329,0.1164730937048329,0.09904183185210597,2022-11-30,49.0,Gloves - SP - KW - MIX - Discovery,gloves,arthritis gloves,broad
-49.0,0.1164730937048329,0.1164730937048329,0.09904183185210597,2022-11-30,49.0,Gloves - SP - KW - MIX - Discovery,gloves,arthritis gloves,phrase
-49.0,0.1164730937048329,0.1164730937048329,0.09904183185210597,2022-11-30,49.0,Gloves - SP - KW - MIX - Discovery,gloves,arthritis gloves women,broad
-49.0,0.1164730937048329,0.1164730937048329,0.09904183185210597,2022-11-30,49.0,Gloves - SP - manual,pain,finger arthritis relief,exact
-49.0,0.1164730937048329,0.1164730937048329,0.09904183185210597,2022-11-30,49.0,Gloves - SP - manual,pain,finger joint pain,broad
-49.0,0.1164730937048329,0.1164730937048329,0.09904183185210597,2022-11-30,49.0,Gloves - SP - manual,pain,finger pain,broad
-49.0,0.1164730937048329,0.1164730937048329,0.09904183185210597,2022-11-30,49.0,Gloves - SP - manual,pain,glove hand pain,exact
-49.0,0.1164730937048329,0.1164730937048329,0.09904183185210597,2022-11-30,49.0,Gloves - SP - manual,pain,gloves hand pain,broad
-49.0,0.1164730937048329,0.1164730937048329,0.09904183185210597,2022-11-30,49.0,Gloves - SP - manual,pain,hand pain,broad
-49.0,0.1164730937048329,0.1164730937048329,0.09904183185210597,2022-11-30,49.0,Gloves - SP - manual,pain,hand pain,exact
-49.0,0.1164730937048329,0.1164730937048329,0.09904183185210597,2022-11-30,49.0,Gloves - SP - manual,pain,hand pain,phrase
-49.0,0.1164730937048329,0.1164730937048329,0.09904183185210597,2022-11-30,49.0,Gloves - SP - manual,pain,hand pain relief,broad
-49.0,0.1164730937048329,0.1164730937048329,0.09904183185210597,2022-11-30,49.0,Gloves - SP - manual,pain,hand pain relief,exact
-49.0,0.1164730937048329,0.1164730937048329,0.09904183185210597,2022-11-30,49.0,Gloves - SP - manual,pain,hand pain relief,phrase
-49.0,0.1164730937048329,0.1164730937048329,0.09904183185210597,2022-11-30,49.0,Gloves - SP - manual,pain,joint pain,phrase
-49.0,0.1164730937048329,0.1164730937048329,0.09904183185210597,2022-11-30,49.0,Gloves - SP - manual,pain,muñequeras para dolor de manos,exact
-49.0,0.1164730937048329,0.1164730937048329,0.09904183185210597,2022-11-30,49.0,Gloves - SP - manual,pain,pain glove,broad
-49.0,0.1164730937048329,0.1164730937048329,0.09904183185210597,2022-11-30,49.0,Gloves - SP - manual,pain,pain relief glove,phrase
-49.0,0.1164730937048329,0.1164730937048329,0.09904183185210597,2022-11-30,49.0,Gloves - SP - manual,phrase,arthritis,phrase
-49.0,0.1164730937048329,0.1164730937048329,0.09904183185210597,2022-11-30,49.0,Gloves - SP - manual,phrase,arthritis gloves women,phrase
-49.0,0.1164730937048329,0.1164730937048329,0.09904183185210597,2022-11-30,49.0,Gloves - SP - manual,phrase,circulation gloves,phrase
-49.0,0.1164730937048329,0.1164730937048329,0.09904183185210597,2022-11-30,49.0,Gloves - SP - manual,phrase,compression gloves swelling,phrase
-49.0,0.1164730937048329,0.1164730937048329,0.09904183185210597,2022-11-30,49.0,Gloves - SP - manual,phrase,finger compression gloves,phrase
-49.0,0.1164730937048329,0.1164730937048329,0.09904183185210597,2022-11-30,49.0,Gloves - SP - manual,phrase,gaming gloves,phrase
-49.0,0.1164730937048329,0.1164730937048329,0.09904183185210597,2022-11-30,49.0,Gloves - SP - manual,phrase,guantes de compresion,phrase
-49.0,0.1164730937048329,0.1164730937048329,0.09904183185210597,2022-11-30,49.0,Gloves - SP - manual,phrase,wrist compression,phrase
-49.0,0.1164730937048329,0.1164730937048329,0.09904183185210597,2022-11-30,49.0,Gloves - SP - manual,phrase,wrist support,phrase
-49.0,0.1164730937048329,0.1164730937048329,0.09904183185210597,2022-11-30,49.0,Gloves - SP - KW - MIX - Discovery,gloves,arthritis gloves women,phrase
-49.0,0.1164730937048329,0.1164730937048329,0.09904183185210597,2022-11-30,49.0,Gloves - SP - KW - MIX - Discovery,gloves,compression gloves women,phrase
-49.0,0.1164730937048329,0.1164730937048329,0.09904183185210597,2022-11-30,49.0,Gloves - SP - KW - MIX - Discovery,gloves,copper compression gloves,phrase
-49.0,0.1164730937048329,0.1164730937048329,0.09904183185210597,2022-11-30,49.0,Gloves - SP - manual,pain,joint pain,broad
-49.0,0.1164730937048329,0.1164730937048329,0.09904183185210597,2022-11-30,49.0,Gloves - SP - manual,pain,joint pain relief,phrase
-49.0,0.1164730937048329,0.1164730937048329,0.09904183185210597,2022-11-30,49.0,Gloves - SP - manual,phrase,arthritis gloves,phrase
-49.0,0.1164730937048329,0.1164730937048329,0.09904183185210597,2022-11-30,49.0,Gloves - SP - manual,phrase,carpal tunnel gloves,phrase
-54.0,0.14124171592213106,0.14124171592213106,0.1402666065350355,2022-11-30,54.0,Wallet - SP - Broad - Generic - GS,Wallet - SP - Broad - Generic - GS,rfid wallet,broad
-54.0,0.14124171592213106,0.14124171592213106,0.1402666065350355,2022-11-30,54.0,Wallet - SP - Broad - Generic - GS,Wallet - SP - Broad - Generic - GS,slim wallets for men,broad
-54.0,0.14124171592213106,0.14124171592213106,0.1402666065350355,2022-11-30,54.0,Wallet - SP - Broad - Generic - GS,Wallet - SP - Broad - Generic - GS,wallet rfid blocking,broad
-54.0,0.14124171592213106,0.14124171592213106,0.1402666065350355,2022-11-30,54.0,Wallet - SP - Broad - Generic - GS,Wallet - SP - Broad - Generic - GS,minimalist wallet men,broad
+8.0,0.07717165658157339,0.07717165658157339,0.07404795307530512,2022-12-14,8.0,Brace - SP - BBM,bbm,+tendonitis +wrist,broad
+8.0,0.07717165658157339,0.07717165658157339,0.07404795307530512,2022-12-14,8.0,Brace - SP - BBM,bbm,+copper +tendinitis,broad
+8.0,0.07717165658157339,0.07717165658157339,0.07404795307530512,2022-12-14,8.0,Brace - SP - BBM,bbm,+tendinitis +wrist,broad
+8.0,0.07717165658157339,0.07717165658157339,0.07404795307530512,2022-12-14,8.0,Brace - SP - BBM,bbm,+copper +brace,broad
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Catch all grouped,brace,canilleras para manos,phrase
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,compression glove,phrase
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Gloves - SP - Cerebro - Amazons Choice - Exact,Gloves - SP - Cerebro - Amazons Choice - Exact,carpal tunnel gloves,exact
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Gloves  - Competitor Brand - Exact,Gloves  - Competitor Brand - Exact,ace gloves,phrase
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Gloves - SP - Cerebro - Exact,gloves,compression gloves for edema,exact
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,anti arthritis gloves,phrase
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,arthriti glove,phrase
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Brace - SP - Exact - Generic - GS,Generic Keywords,compression wrist brace,exact
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,arthriti compression,phrase
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,arthriti compression glove,phrase
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,arthriti pain,phrase
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,compression hand arm sleeves for women,broad
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,compression socks for hand,broad
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,arthriti pain relief,phrase
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Gloves  - Competitor Brand - Exact,Gloves  - Competitor Brand - Exact,ace gloves,exact
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Catch all grouped,gloves,bowling gloves right hand,phrase
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,arthritis compression gloves men,broad
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,arthritis gloves,broad
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,arthritis gloves magnetic,broad
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,arthritis hand relief,broad
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,carpal tunnel gloves,broad
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,compression gloves,broad
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,compression hands women,broad
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,arthriti joint,phrase
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,arthriti relief,phrase
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,arthritis glove,phrase
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,arthritis gloves,phrase
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Catch all grouped,brace,compression gloves,broad
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Catch all grouped,brace,compression gloves,phrase
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Catch all grouped,gloves,compression gloves arthritis,broad
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Gloves - SP - Cerebro - Amazons Choice - Exact,Gloves - SP - Cerebro - Amazons Choice - Exact,compression gloves for women,exact
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,arthitis compression gloves,broad
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,arthritis pain gloves women,broad
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,compression glove,broad
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,compression gloves for fingers,broad
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,compression sock gloves,broad
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,compression socks gloves,broad
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Gloves - SP - Cerebro - Exact,gloves,compression copper gloves,exact
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,compression gloves open,phrase
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Catch all grouped,brace,carpal tunnel,phrase
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Catch all grouped,gloves,bowling gloves right hand womens,broad
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Catch all grouped,gloves,carpal tunnel fingers,broad
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Catch all grouped,gloves,carpal tunnel sleeve,broad
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,arthritis gloves men,broad
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,circulation gloves cold hands,broad
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,compression arthritis gloves,broad
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,compression gloves edema,broad
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,compression gloves for arthritis for men,broad
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,compression gloves lymphedema,broad
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,compression gloves men,broad
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,compression gloves swelling,broad
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,compression gloves women,broad
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,compression gloves wrist,broad
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,compression hand gloves,broad
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,compression stocking gloves,broad
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,compression therapy gloves,broad
+13.0,0.08622475385652309,0.08622475385652309,0.08638061176970166,2022-12-14,13.0,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,arthriti swelling,phrase
+24.0,0.1438883570075078,0.1438883570075078,0.10873908473863958,2022-12-14,24.0,Brace - SP - Broad - Generic - GS,Generic Keywords,sport wrist brace,broad
+24.0,0.1438883570075078,0.1438883570075078,0.10873908473863958,2022-12-14,24.0,Brace - SP - Broad - Generic - GS,Generic Keywords,wrist brace typing,broad
+24.0,0.1438883570075078,0.1438883570075078,0.10873908473863958,2022-12-14,24.0,Brace - SP - Broad - Generic - GS,Generic Keywords,wrist relief for pain,broad
+24.0,0.1438883570075078,0.1438883570075078,0.10873908473863958,2022-12-14,24.0,Brace - SP - Broad - Generic - GS,Generic Keywords,gaming wrist brace,broad
+24.0,0.1438883570075078,0.1438883570075078,0.10873908473863958,2022-12-14,24.0,Brace - SP - Broad - Generic - GS,Generic Keywords,medical wrist brace,broad
+24.0,0.1438883570075078,0.1438883570075078,0.10873908473863958,2022-12-14,24.0,Brace - SP - Broad - Generic - GS,Generic Keywords,wrist wrap injury,broad
+24.0,0.1438883570075078,0.1438883570075078,0.10873908473863958,2022-12-14,24.0,Brace - SP - Broad - Generic - GS,Generic Keywords,hand brace,broad
+24.0,0.1438883570075078,0.1438883570075078,0.10873908473863958,2022-12-14,24.0,Brace - SP - Broad - Generic - GS,Generic Keywords,hand stabilizer brace,broad
+24.0,0.1438883570075078,0.1438883570075078,0.10873908473863958,2022-12-14,24.0,Brace - SP - Broad - Generic - GS,Generic Keywords,hand wrist,broad
+24.0,0.1438883570075078,0.1438883570075078,0.10873908473863958,2022-12-14,24.0,Brace - SP - Broad - Generic - GS,Generic Keywords,hand wrist brace,broad
+24.0,0.1438883570075078,0.1438883570075078,0.10873908473863958,2022-12-14,24.0,Brace - SP - Broad - Generic - GS,Generic Keywords,hand wrist compression,broad
+24.0,0.1438883570075078,0.1438883570075078,0.10873908473863958,2022-12-14,24.0,Brace - SP - Broad - Generic - GS,Generic Keywords,support brace wrist,broad
+24.0,0.1438883570075078,0.1438883570075078,0.10873908473863958,2022-12-14,24.0,Brace - SP - Broad - Generic - GS,Generic Keywords,wrist brace,broad
+24.0,0.1438883570075078,0.1438883570075078,0.10873908473863958,2022-12-14,24.0,Brace - SP - Broad - Generic - GS,Generic Keywords,wrist stabilizer,broad
+24.0,0.1438883570075078,0.1438883570075078,0.10873908473863958,2022-12-14,24.0,Brace - SP - Broad - Generic - GS,Generic Keywords,wrist compression,broad
+24.0,0.1438883570075078,0.1438883570075078,0.10873908473863958,2022-12-14,24.0,Brace - SP - Broad - Generic - GS,Generic Keywords,wrist immobilizer,broad
+24.0,0.1438883570075078,0.1438883570075078,0.10873908473863958,2022-12-14,24.0,Brace - SP - Broad - Generic - GS,Generic Keywords,hand compression brace,broad
+24.0,0.1438883570075078,0.1438883570075078,0.10873908473863958,2022-12-14,24.0,Brace - SP - Broad - Generic - GS,Generic Keywords,wrist brace sleeping,broad
+24.0,0.1438883570075078,0.1438883570075078,0.10873908473863958,2022-12-14,24.0,Brace - SP - Broad - Generic - GS,Generic Keywords,wrist brace working out,broad
+24.0,0.1438883570075078,0.1438883570075078,0.10873908473863958,2022-12-14,24.0,Brace - SP - Broad - Generic - GS,Generic Keywords,wristbands pain relief,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Broad - Injury KW - GS,Injury,wrist injury brace,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Broad - Injury KW - GS,Injury,wrist injury support,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Competitor manual,brace,night wrist brace,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Exact - Injury KW - GS,Sprains,sprained wrist brace for men,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Exact - Injury KW - GS,Sprains,sprained wrist brace for women,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Exact - Injury KW - GS,Sprains,wrist brace for sprained wrist,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,brace,edema glove,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,brace,edema glove,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves  - Competitor Brand - Exact,Gloves  - Competitor Brand - Exact,copper compression,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves  - Competitor Brand - Exact,Gloves  - Competitor Brand - Exact,copper fit gloves,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Amazons Choice - Exact,Gloves - SP - Cerebro - Amazons Choice - Exact,gloves carpal tunnel,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,copper gloves men,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,swelling reducer for hands,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Exact,gloves,gaming gloves,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Broad - Injury KW - GS,Injury,wrist injury,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Broad - Injury KW - GS,Injury,wrist injury support brace,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Exact - Injury KW - GS,Sprains,sprained wrist brace left,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Exact - Injury KW - GS,Tendinitis,wrist wraps tendonitis,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,brace,wrist copper,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,emf gloves,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Exact,gloves,swelling reducer for hands,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,swelling reducer for hands,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Broad - Injury KW - GS,Injury,wrist injury therapy,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Competitor manual,brace,night wrist brace,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Exact - Injury KW - GS,Pain,hand pain relief,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Exact - Injury KW - GS,Pain,wrist bandage pain,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Exact - Injury KW - GS,Sprains,sprained wrist brace,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves  - Competitor Brand - Exact,Gloves  - Competitor Brand - Exact,copper compression,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Amazons Choice - Exact,Gloves - SP - Cerebro - Amazons Choice - Exact,sewing gloves,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,pressure glove,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Exact,gloves,thumb compression sleeve,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,copper glove,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Broad - Injury KW - GS,Injury,injury brace,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves  - Competitor Brand - Exact,Gloves  - Competitor Brand - Exact,copper compression,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Competitor manual,brace,night wrist support,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Exact - Generic - GS,Left,left wrist brace women,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Exact - Generic - GS,Generic Keywords,wrist braces,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Exact - Generic - GS,Generic Keywords,wrist relief for pain,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Exact - Generic - GS,Left,wrist brace left hand,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Exact - Generic - GS,Right,right wrist brace women,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,brace,wrist copper,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Exact - Generic - GS,Generic Keywords,wrist compression,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Exact - Generic - GS,Generic Keywords,wrist wrap injury,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Exact - Generic - GS,Right,right wrist support,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Exact - Injury KW - GS,Pain,hand bandage pain,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Broad - Injury KW - GS,Injury,sport injury brace,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Broad - Injury KW - GS,Injury,wrist injury recovery,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Exact - Generic - GS,Generic Keywords,wristbands pain relief,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Exact - Generic - GS,Left,wrist immobilizer left hand,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Exact - Generic - GS,Generic Keywords,compression wrist support,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Exact - Generic - GS,Generic Keywords,hand wrist,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Exact - Generic - GS,Generic Keywords,wrist support,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Exact - Generic - GS,Generic Keywords,wrist support for small wrists,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Amazons Choice - Exact,Gloves - SP - Cerebro - Amazons Choice - Exact,copper fit gloves for men,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Amazons Choice - Exact,Gloves - SP - Cerebro - Amazons Choice - Exact,typing gloves for cold hands,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,copper finger glove,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Broad - Injury KW - GS,Tendinitis,tendonitis wrist brace for women,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,copper fingerless glove for women,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Exact - Generic - GS,Generic Keywords,wrist immobilizer,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Amazons Choice - Exact,Gloves - SP - Cerebro - Amazons Choice - Exact,the gamer gloves,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,copper fit gloves,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,brace,hand pain,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Amazons Choice - Exact,Gloves - SP - Cerebro - Amazons Choice - Exact,gloves for typing in cold office,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,gloves for rheumatoid arthritis,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Broad - Injury KW - GS,Sprains,wrist sprain brace,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Broad - Injury KW - GS,Tendinitis,tendinitis band wrist,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Broad - Injury KW - GS,Tendinitis,tendonitis left wrist brace,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Broad - Injury KW - GS,Tendinitis,tendonitis wrist band,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Broad - Injury KW - GS,Tendinitis,tendonitis wrist brace,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Broad - Injury KW - GS,Tendinitis,tendonitis wrist support,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Competitor manual,brace,copper compression wrist support,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Exact - Generic - GS,Generic Keywords,hand brace,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Exact - Generic - GS,Generic Keywords,wrist injury brace,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Exact - Generic - GS,Left,wrist splint left hand,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Exact - Injury KW - GS,Pain,hand pain,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Exact - Injury KW - GS,Pain,wrist pain,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,brace,copper wrist band,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,brace,wrist brace carpal tunnel,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,brace,wrist orthosis,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,brace,wrist orthosis,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,brace,wrist protection,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,brace,wrist splint,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,brace,wrist support,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,brace,wrist wraps,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,brace,wrist wraps,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,brace,wristbands carpal tunnel,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,finger compression,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,finger gloves,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,finger gloves,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,fingerless gloves,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,fingerless gloves,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,fingerless gloves men,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,fingerless gloves women,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,gloves men,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,gloves women,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,half finger gloves,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,half finger gloves men,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,hand brace,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,hand cramp relief,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,hand finger brace,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,knitting gloves,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,knitting gloves,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,lymphedema gloves,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,stroke gloves right hand,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,wrist brace,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,wrist support,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Amazons Choice - Exact,Gloves - SP - Cerebro - Amazons Choice - Exact,copper gloves for arthritis hands for women,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Amazons Choice - Exact,Gloves - SP - Cerebro - Amazons Choice - Exact,gaming gloves for cold hands,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Amazons Choice - Exact,Gloves - SP - Cerebro - Amazons Choice - Exact,gloves for arthritis hands for men,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Amazons Choice - Exact,Gloves - SP - Cerebro - Amazons Choice - Exact,guantes para artritis para mujer,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Amazons Choice - Exact,Gloves - SP - Cerebro - Amazons Choice - Exact,hand support for arthritis,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Amazons Choice - Exact,Gloves - SP - Cerebro - Amazons Choice - Exact,trigger finger gloves,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,copper compression gloves,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,copper glove,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,copper infused gloves,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,gloves for painful hands,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,hand compression,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,hand compression,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Broad - Injury KW - GS,Tendinitis,tendonitis wrist,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Broad - Injury KW - GS,Tendinitis,wrist wraps tendonitis,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,brace,copper gloves,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,brace,copper wrist support,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,brace,covid 19 wristbands,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,brace,hand bandage,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,brace,hand pain,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,brace,hand support,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,brace,munequeras para dolor de manos,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,brace,splint right hand,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,brace,thumb brace,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,brace,tommie copper wrist,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,brace,tunel carpiano,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,brace,venda de mano,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,brace,venda de mano,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,brace,venda para la mano,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,brace,wrist lacer,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,brace,wrist splint,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,brace,wrist support women,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,copper fit hand relief,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,copper gloves women,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,copper infused gloves men,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,cotton fingerless gloves,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,finger less gloves,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,fingerless gloves,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,fingerless gloves women,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,half finger gloves,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,hand bandage,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,hand brace,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,hand pain,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,hand support,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,heated gloves arthritis hands,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,lymphedema gloves,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,magnetic gloves,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,right hand brace,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,stroke gloves right hand,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,therapeutic gloves,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,thumb glove,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,tremor relief,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,wrist brace,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,wrist compression,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,cooper gloves,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,copper fit compression gloves women,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,copper gloves women,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,copper hand gloves,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,copper hands,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,copper hands arthritis gloves men,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,edema glove,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,fingerless compression gloves,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,gamer gloves,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,gaming gloves pc,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,gloves swelling,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,guantes para artritis hombres,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,munequeras para dolor de manos,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,typing gloves,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,edema glove,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,gaming gloves,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,soportes para las manos,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Brace - SP - Exact - Generic - GS,Generic Keywords,wrist brace working out,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,brace,hand splint,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,brace,wrist brace,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,brace,wrist lacer,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,copper fit wrist,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,copper wrist brace men,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,copper wrist brace women,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,cotton fingerless gloves,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,finger compression,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,finger compression,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,finger splints arthritis,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,fingerless therapy gloves,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,gloves men,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,gloves women,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,hempvana gloves,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,magnetic gloves,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,recovery hand gloves,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,wrist compression sleeve,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,wrist support,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Catch all grouped,gloves,wrist support gloves,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,copper arthritis gloves,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,copper compression fit gloves,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,copper compression gloves for arthritis,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,finger sleeves compression,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,finger splints arthritis,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,finger swelling reducer,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,fingers pain relief,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,glove for arthritis hands,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,glove tendonitis,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,hand compression copper,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,hand compression glove arthritis,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,hand gloves after surgery,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,muñequeras para dolor de manos,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,open finger compression gloves,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,soportes para las manos,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,thumb compression sleeve,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Broad,Cerebro - Broad,warming compression gloves,broad
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Exact,gloves,soportes para las manos,exact
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,copper compression gloves,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,copper fingerless gloves,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,copper gloves men,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,copper half finger,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,copper infused gloves,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,gloves for arthritic hands,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,gloves for arthritis for women,phrase
+29.0,0.16021535785021562,0.16021535785021562,0.15593253075458569,2022-12-14,29.0,Gloves - SP - Cerebro - Phrase,Cerebro - Phrase,gloves for pain,phrase
+39.0,0.5563995696158122,0.5563995696158122,0.5581971582626261,2022-12-14,39.0,Gloves - SP - Exact - Brand Defense Keywords - GS,Gloves - SP - Exact - Brand Defense Keywords - GS,fititude compression gloves,exact
+39.0,0.5563995696158122,0.5563995696158122,0.5581971582626261,2022-12-14,39.0,Gloves - SP - Exact - Brand Defense Keywords - GS,Gloves - SP - Exact - Brand Defense Keywords - GS,fititude gloves,exact
+39.0,0.5563995696158122,0.5563995696158122,0.5581971582626261,2022-12-14,39.0,Gloves - SP - Exact - Brand Defense Keywords - GS,Gloves - SP - Exact - Brand Defense Keywords - GS,fititude infused copper pair of compression gloves,exact
+39.0,0.5563995696158122,0.5563995696158122,0.5581971582626261,2022-12-14,39.0,Gloves - SP - Exact - Brand Defense Keywords - GS,Gloves - SP - Exact - Brand Defense Keywords - GS,fititude gloves,broad
+39.0,0.5563995696158122,0.5563995696158122,0.5581971582626261,2022-12-14,39.0,Gloves - SP - Exact - Brand Defense Keywords - GS,Gloves - SP - Exact - Brand Defense Keywords - GS,compression gloves fititude,exact
+39.0,0.5563995696158122,0.5563995696158122,0.5581971582626261,2022-12-14,39.0,Gloves - SP - Exact - Brand Defense Keywords - GS,Gloves - SP - Exact - Brand Defense Keywords - GS,fititude compression gloves,broad
+39.0,0.5563995696158122,0.5563995696158122,0.5581971582626261,2022-12-14,39.0,Gloves - SP - Exact - Brand Defense Keywords - GS,Gloves - SP - Exact - Brand Defense Keywords - GS,fititude arthritis gloves,broad
+45.0,0.17247084959045622,0.17247084959045622,0.17307287053191686,2022-12-14,45.0,Gloves - SP - Top Keywords,Top Keywords,gloves for swelling,exact
+45.0,0.17247084959045622,0.17247084959045622,0.17307287053191686,2022-12-14,45.0,Gloves - SP - Top Keywords,Top Keywords,gloves for swelling,phrase
+45.0,0.17247084959045622,0.17247084959045622,0.17307287053191686,2022-12-14,45.0,Gloves - SP - Top Keywords,Top Keywords,hand support glove pain,phrase
+45.0,0.17247084959045622,0.17247084959045622,0.17307287053191686,2022-12-14,45.0,Wallet - SP - Broad - Generic - GS,Wallet - SP - Broad - Generic - GS,rfid wallet,broad
+45.0,0.17247084959045622,0.17247084959045622,0.17307287053191686,2022-12-14,45.0,Wallet - SP - Broad - Generic - GS,Wallet - SP - Broad - Generic - GS,slim wallets for men,broad
+45.0,0.17247084959045622,0.17247084959045622,0.17307287053191686,2022-12-14,45.0,Wallet - SP - Broad - Generic - GS,Wallet - SP - Broad - Generic - GS,wallet rfid blocking,broad
+45.0,0.17247084959045622,0.17247084959045622,0.17307287053191686,2022-12-14,45.0,Gloves - SP - Top Keywords,Top Keywords,hand support glove pain,exact
+45.0,0.17247084959045622,0.17247084959045622,0.17307287053191686,2022-12-14,45.0,Wallet - SP - Broad - Generic - GS,Wallet - SP - Broad - Generic - GS,minimalist wallet men,broad
+45.0,0.17247084959045622,0.17247084959045622,0.17307287053191686,2022-12-14,45.0,Gloves - SP - Top Keywords,Top Keywords,hand compression gloves,phrase
+45.0,0.17247084959045622,0.17247084959045622,0.17307287053191686,2022-12-14,45.0,Gloves - SP - Top Keywords,Top Keywords,compression gloves,phrase
+45.0,0.17247084959045622,0.17247084959045622,0.17307287053191686,2022-12-14,45.0,Gloves - SP - Top Keywords,Top Keywords,arthritis gloves for women for pain,exact
+45.0,0.17247084959045622,0.17247084959045622,0.17307287053191686,2022-12-14,45.0,Gloves - SP - Top Keywords,Top Keywords,wrist compression sleeve,exact
+45.0,0.17247084959045622,0.17247084959045622,0.17307287053191686,2022-12-14,45.0,Gloves - SP - Top Keywords,Top Keywords,edema gloves for swelling,exact
+45.0,0.17247084959045622,0.17247084959045622,0.17307287053191686,2022-12-14,45.0,Gloves - SP - Top Keywords,Top Keywords,wrist compression sleeve,phrase
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - KW - MIX - Discovery,gloves,arthritis gloves for women for pain,exact
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - KW - MIX - Discovery,gloves,compression glove,broad
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - manual,broad,copper hands,broad
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - KW - MIX - Discovery,gloves,arthritis gloves for women for pain,broad
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - KW - MIX - Discovery,gloves,arthritis gloves for women for pain,phrase
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - manual,broad,copper gloves,broad
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - KW - MIX - Discovery,gloves,compression gloves for arthritis for women,exact
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Brace - SP - Broad - Injury KW - GS,Tendinitis,brace tendonitis,broad
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - KW - MIX - Discovery,gloves,compression glove,phrase
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - KW - MIX - Discovery,gloves,arthritis gloves,broad
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - KW - MIX - Discovery,gloves,arthritis gloves,phrase
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - KW - MIX - Discovery,gloves,arthritis gloves women,broad
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - manual,bbm,+arthritis +gloves,broad
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - manual,bbm,+arthritis +pain,broad
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - manual,bbm,+edema +glove,broad
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - manual,bbm,+hand +pain,broad
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - manual,bbm,+swelling +hand,broad
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - manual,phrase,arthritis gloves women,phrase
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - manual,phrase,circulation gloves,phrase
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - manual,phrase,compression gloves swelling,phrase
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - manual,phrase,finger compression gloves,phrase
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - manual,phrase,gaming gloves,phrase
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - manual,phrase,guantes de compresion,phrase
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - manual,phrase,wrist compression,phrase
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - manual,phrase,wrist support,phrase
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - KW - MIX - Discovery,gloves,arthritis gloves men,phrase
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - KW - MIX - Discovery,gloves,arthritis gloves women,phrase
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - KW - MIX - Discovery,gloves,carpal tunnel relief,phrase
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - KW - MIX - Discovery,gloves,compression gloves women,phrase
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - KW - MIX - Discovery,gloves,copper compression gloves,phrase
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - manual,bbm,+arthritis +relief,broad
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - manual,bbm,+compression +gloves,broad
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - manual,bbm,+compression +hand,broad
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - manual,bbm,+copper +hand,broad
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - manual,broad,arthritis gloves,broad
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - manual,broad,arthritis gloves women,broad
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - manual,broad,arthritis hand gloves,broad
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - manual,broad,arthritis hand relief,broad
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - manual,broad,copper infused gloves,broad
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - manual,exact,arthritis compression gloves,exact
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - manual,exact,arthritis gloves,exact
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - manual,exact,compression gloves for arthritis for men,exact
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - manual,phrase,arthritis gloves,phrase
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - manual,phrase,carpal tunnel gloves,phrase
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - manual,phrase,copper compression gloves,phrase
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - manual,phrase,edema gloves swelling,phrase
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - manual,phrase,fingerless compression gloves,phrase
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - manual,phrase,hand bandage glove,phrase
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - manual,phrase,hand compression sleeve,phrase
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Brace - SP - Broad - Generic - GS,Generic Keywords,compression wrist support,broad
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - KW - MIX - Discovery,gloves,arthritis gloves men,broad
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - KW - MIX - Discovery,gloves,compression gloves for arthritis for women,phrase
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - KW - MIX - Discovery,gloves,compression gloves for swelling,exact
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - KW - MIX - Discovery,gloves,copper compression gloves,broad
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - manual,bbm,+copper +glove,broad
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - manual,broad,copper infused gloves men,broad
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - manual,exact,copper gloves for men,exact
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - manual,phrase,arthritis gloves men,phrase
+52.0,0.1077182780958092,0.1077182780958092,0.10074989617666698,2022-12-14,52.0,Gloves - SP - manual,phrase,hand bandage pain,phrase
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,exact,thumb arthritis compression gloves,exact
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - Exact - Brand Defense Keywords - GS,Gloves - SP - Exact - Brand Defense Keywords - GS,fititude,exact
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,exact,finger support arthritis,exact
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,exact,edema glove left hand,exact
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Brace - SP - Broad - Injury KW - GS,Tendinitis,tendonitis,broad
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - Exact - Brand Defense Keywords - GS,Gloves - SP - Exact - Brand Defense Keywords - GS,fititude,phrase
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Catch all grouped,brace,comfybrace,phrase
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,exact,gloves for arthritis,exact
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - KW - MIX - Discovery,gloves,fingerless compression gloves for women,exact
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Catch all grouped,gloves,gloves,broad
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,broad,edema glove,broad
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,broad,finger support arthritis,broad
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,broad,guantes para artritis mujer,broad
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,broad,hand compression,broad
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,broad,hand support arthritis,broad
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,exact,wrist compression sleeve,exact
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,pain,finger arthritis relief,exact
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,pain,finger joint pain,broad
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,pain,finger pain,broad
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,pain,glove hand pain,exact
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,pain,gloves hand pain,broad
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,pain,hand pain,broad
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,pain,hand pain,exact
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,pain,hand pain,phrase
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,pain,hand pain relief,broad
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,pain,hand pain relief,exact
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,pain,hand pain relief,phrase
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,pain,joint pain,phrase
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,pain,muñequeras para dolor de manos,exact
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,pain,pain glove,broad
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,pain,pain relief glove,phrase
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,phrase,arthritis,phrase
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Catch all grouped,gloves,arthritis,broad
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Catch all grouped,gloves,arthritis,phrase
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,broad,fingerless compression gloves,broad
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,broad,gaming gloves,broad
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,broad,gloves rheumatoid,broad
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,broad,gloves swelling,broad
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,broad,guantes de compresion,broad
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,broad,hand bandage glove,broad
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,broad,muñequeras para dolor de manos,broad
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,broad,pain relief glove,broad
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,exact,hand compression gloves,exact
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,exact,hand gloves for pain relief,exact
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,exact,muñequeras para dolor de manos,exact
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,pain,crochet gloves for pain,exact
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,pain,finger arthritis relief,broad
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,pain,finger pain,phrase
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,pain,hand glove pain relief,exact
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,pain,joint pain,broad
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,pain,joint pain gloves,phrase
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,pain,joint pain relief,phrase
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,pain,pain relief glove,broad
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,broad,edema glove left hand,broad
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,broad,guantes de compresion para artritis,broad
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,broad,guantes ortopedicos para la mano,broad
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,broad,swelling finger,broad
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,exact,hand support glove for pain,exact
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,pain,finger pain relief,broad
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,pain,finger pain relief,exact
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,pain,gloves for joint pain,phrase
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,pain,hand bandage pain,broad
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,pain,hand gloves pain relief,phrase
+61.0,0.16488151359585995,0.16488151359585995,0.16239076658908216,2022-12-14,61.0,Gloves - SP - manual,pain,pain glove,phrase

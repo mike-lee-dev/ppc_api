@@ -13,40 +13,26 @@ import os
 def main():  # optimize all accounts
     global_var.db = mongo_db.db_connect()
     accounts = mongo_db.read_collection_as_df('accounts', global_var.db)
+    json_dict = {}
     for profileId in accounts['profileId']:
         print(f"{profileId}  --- Merge")
-        optimize_account(profileId)
-
+        json_dict[profileId] = optimize_account(profileId)
+    return json_dict
 
 def optimize_account(profileId):
     df_campaign = input_output.get_campaign(profileId)
-    # print(f"Campaign: {len(df_campaign)}")
-    # print(f"Campaign :\n{df_campaign}")
     df_adgroup = input_output.get_adgroup(profileId)
-    # print(f"df_adgroup: {len(df_adgroup)}")
-    # print(f"Adgroup: \n{df_adgroup}")
     df_keyword = input_output.get_keyword(profileId)
-    # print(f"df_keyword: {len(df_keyword)}")
-    # print(f"Keyword: \n{df_keyword}")
     df_kw_history = input_output.read_keyword_history(profileId)
-    # print(f"df_kw_history: {len(df_kw_history)}")
-    # print(f"Keyword History: \n{df_kw_history}")
-    df_bid_history = input_output.read_bid_history(profileId)
-    # print(f"Bids History: \n{df_bid_history}")
     df_price = input_output.get_price(profileId)
-    # print(f"Price Report: \n{df_price}")
     df_history = merge_history(df_campaign, df_adgroup, df_keyword, df_kw_history)
-    # print(df_history)
     df_clustered, RF_decoding = initiate_clustering(df_history, profileId)
-    # df_clustered.to_csv('./data/df_clustered.csv')
-    # RF_decoding.to_csv('./data/RF_decoding.csv')
-    # print(df_clustered, RF_decoding)
     df_forecast = conversion_rate(df_clustered, RF_decoding, profileId)
-    # df_forecast.to_csv('./data/df_forecast.csv')
-    # print(df_forecast)
     df_bid_history_merge = merge_forecast_bid(df_campaign, df_adgroup, df_keyword, df_kw_history, df_forecast)
-    df_bid_history_merge.to_csv('./data/df_bid_history_merge.csv')
     df_bid_conv = get_slope_conv_value(df_campaign, df_history, df_kw_history, df_bid_history_merge, profileId)
+    if df_bid_conv is None:
+        return {}
+    return df_bid_conv.to_json(default_handler=str)
     # df_bid = compute_bid(df_bid)
     # df_bid_SP.to_csv(global_var.account + "/prediction/newbids_SP.csv")
     # update_bid_excel(df_bid_SP, 'SP')
@@ -230,6 +216,9 @@ def get_slope_conv_value(df_campaign, df_history, df_kw_history, df_bid_history_
         avg_cpc_list.append(avg_cpc)
 
     df_bid_history_merge['avg_cpc'] = avg_cpc_list
+
+    df_bid_history = input_output.read_bid_history(profileId)
+    df_bid_history_merge = pd.merge(df_bid_history_merge, df_bid_history[['keywordId', 'bid']], on=['keywordId'])
     df_bid_history_merge.to_csv('./data/df_bid_history_merge_slope_avg_cpc.csv')
 
     # # df_bid_history_merge['max_cpc'] = df_bid_history_merge.apply(cal_max_cpc, axis=1)
@@ -265,10 +254,11 @@ def get_slope_conv_value(df_campaign, df_history, df_kw_history, df_bid_history_
                         slope_list.append(1)
         if check_slope != 1:
             df_bid_history['avg_cpc'] = df_bid_history_merge['avg_cpc']
+            df_bid_history['bid'] = df_bid_history_merge['bid']
             a = market_curve.market_curve(dataframe.select_row_by_val(df_bid_history, 'campaignId', row['campaignId']).dropna(subset=['avg_cpc']))
             slope_list.append(a)
     df_bid_history_merge['slope'] = slope_list
-    df_bid_history_merge.to_csv('./data/df_bid_history_merge_slope_last.csv')
+    return df_bid_history_merge
 
     # loop over campaign, then adgroup, then target and add output (CV and slope) to the prediction file
     # for i, cam in df_campaign.iterrows():  # we could use itertuples to speed up the performance but we would need to have the same format for all campaigns

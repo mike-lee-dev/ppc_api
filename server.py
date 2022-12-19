@@ -7,9 +7,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    # ppcoptimizer.main()
-    return json.dumps({'name': 'alice',
-                       'email': 'alice@outlook.com'})
+    updated_info =  ppcoptimizer.main()
+    return json.dumps(updated_info)
 
 
 app.run()

@@ -13,8 +13,7 @@ def market_curve(dfbid_history):
     sigma = (1 / dfbid_history['clicks']).to_numpy()  # sampling error
     # popt, pcov = curve_fit(avg_cpc_model, dfbid_history['Max bid'], dfbid_history['avg_cpc'], sigma=sigma, absolute_sigma=True)							#reverse the order of the years
     print(dfbid_history['avg_cpc'])
-    popt, pcov = curve_fit(avg_cpc_model, dfbid_history['bid'], dfbid_history['avg_cpc'], sigma=sigma,
-                           absolute_sigma=True)
+    popt, pcov = curve_fit(avg_cpc_model, dfbid_history['bid'], dfbid_history['avg_cpc'], sigma=sigma, absolute_sigma=True)
     a = popt[0]
     if a < 1. / 3.:
         a = 1. / 3.
