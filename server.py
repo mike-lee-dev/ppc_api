@@ -5,9 +5,9 @@ import ppcoptimizer
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/', methods = ['POST', 'GET'])
 def index():
-    updated_info =  ppcoptimizer.main()
+    updated_info = ppcoptimizer.main()
     return json.dumps(updated_info)
 
 

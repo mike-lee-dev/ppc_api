@@ -40,6 +40,45 @@ def read_collection_account_as_df(collection, profileId, db):
     return df
 
 
+def read_collection_by_campaign_as_df(collection, campaignId, db):
+    # select the collection within the database
+    col = db[collection]
+    # getting documents
+    cursor = col.find({"campaignId": campaignId})
+    # cursor = col.find({})
+    # Converting the Cursor to Dataframe
+    list_cur = list(cursor)
+    df = pd.DataFrame(list_cur)
+    df = df.convert_dtypes()
+    return df
+
+
+def read_collection_by_adgroup_as_df(collection, adgroupId, db):
+    # select the collection within the database
+    col = db[collection]
+    # getting documents
+    cursor = col.find({"adgroupId": adgroupId})
+    # cursor = col.find({})
+    # Converting the Cursor to Dataframe
+    list_cur = list(cursor)
+    df = pd.DataFrame(list_cur)
+    df = df.convert_dtypes()
+    return df
+
+
+def read_collection_by_keyword_as_df(collection, keywordId, db):
+    # select the collection within the database
+    col = db[collection]
+    # getting documents
+    cursor = col.find({"keywordId": keywordId})
+    # cursor = col.find({})
+    # Converting the Cursor to Dataframe
+    list_cur = list(cursor)
+    df = pd.DataFrame(list_cur)
+    df = df.convert_dtypes()
+    return df
+
+
 def write_df(collection, db):
     db.collection.insert_many(df.to_dict('records'))
 
