@@ -250,6 +250,7 @@ def update_bid_to_db(df_new_bid, profileId):
 
     df_keyword = df_new_bid
     df_keyword.drop_duplicates(subset=['keywordId'])
+    df_keyword = pd.merge(df_keyword, df_keyword_db[['keywordId', 'optimizing']], on=['keywordId'])
 
     return df_campaign, df_adgroup, df_keyword
 
