@@ -38,11 +38,17 @@ def optimize_account(profileId):
     df_kw_history = input_output.read_keyword_history(profileId)
     # df_price = input_output.get_price(profileId)
     df_history = merge_history(df_campaign, df_adgroup, df_keyword, df_kw_history)
+    # df_history.to_csv('./data/df_history.csv')
     df_clustered, RF_decoding = initiate_clustering(df_history, profileId)
+    # df_clustered.to_csv('./data/df_clustered.csv')
     df_forecast = conversion_rate(df_clustered, RF_decoding, profileId)
+    # df_forecast.to_csv('./data/df_forecast.csv')
     df_bid_history_merge = merge_forecast_bid(df_campaign, df_adgroup, df_keyword, df_kw_history, df_forecast)
+    # df_bid_history_merge.to_csv('./data/df_bid_history_merge.csv')
     df_slope_conv = get_slope_conv_value(df_campaign, df_history, df_kw_history, df_bid_history_merge, profileId)
+    # df_slope_conv.to_csv('./data/df_slope_conv.csv')
     df_new_bid = update_new_bid(df_slope_conv, profileId)
+    # df_new_bid.to_csv('./data/df_new_bid.csv')
     return df_new_bid
 
 
@@ -143,7 +149,7 @@ def get_slope_conv_value(df_campaign, df_history, df_kw_history, df_bid_history_
 
     ### Calculate Conversion values
     ## Get campaign Type first
-    df_bid_history_merge['campaignType'] = df_bid_history_merge['campaignName'].apply(lambda x: df_campaign.loc[df_campaign['campaignName'] == x].iloc[0]['campaignType'])
+    df_bid_history_merge['campaignType'] = df_bid_history_merge['campaignId'].apply(lambda x: df_campaign.loc[df_campaign['campaignId'] == x].iloc[0]['campaignType'])
 
     ## Get Conversion Value as a List
     conv_val_list = []
@@ -227,7 +233,6 @@ def update_new_bid(df_slope_merge, profileId):
     df_slope_merge['update_bid'] = df_slope_merge['target_acos'] * df_slope_merge['CR'] * df_slope_merge['conv_value'] / df_slope_merge['slope']
 
     df_slope_merge['new_bid'] = df_slope_merge.apply(limit_bid_change, axis=1)
-    df_slope_merge.to_csv('./data/new_bid.csv')
     return df_slope_merge
 
 
