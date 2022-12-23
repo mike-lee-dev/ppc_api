@@ -227,6 +227,7 @@ def update_new_bid(df_slope_merge, profileId):
     df_slope_merge['update_bid'] = df_slope_merge['target_acos'] * df_slope_merge['CR'] * df_slope_merge['conv_value'] / df_slope_merge['slope']
 
     df_slope_merge['new_bid'] = df_slope_merge.apply(limit_bid_change, axis=1)
+    df_slope_merge.to_csv('./data/new_bid.csv')
     return df_slope_merge
 
 
