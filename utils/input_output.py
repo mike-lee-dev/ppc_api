@@ -55,6 +55,17 @@ def read_keyword_history(profileId):
     return df_history
 
 
+def read_targets(profileId):
+    df_history = mongo_db.read_collection_account_as_df('targets', profileId, global_var.db)
+    new_expression_list = []
+    if len(df_history) > 0:
+        for i in range(len(df_history)):
+            expression = df_history.iloc[i]['resolvedExpression']
+            new_expression_list.append(expression[0]['type'])
+        df_history['resolvedExpression'] = new_expression_list
+    return df_history
+
+
 def read_target_history(profileId):
     df_history = mongo_db.read_collection_account_as_df('target_history', profileId, global_var.db)
     if len(df_history) > 0:
