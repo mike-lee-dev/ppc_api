@@ -58,7 +58,7 @@ def optimize_account(profileId):
 def merge_history(df_campaign, df_adgroup, df_keyword, df_kw_history, df_target, df_target_history):
     try:
         # df_history = df_adgroup.merge(df_campaign, how='left', on='campaignId')
-        df_keyword['targeting'] = df_keyword['keywordText']
+        # df_keyword['targeting'] = df_keyword['keywordText']
         # df_history = df_history.merge(df_keyword, how='left', on=['adGroupId', 'campaignId'])
         # df_history = df_history.merge(df_kw_history, how='left', on=['keywordId'])
         # df_target['targeting'] = df_target['resolvedExpression']
