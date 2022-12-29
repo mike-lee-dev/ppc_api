@@ -69,8 +69,8 @@ def read_targets(profileId):
 def read_target_history(profileId):
     df_history = mongo_db.read_collection_account_as_df('target_history', profileId, global_var.db)
     if len(df_history) > 0:
-        df_history['conversions'] = df_history['attributedConversions30d']
-        df_history['sales'] = df_history['attributedSales30d']
+        df_history['conversions'] = df_history['purchases30d']
+        df_history['sales'] = df_history['sales30d']
     return df_history
 
 
