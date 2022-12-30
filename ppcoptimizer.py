@@ -37,21 +37,21 @@ def optimize_account(profileId):
     df_keyword = input_output.get_keyword(profileId)
     df_kw_history = input_output.read_keyword_history(profileId)
     df_target = input_output.read_targets(profileId)
-    df_target.to_csv('./data/df_targets.csv')
+    # df_target.to_csv('./data/df_targets.csv')
     df_target_history = input_output.read_target_history(profileId)
     # df_price = input_output.get_price(profileId)
     df_history = merge_history(df_campaign, df_adgroup, df_keyword, df_kw_history, df_target, df_target_history)
-    df_history.to_csv('./data/df_history.csv')
+    # df_history.to_csv('./data/df_history.csv')
     df_clustered, RF_decoding = initiate_clustering(df_history, profileId)
-    df_clustered.to_csv('./data/df_clustered.csv')
+    # df_clustered.to_csv('./data/df_clustered.csv')
     df_forecast = conversion_rate(df_clustered, RF_decoding, profileId)
-    df_forecast.to_csv('./data/df_forecast.csv')
+    # df_forecast.to_csv('./data/df_forecast.csv')
     df_bid_history_merge = merge_forecast_bid(df_campaign, df_adgroup, df_keyword, df_kw_history, df_forecast)
-    df_bid_history_merge.to_csv('./data/df_bid_history_merge.csv')
+    # df_bid_history_merge.to_csv('./data/df_bid_history_merge.csv')
     df_slope_conv = get_slope_conv_value(df_campaign, df_history, df_kw_history, df_bid_history_merge, profileId)
-    df_slope_conv.to_csv('./data/df_slope_conv.csv')
+    # df_slope_conv.to_csv('./data/df_slope_conv.csv')
     df_new_bid = update_new_bid(df_slope_conv, profileId)
-    df_new_bid.to_csv('./data/df_new_bid.csv')
+    # df_new_bid.to_csv('./data/df_new_bid.csv')
     return df_new_bid
 
 
@@ -71,8 +71,6 @@ def merge_history(df_campaign, df_adgroup, df_keyword, df_kw_history, df_target,
         df_history = df_history.merge(df_campaign, how='left', on='campaignId')
         df_history = df_history.merge(df_kw_history, how='left', on=['campaignId', 'adGroupId', 'keywordId'])
         # df_history = df_history.merge(df_target_history, how='left', on='targetId')
-        # if df_history['date_x']:
-        #     df_history['date'] = df_history['date_x']
         return df_history
     except:
         return pd.DataFrame()
@@ -180,8 +178,6 @@ def get_slope_conv_value(df_campaign, df_history, df_kw_history, df_bid_history_
     df_adgroup_history['date'] = df_adgroup_history['date'].apply(lambda x: pd.Timestamp(x))
     df_adgroup_history['price'] = df_adgroup_history.apply(get_adgroup_history, axis=1)
     df_ads = input_output.get_ads(profileId)
-    df_ads.to_csv('./data/df_ads.csv')
-    df_adgroup_history.to_csv('./data/df_adgroup_history.csv')
     df_campaign_history = input_output.read_campaign_history(profileId)
     df_campaign_history['date'] = df_campaign_history['date'].apply(lambda x: pd.Timestamp(x))
     for i in range(len(df_bid_history_merge)):
@@ -189,9 +185,13 @@ def get_slope_conv_value(df_campaign, df_history, df_kw_history, df_bid_history_
         campaign_type = row['campaignType']
 
         if campaign_type == 'sponsoredBrands':
-            df_ads_ch = df_ads.loc[df_ads['active'] == "TRUE"]
+            check_idx_list = []
+            for k in range(len(df_ads)):
+                if df_ads.iloc[k]['active']:
+                    check_idx_list.append(k)
+            df_ads_ch = df_ads.loc[check_idx_list]
             df_ads_ch.to_csv('./data/df_ads_ch.csv')
-            df_adgroup_history_ch = df_adgroup_history.loc[(df_adgroup_history['adGroupId'] in df_ads_ch['adGroupId']) & (df_adgroup_history['price'] != 0)]
+            df_adgroup_history_ch = df_adgroup_history.loc[(df_adgroup_history['adGroupId'].isin(list(df_ads_ch['adGroupId']))) & (df_adgroup_history['price'] != 0)]
             conv_value = df_adgroup_history_ch['price'].mean()
 
         else:
