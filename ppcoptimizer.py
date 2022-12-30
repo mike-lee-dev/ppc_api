@@ -70,6 +70,9 @@ def merge_history(df_campaign, df_adgroup, df_keyword, df_kw_history, df_target,
         df_history = df_keyword.merge(df_adgroup, how='left', on=['adGroupId', 'campaignId'])
         df_history = df_history.merge(df_campaign, how='left', on='campaignId')
         df_history = df_history.merge(df_kw_history, how='left', on=['campaignId', 'adGroupId', 'keywordId'])
+        # df_history = df_history.merge(df_target_history, how='left', on='targetId')
+        # if df_history['date_x']:
+        #     df_history['date'] = df_history['date_x']
         return df_history
     except:
         return pd.DataFrame()
@@ -151,6 +154,12 @@ def limit_bid_change(row):
     return new_bid
 
 
+def get_adgroup_history(row):
+    if row['sales30d'] == 0:
+        return 0
+    return row['sales30d'] / row['purchases30d']
+
+
 def get_slope_conv_value(df_campaign, df_history, df_kw_history, df_bid_history_merge, profileId):
     # for every campaign, every adgroup, every target in df_bid get a + b
     if len(df_campaign) == 0 or len(df_history) == 0 or len(df_kw_history) == 0 or len(df_bid_history_merge) == 0:
@@ -167,8 +176,12 @@ def get_slope_conv_value(df_campaign, df_history, df_kw_history, df_bid_history_
     ## Get Conversion Value as a List
     conv_val_list = []
     df_adgroup_history = input_output.read_adgroup_history(profileId)
+    df_adgroup_history.dropna(axis=0, inplace=True)
     df_adgroup_history['date'] = df_adgroup_history['date'].apply(lambda x: pd.Timestamp(x))
+    df_adgroup_history['price'] = df_adgroup_history.apply(get_adgroup_history, axis=1)
     df_ads = input_output.get_ads(profileId)
+    df_ads.to_csv('./data/df_ads.csv')
+    df_adgroup_history.to_csv('./data/df_adgroup_history.csv')
     df_campaign_history = input_output.read_campaign_history(profileId)
     df_campaign_history['date'] = df_campaign_history['date'].apply(lambda x: pd.Timestamp(x))
     for i in range(len(df_bid_history_merge)):
@@ -176,8 +189,9 @@ def get_slope_conv_value(df_campaign, df_history, df_kw_history, df_bid_history_
         campaign_type = row['campaignType']
 
         if campaign_type == 'sponsoredBrands':
-            df_ads_ch = df_ads.loc[df_ads['active'] == True]
-            df_adgroup_history_ch = df_adgroup_history.loc[(df_adgroup_history['adGroupId'] in df_ads_ch['adGroupId']) and (df_adgroup_history['price'] != 0)]
+            df_ads_ch = df_ads.loc[df_ads['active'] == "TRUE"]
+            df_ads_ch.to_csv('./data/df_ads_ch.csv')
+            df_adgroup_history_ch = df_adgroup_history.loc[(df_adgroup_history['adGroupId'] in df_ads_ch['adGroupId']) & (df_adgroup_history['price'] != 0)]
             conv_value = df_adgroup_history_ch['price'].mean()
 
         else:
