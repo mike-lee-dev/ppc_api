@@ -41,7 +41,7 @@ def optimize_account(profileId):
     df_target_history = input_output.read_target_history(profileId)
     # df_price = input_output.get_price(profileId)
     df_history = merge_history(df_campaign, df_adgroup, df_keyword, df_kw_history, df_target, df_target_history)
-    # df_history.to_csv('./data/df_history.csv')
+    df_history.to_csv('./data/df_history.csv')
     df_clustered, RF_decoding = initiate_clustering(df_history, profileId)
     # df_clustered.to_csv('./data/df_clustered.csv')
     df_forecast = conversion_rate(df_clustered, RF_decoding, profileId)
@@ -51,7 +51,7 @@ def optimize_account(profileId):
     df_slope_conv = get_slope_conv_value(df_campaign, df_history, df_kw_history, df_bid_history_merge, profileId)
     # df_slope_conv.to_csv('./data/df_slope_conv.csv')
     df_new_bid = update_new_bid(df_slope_conv, profileId)
-    # df_new_bid.to_csv('./data/df_new_bid.csv')
+    df_new_bid.to_csv('./data/df_new_bid.csv')
     return df_new_bid
 
 
@@ -152,7 +152,7 @@ def limit_bid_change(row):
     return new_bid
 
 
-def get_adgroup_history(row):
+def get_price_adgroup_history(row):
     if row['sales30d'] == 0:
         return 0
     return row['sales30d'] / row['purchases30d']
@@ -176,7 +176,7 @@ def get_slope_conv_value(df_campaign, df_history, df_kw_history, df_bid_history_
     df_adgroup_history = input_output.read_adgroup_history(profileId)
     df_adgroup_history.dropna(axis=0, inplace=True)
     df_adgroup_history['date'] = df_adgroup_history['date'].apply(lambda x: pd.Timestamp(x))
-    df_adgroup_history['price'] = df_adgroup_history.apply(get_adgroup_history, axis=1)
+    df_adgroup_history['price'] = df_adgroup_history.apply(get_price_adgroup_history, axis=1)
     df_ads = input_output.get_ads(profileId)
     df_campaign_history = input_output.read_campaign_history(profileId)
     df_campaign_history['date'] = df_campaign_history['date'].apply(lambda x: pd.Timestamp(x))
@@ -190,7 +190,6 @@ def get_slope_conv_value(df_campaign, df_history, df_kw_history, df_bid_history_
                 if df_ads.iloc[k]['active']:
                     check_idx_list.append(k)
             df_ads_ch = df_ads.loc[check_idx_list]
-            df_ads_ch.to_csv('./data/df_ads_ch.csv')
             df_adgroup_history_ch = df_adgroup_history.loc[(df_adgroup_history['adGroupId'].isin(list(df_ads_ch['adGroupId']))) & (df_adgroup_history['price'] != 0)]
             conv_value = df_adgroup_history_ch['price'].mean()
 
@@ -300,13 +299,17 @@ def update_into_db(df_update, account):
     url = "https://advertising-api.amazon.com/v2/sp/keywords"
     for i in range(len(df_update)):
         if df_update.iloc[i]['optimizing']:
-            req_body.append({
+            req_body = [{
                 "keywordId": df_update.iloc[i]['keywordId'],
                 "state": df_update.iloc[i]['state'],
                 "bid": df_update.iloc[i]['new_bid']
-            })
+            }]
+            # response = requests.put(url, json=req_body, headers=header)
+            # print(df_update.iloc[i]['keywordId'], '___Updated___',response.status_code)
+
     if len(req_body) > 0:
-        response = requests.put(url, data=req_body, headers=header)
+        # print(req_body)
+        response = requests.put(url, json=req_body, headers=header)
         print(response.status_code)
 
 

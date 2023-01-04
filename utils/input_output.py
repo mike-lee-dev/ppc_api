@@ -9,6 +9,8 @@ import global_var
 # account Objects
 def get_campaign(profileId):
     df_campaign = mongo_db.read_collection_account_as_df('campaigns', profileId, global_var.db)
+    if len(df_campaign) > 0:
+        df_campaign['target_acos'] = df_campaign['target_acos'].apply(lambda x: x / 100 if x else x)
     return df_campaign
 
 
@@ -21,6 +23,8 @@ def read_campaign_history(profileId):
 
 def get_adgroup(profileId):
     df_adgroup = mongo_db.read_collection_account_as_df('adgroups', profileId, global_var.db)
+    if len(df_adgroup) > 0:
+        df_adgroup['target_acos'] = df_adgroup['target_acos'].apply(lambda x: x / 100 if x else x)
     return df_adgroup
 
 
@@ -38,6 +42,8 @@ def get_ads(profileId):
 
 def get_keyword(profileId):
     df_keyword = mongo_db.read_collection_account_as_df('keywords', profileId, global_var.db)
+    if len(df_keyword) > 0:
+        df_keyword['target_acos'] = df_keyword['target_acos'].apply(lambda x: x / 100 if x else x)
     return df_keyword
 
 
