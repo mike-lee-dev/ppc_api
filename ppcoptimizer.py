@@ -41,7 +41,7 @@ def optimize_account(profileId):
     df_target_history = input_output.read_target_history(profileId)
     # df_price = input_output.get_price(profileId)
     df_history = merge_history(df_campaign, df_adgroup, df_keyword, df_kw_history, df_target, df_target_history)
-    df_history.to_csv('./data/df_history.csv')
+    # df_history.to_csv('./data/df_history.csv')
     df_clustered, RF_decoding = initiate_clustering(df_history, profileId)
     # df_clustered.to_csv('./data/df_clustered.csv')
     df_forecast = conversion_rate(df_clustered, RF_decoding, profileId)
