@@ -22,6 +22,9 @@ def main():  # optimize all accounts
         print(f"{profileId}  --- Merge")
         df_new_bid= optimize_account(profileId)
         df_campaign, df_adgroup, df_keyword = update_bid_to_db(df_new_bid, profileId)
+        df_campaign.to_csv("./data/result_campaign.csv")
+        df_adgroup.to_csv("./data/result_adgroup.csv")
+        df_keyword.to_csv("./data/result_keyword.csv")
         update_into_db(df_campaign, accounts.iloc[i])
         update_into_db(df_adgroup, accounts.iloc[i])
         update_into_db(df_keyword, accounts.iloc[i])
@@ -51,7 +54,7 @@ def optimize_account(profileId):
     df_slope_conv = get_slope_conv_value(df_campaign, df_history, df_kw_history, df_bid_history_merge, profileId)
     # df_slope_conv.to_csv('./data/df_slope_conv.csv')
     df_new_bid = update_new_bid(df_slope_conv, profileId)
-    df_new_bid.to_csv('./data/df_new_bid.csv')
+    # df_new_bid.to_csv('./data/df_new_bid.csv')
     return df_new_bid
 
 
@@ -302,15 +305,14 @@ def update_into_db(df_update, account):
             req_body = [{
                 "keywordId": df_update.iloc[i]['keywordId'],
                 "state": df_update.iloc[i]['state'],
-                "bid": df_update.iloc[i]['new_bid']
+                "bid": round(float(df_update.iloc[i]['new_bid']) * 100) / 100
             }]
             # response = requests.put(url, json=req_body, headers=header)
             # print(df_update.iloc[i]['keywordId'], '___Updated___',response.status_code)
 
     if len(req_body) > 0:
-        # print(req_body)
         response = requests.put(url, json=req_body, headers=header)
-        print(response.status_code)
+        print(response)
 
 
 if __name__ == "__main__":
