@@ -20,7 +20,7 @@ def main():  # optimize all accounts
     for i in range(len(accounts)):
         profileId = accounts.iloc[i]['profileId']
         print(f"{profileId}  --- Merge")
-        df_new_bid= optimize_account(profileId)
+        df_new_bid = optimize_account(profileId)
         df_campaign, df_adgroup, df_keyword = update_bid_to_db(df_new_bid, profileId)
         df_campaign.to_csv("./data/result_campaign.csv")
         df_adgroup.to_csv("./data/result_adgroup.csv")
@@ -36,12 +36,17 @@ def main():  # optimize all accounts
 
 def optimize_account(profileId):
     df_campaign = input_output.get_campaign(profileId)
+    # df_campaign.to_csv('./data/df_campaign.csv')
     df_adgroup = input_output.get_adgroup(profileId)
+    # df_adgroup.to_csv('./data/df_adgroup.csv')
     df_keyword = input_output.get_keyword(profileId)
+    # df_keyword.to_csv('./data/df_keyword.csv')
     df_kw_history = input_output.read_keyword_history(profileId)
+    # df_kw_history.to_csv('./data/df_kw_history.csv')
     df_target = input_output.read_targets(profileId)
     # df_target.to_csv('./data/df_targets.csv')
     df_target_history = input_output.read_target_history(profileId)
+    # df_target_history.to_csv('./data/df_target_history.csv')
     # df_price = input_output.get_price(profileId)
     df_history = merge_history(df_campaign, df_adgroup, df_keyword, df_kw_history, df_target, df_target_history)
     # df_history.to_csv('./data/df_history.csv')
@@ -58,25 +63,54 @@ def optimize_account(profileId):
     return df_new_bid
 
 
-def merge_history(df_campaign, df_adgroup, df_keyword, df_kw_history, df_target, df_target_history):
-    try:
-        # df_history = df_adgroup.merge(df_campaign, how='left', on='campaignId')
-        # df_keyword['targeting'] = df_keyword['keywordText']
-        # df_history = df_history.merge(df_keyword, how='left', on=['adGroupId', 'campaignId'])
-        # df_history = df_history.merge(df_kw_history, how='left', on=['keywordId'])
-        # df_target['targeting'] = df_target['resolvedExpression']
-        df_keyword = df_keyword.merge(df_target, how='left', on='campaignId')
-        # df_keyword = df_keyword.merge(df_target, how='left', on=['adGroupId', 'campaignId'])
-        # df_history = df_history.merge(df_target_history, how='left', on=['targetId'])
+def convert_time(str_time):
+    new_time = str(str_time)[0:4] + "-" + str(str_time)[4:6] + "-" + str(str_time)[6:]
+    return new_time
 
-        # df_keyword['targeting'] = df_keyword['keywordText']
-        df_history = df_keyword.merge(df_adgroup, how='left', on=['adGroupId', 'campaignId'])
-        df_history = df_history.merge(df_campaign, how='left', on='campaignId')
-        df_history = df_history.merge(df_kw_history, how='left', on=['campaignId', 'adGroupId', 'keywordId'])
-        # df_history = df_history.merge(df_target_history, how='left', on='targetId')
-        return df_history
-    except:
+
+def merge_history(df_campaign, df_adgroup, df_keyword, df_kw_history, df_target, df_target_history):
+    if len(df_campaign) == 0 or len(df_adgroup) == 0 or len(df_keyword) == 0 or \
+            len(df_kw_history) == 0 or len(df_target) == 0 or len(df_target_history) == 0:
         return pd.DataFrame()
+
+    # Append Keyword And target
+    # df_keyword['targeting'] = df_keyword['keywordText']
+    # df_keyword = df_keyword[['keywordId', 'adGroupId', 'campaignId', 'matchType', 'targeting']]
+    df_keyword = df_keyword[['keywordId', 'adGroupId', 'campaignId', 'matchType']]
+    # df_target['targeting'] = df_target['resolvedExpression']
+    df_target['keywordId'] = df_target['targetId']
+    df_target['matchType'] = ['-'] * len(df_target)
+    df_target = df_target[['keywordId', 'campaignId', 'matchType']]
+    # Add adgroup ID to targets DF
+    adgroup_list = []
+    for i in range(len(df_target)):
+        targetID = df_target.iloc[i]['keywordId']
+        df_target_adgroup = df_target_history[df_target_history['targetId'] == targetID]
+        if len(df_target_adgroup) > 0:
+            adgroup_list.append(df_target_adgroup.iloc[0]['adGroupId'])
+        else:
+            adgroup_list.append(0)
+    df_target['adGroupId'] = adgroup_list
+    df_target = df_target[df_target['adGroupId'] != 0]
+    df_keyword = pd.concat([df_keyword, df_target])
+
+    # Append Keyword History And target History
+    df_kw_history = df_kw_history[['keywordId', 'adGroupId', 'campaignId', 'profileId', 'targeting', 'clicks', 'impressions',
+                                   'cost', 'date', 'conversions', 'sales']]
+    df_target_history['keywordId'] = df_target_history['targetId']
+    df_target_history['targeting'] = df_target_history['targetingExpression']
+    df_target_history["date"] = df_target_history["date"].apply(convert_time)
+    df_target_history["date"] = pd.to_datetime(df_target_history["date"], format='%Y-%m-%d')
+    df_target_history = df_target_history[['keywordId', 'adGroupId', 'campaignId', 'profileId', 'targeting', 'clicks', 'impressions',
+                                           'cost', 'date', 'conversions', 'sales']]
+    df_kw_history = pd.concat([df_kw_history, df_target_history])
+    df_kw_history = df_kw_history[df_kw_history['clicks'] != 0]
+
+    df_history = df_keyword.merge(df_adgroup, how='left', on=['adGroupId', 'campaignId'])
+    df_history = df_history.merge(df_campaign, how='left', on='campaignId')
+    df_history = df_history.merge(df_kw_history, how='left', on=['campaignId', 'adGroupId', 'keywordId'])
+    df_history = df_history[df_history['clicks'] > 0]
+    return df_history
 
 
 def initiate_clustering(df_history, profileId):
@@ -294,25 +328,28 @@ def update_into_db(df_update, account):
         return
     req_body = []
     header = {
-            'Content-Type': 'application/json',
-            'Amazon-Advertising-API-ClientId': "amzn1.application-oa2-client.9249028043c04df085aafd96e8e23908",
-            'Amazon-Advertising-API-Scope': account['profileId'],
-            'Authorization': account['access_token'],
-        }
+        'Content-Type': 'application/json',
+        'Amazon-Advertising-API-ClientId': "amzn1.application-oa2-client.9249028043c04df085aafd96e8e23908",
+        'Amazon-Advertising-API-Scope': account['profileId'],
+        'Authorization': account['access_token'],
+    }
+    # url = "https://advertising-api.amazon.com/sp/keywords"
+    # Version 2 url for sp update
     url = "https://advertising-api.amazon.com/v2/sp/keywords"
     for i in range(len(df_update)):
-        if df_update.iloc[i]['optimizing']:
-            req_body = [{
-                "keywordId": df_update.iloc[i]['keywordId'],
+        if df_update.iloc[i]['optimizing'] and df_update.iloc[i]['new_bid']:
+            req_body.append({
+                "keywordId": int(df_update.iloc[i]['keywordId']),
                 "state": df_update.iloc[i]['state'],
                 "bid": round(float(df_update.iloc[i]['new_bid']) * 100) / 100
-            }]
+            })
             # response = requests.put(url, json=req_body, headers=header)
             # print(df_update.iloc[i]['keywordId'], '___Updated___',response.status_code)
 
     if len(req_body) > 0:
+        # response = requests.put(url, json={"keywords": req_body}, headers=header)
         response = requests.put(url, json=req_body, headers=header)
-        print(response)
+        print(response.status_code)
 
 
 if __name__ == "__main__":
